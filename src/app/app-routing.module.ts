@@ -15,6 +15,7 @@ const routes: Routes = [
     path: 'fivethree',
     loadChildren: () => import('./pages/fivethree/fivethree.module').then(m => m.FivethreePageModule)
   },
+  { path: 'app-bar', loadChildren: './pages/fivethree/components/app-bar/app-bar.module#AppBarPageModule' },
 
 ];
 

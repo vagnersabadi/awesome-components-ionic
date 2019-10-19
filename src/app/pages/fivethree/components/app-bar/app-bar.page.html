@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>App-bar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label>Title Layout</ion-label>
+    <ion-select [(ngModel)]="titleLayout" [interfaceOptions]="customTitleLayoutOptions" interface="popover">
+      <ion-select-option value="hide">Hide Title</ion-select-option>
+      <ion-select-option value="show">Show Title</ion-select-option>
+      <ion-select-option value="active-only">Show Title for active only</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Floating Action Bottom Position</ion-label>
+    <ion-select [(ngModel)]="position" [interfaceOptions]="customFabPositionOptions" interface="popover">
+      <ion-select-option value="center">Center</ion-select-option>
+      <ion-select-option value="right">Right</ion-select-option>
+      <ion-select-option value="left">Left</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Fab Visible</ion-label>
+    <ion-checkbox [(ngModel)]="fabVisible" slot="end"></ion-checkbox>
+  </ion-item>
+
+
+
+</ion-content>
+
+<ion-footer>
+    <ion-tabs #tabs>
+        <fiv-app-bar (fivFabClick)="presentToast('Floating action button clicked')" slot="bottom"
+          [titleLayout]="titleLayout" #bar [position]="position" [fabVisible]="fabVisible" [icon]="icon">
+          <fiv-app-bar-tab left tab="#" href="#" icon="md-home" name="App Bar">
+          </fiv-app-bar-tab>
+          <fiv-app-bar-tab left tab="#" href="#" icon="md-resize" name="Expandable" [badge]="1">
+          </fiv-app-bar-tab>
+          <fiv-app-bar-tab right tab="#" href="#" icon="md-eye" name="Password">
+          </fiv-app-bar-tab>
+          <fiv-app-bar-tab right tab="#" href="#" icon="md-more" name="Buttons">
+          </fiv-app-bar-tab>
+        </fiv-app-bar>
+      </ion-tabs>
+</ion-footer>

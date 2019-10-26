@@ -11,7 +11,9 @@ import {
   FivDialogModule,
   FivFabModule,
   FivIconModule,
-
+  FivCenterModule,
+  FivLoadingProgressBarModule,
+  FivLoadingSpinnerModule,
   
 } from '@fivethree/core';
 
@@ -31,7 +33,10 @@ const routes: Routes = [
     FivSearchbarModule,
     FivDialogModule,
     FivFabModule,
-    FivIconModule
+    FivIconModule,
+    FivCenterModule,
+    FivLoadingProgressBarModule,
+    FivLoadingSpinnerModule,
   ],
   declarations: [AnyPage]
 })

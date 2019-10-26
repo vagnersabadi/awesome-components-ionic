@@ -111,18 +111,68 @@
       </ion-item>
     </ion-card>
 
-    <ion-card>
+    <ion-card class="icons-card">
       <ion-card-header>
-        Feature Discovery
+        Icons
       </ion-card-header>
+
+      <ion-button (click)="increment()">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+      <ion-button (click)="decrement()">
+        <ion-icon slot="icon-only" name="remove"></ion-icon>
+      </ion-button>
+
+      <ion-item>
+        <ion-label>Icon turned off</ion-label>
+        <ion-checkbox [(ngModel)]="off" slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Icon dot</ion-label>
+        <ion-checkbox [(ngModel)]="dot" slot="end"></ion-checkbox>
+      </ion-item>
+
+      <div class="example">
+        <ion-button [fivCenter] fill="clear">
+          <fiv-icon [off]="off" [dotVisible]="dot" slot="icon-only" [indicatorValue]="indicatorValue" [name]="icon">
+          </fiv-icon>
+        </ion-button>
+      </div>
 
     </ion-card>
 
-    <ion-card>
+    <ion-card class="loading-card">
       <ion-card-header>
         Feature Discovery
       </ion-card-header>
 
+      <ion-button [disabled]="bar.loading" (click)="bar.fillIn(2000)">
+        fill
+      </ion-button>
+
+      <ion-button [disabled]="bar.loading" (click)="bar.shrinkIn(2000)">
+        shrink
+      </ion-button>
+      <ion-button [disabled]="bar.loading" (click)="bar.load()">
+        load
+      </ion-button>
+      <ion-button [disabled]="!bar.loading" (click)="bar.unload()">
+        unload
+      </ion-button>
+      <ion-button [disabled]="!bar.loading" (click)="bar.complete()">
+        complete
+      </ion-button>
+      <div class="wrapper">
+        <div [fivCenter] class="progress-bar">
+          <fiv-loading-progress-bar #bar></fiv-loading-progress-bar>
+        </div>
+      </div>
+
+      <div class="wrapper">
+        <div [fivCenter]>
+          <fiv-loading-spinner></fiv-loading-spinner>
+        </div>
+      </div>
     </ion-card>
 
 

@@ -28,7 +28,6 @@ export class AnyPage implements OnInit {
 
   // Fab
   pulse = false;
-  icon = 'fitness';
   vertical = 'bottom';
   horizontal = 'end';
   extended = true;
@@ -36,9 +35,15 @@ export class AnyPage implements OnInit {
   scroll = true;
   mode = 'normal';
 
-  // Feature
-  fp = 20;
-  co = 20;
+  // Icons
+  icon = 'md-notifications';
+  indicatorValue = 0;
+  off = false;
+  dot = false;
+
+  // Loading
+  modeLoading = 'determinate';
+  value = 0;
 
   constructor() { }
 
@@ -63,8 +68,27 @@ export class AnyPage implements OnInit {
   close() { }
   over() { }
 
-  // Feature
-  async log(s: string) { }
+  // Icons
+  decrement() {
+    if (this.indicatorValue > 0) {
+      this.indicatorValue--;
+    }
+  }
+  increment() {
+    this.indicatorValue++;
+  }
 
+  // Loading
+  fabComplete() { }
+  buttonComplete() { }
+  showHint(refresher) {
+    refresher.showHint();
+  }
+  onRefresh(refresher) {
+    setTimeout(() => {
+      refresher.completeRefresh();
+    }, 2000);
+  }
+  complete() { }
 
 }

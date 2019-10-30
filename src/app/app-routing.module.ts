@@ -21,6 +21,12 @@ const routes: Routes = [
   { path: 'stepper', loadChildren: './pages/fivethree/components/stepper/stepper.module#StepperPageModule' },
   { path: 'any', loadChildren: './pages/fivethree/components/any/any.module#AnyPageModule' },
   { path: 'feature-discovery', loadChildren: './pages/fivethree/components/feature-discovery/feature-discovery.module#FeatureDiscoveryPageModule' },
+  { path: 'dialog', loadChildren: './pages/fivethree/components/dialog/dialog.module#DialogPageModule' },
+  { path: 'editable-label', loadChildren: './pages/fivethree/components/editable-label/editable-label.module#EditableLabelPageModule' },
+  { path: 'expandable', loadChildren: './pages/fivethree/components/expandable/expandable.module#ExpandablePageModule' },
+  { path: 'searchbar', loadChildren: './pages/fivethree/components/searchbar/searchbar.module#SearchbarPageModule' },
+  { path: 'fab', loadChildren: './pages/fivethree/components/fab/fab.module#FabPageModule' },
+  { path: 'icon', loadChildren: './pages/fivethree/components/icon/icon.module#IconPageModule' },
 
 ];
 

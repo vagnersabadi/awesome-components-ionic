@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Expandable</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item-divider>
+    <ion-label>Basic Example</ion-label>
+  </ion-item-divider>
+  <div class="ion-text-center">
+    <ion-button [disabled]="ex.isOpen" (click)="ex.open()">
+      Open
+    </ion-button>
+    <ion-button [disabled]="!ex.isOpen" (click)="ex.close()">
+      Close
+    </ion-button>
+  </div>
+
+  <fiv-expandable #ex>
+    <fiv-ripple [hover]="true" header (fivClick)="ex.toggle()">
+      <ion-item [lines]="'inset'">
+        <ion-label>Expandable Header</ion-label>
+        <fiv-expandable-indicator></fiv-expandable-indicator>
+      </ion-item>
+    </fiv-ripple>
+    <div content>
+      <span class="content" [fivCenter]>Expandable Content (height depends on contents size)</span>
+    </div>
+  </fiv-expandable>
+
+</ion-content>

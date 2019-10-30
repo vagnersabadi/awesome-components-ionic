@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Icons</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item-divider>
+    <ion-label>Basic Example</ion-label>
+  </ion-item-divider>
+  <div class="ion-text-center">
+    <ion-button (click)="getNewIcon()">
+      change icon
+    </ion-button>
+    <ion-button (click)="increment()">
+      <ion-icon slot="icon-only" name="add"></ion-icon>
+    </ion-button>
+    <ion-button (click)="decrement()">
+      <ion-icon slot="icon-only" name="remove"></ion-icon>
+    </ion-button>
+  </div>
+
+  <ion-item>
+    <ion-label>Icon turned off</ion-label>
+    <ion-checkbox [(ngModel)]="off" slot="end"></ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-label>Icon dot</ion-label>
+    <ion-checkbox [(ngModel)]="dot" slot="end"></ion-checkbox>
+  </ion-item>
+
+  <div class="example">
+    <ion-button [fivCenter] fill="clear">
+      <fiv-icon [off]="off" [dotVisible]="dot" slot="icon-only" [indicatorValue]="indicatorValue" [name]="icon">
+      </fiv-icon>
+    </ion-button>
+  </div>
+</ion-content>

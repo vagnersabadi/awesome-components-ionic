@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>bottom-sheet</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Bottom Sheet</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -9,60 +12,56 @@
     <ion-row>
       <ion-col sizeXl="10" offsetXl="1" sizeLg="10" offsetLg="1" sizeMd="12" sizeXs="12" offsetXs="0" offsetSm="0"
         offsetMd="0" sizeSm="12" sizeMd="12">
-          <ion-list>
-            <ion-item>
-              <ion-label>Top</ion-label>
-              <ion-radio [checked]="drawerState===states.Top" (click)="drawerState = states.Top"></ion-radio>
-            </ion-item>
-            <ion-item>
-              <ion-label>Docked</ion-label>
-              <ion-radio [checked]="drawerState===states.Docked" (click)="drawerState = states.Docked"></ion-radio>
-            </ion-item>
-            <ion-item>
-              <ion-label>Bottom</ion-label>
-              <ion-radio [checked]="drawerState===states.Bottom" (click)="drawerState = states.Bottom"></ion-radio>
-            </ion-item>
-          </ion-list>
-          <ion-list>
-            <ion-item>
-              <ion-label>Bounce</ion-label>
-              <ion-checkbox [(ngModel)]="shouldBounce"></ion-checkbox>
-            </ion-item>
-            <ion-item>
-              <ion-label>Docked height</ion-label>
-              <ion-input type="number" [(ngModel)]="dockedHeight" value="150"></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-label>Top Distance</ion-label>
-              <ion-input type="number" [(ngModel)]="distanceTop" value="56"></ion-input>
-            </ion-item>
-            <ion-item-divider>
-              <ion-label>Bottom Sheet Content</ion-label>
-            </ion-item-divider>
-            <ion-item>
-              <ion-label>Rounded</ion-label>
-              <ion-checkbox [(ngModel)]="rounded"></ion-checkbox>
-            </ion-item>
-            <ion-item>
-              <ion-label>Handle</ion-label>
-              <ion-checkbox [(ngModel)]="handle"></ion-checkbox>
-            </ion-item>
-            <ion-item>
-              <ion-label>Float</ion-label>
-              <ion-checkbox [(ngModel)]="float"></ion-checkbox>
-            </ion-item>
-          </ion-list>
+        <ion-list>
+          <ion-item>
+            <ion-label>Top</ion-label>
+            <ion-radio [checked]="drawerState===states.Top" (click)="drawerState = states.Top"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Docked</ion-label>
+            <ion-radio [checked]="drawerState===states.Docked" (click)="drawerState = states.Docked"></ion-radio>
+          </ion-item>
+          <ion-item>
+            <ion-label>Bottom</ion-label>
+            <ion-radio [checked]="drawerState===states.Bottom" (click)="drawerState = states.Bottom"></ion-radio>
+          </ion-item>
+        </ion-list>
+        <ion-list>
+          <ion-item>
+            <ion-label>Bounce</ion-label>
+            <ion-checkbox [(ngModel)]="shouldBounce"></ion-checkbox>
+          </ion-item>
+          <ion-item>
+            <ion-label>Docked height</ion-label>
+            <ion-input type="number" [(ngModel)]="dockedHeight" value="150"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Top Distance</ion-label>
+            <ion-input type="number" [(ngModel)]="distanceTop" value="56"></ion-input>
+          </ion-item>
+          <ion-item-divider>
+            <ion-label>Bottom Sheet Content</ion-label>
+          </ion-item-divider>
+          <ion-item>
+            <ion-label>Rounded</ion-label>
+            <ion-checkbox [(ngModel)]="rounded"></ion-checkbox>
+          </ion-item>
+          <ion-item>
+            <ion-label>Handle</ion-label>
+            <ion-checkbox [(ngModel)]="handle"></ion-checkbox>
+          </ion-item>
+          <ion-item>
+            <ion-label>Float</ion-label>
+            <ion-checkbox [(ngModel)]="float"></ion-checkbox>
+          </ion-item>
+        </ion-list>
       </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>
 
-<fiv-bottom-sheet 
-#fbs *fivIf="['mobile']" 
-[(state)]="drawerState" 
-[dockedHeight]="dockedHeight"
-[shouldBounce]="shouldBounce" 
-[distanceTop]="distanceTop">
+<fiv-bottom-sheet #fbs *fivIf="['mobile']" [(state)]="drawerState" [dockedHeight]="dockedHeight"
+  [shouldBounce]="shouldBounce" [distanceTop]="distanceTop">
 
   <fiv-bottom-sheet-content [float]="float" [rounded]="rounded" [handle]="handle">
     <ion-item-divider padding sticky>

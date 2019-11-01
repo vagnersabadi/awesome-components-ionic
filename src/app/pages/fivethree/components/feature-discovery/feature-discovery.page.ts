@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FivFeature } from '@fivethree/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-feature-discovery',
@@ -11,13 +12,16 @@ export class FeatureDiscoveryPage implements OnInit {
   fp = 20;
   co = 20;
 
-  constructor() { }
+  constructor(private router: Router,
+  ) { }
 
   ngOnInit() { }
 
   async log(s: string) { }
 
   navigateBack() {
+    this.router.navigateByUrl('fivethree');
+
   }
 
 }

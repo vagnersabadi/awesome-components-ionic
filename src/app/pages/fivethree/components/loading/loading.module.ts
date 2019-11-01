@@ -5,22 +5,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AnyPage } from './any.page';
-import {
-  FivSearchbarModule,
-  FivDialogModule,
-  FivFabModule,
-  FivIconModule,
-  FivCenterModule,
-  FivLoadingProgressBarModule,
-  FivLoadingSpinnerModule,
-  
-} from '@fivethree/core';
+import { LoadingPage } from './loading.page';
+import { FivCenterModule, FivLoadingSpinnerModule, FivLoadingProgressBarModule } from '@fivethree/core';
 
 const routes: Routes = [
   {
     path: '',
-    component: AnyPage
+    component: LoadingPage
   }
 ];
 
@@ -30,14 +21,10 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    FivSearchbarModule,
-    FivDialogModule,
-    FivFabModule,
-    FivIconModule,
-    FivCenterModule,
     FivLoadingProgressBarModule,
     FivLoadingSpinnerModule,
+    FivCenterModule
   ],
-  declarations: [AnyPage]
+  declarations: [LoadingPage]
 })
-export class AnyPageModule { }
+export class LoadingPageModule {}

@@ -1,5 +1,8 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>App-bar</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -34,17 +37,17 @@
 </ion-content>
 
 <ion-footer>
-    <ion-tabs #tabs>
-        <fiv-app-bar (fivFabClick)="presentToast('Floating action button clicked')" slot="bottom"
-          [titleLayout]="titleLayout" #bar [position]="position" [fabVisible]="fabVisible" [icon]="icon">
-          <fiv-app-bar-tab left tab="#" href="#" icon="md-home" name="App Bar">
-          </fiv-app-bar-tab>
-          <fiv-app-bar-tab left tab="#" href="#" icon="md-resize" name="Expandable" [badge]="1">
-          </fiv-app-bar-tab>
-          <fiv-app-bar-tab right tab="#" href="#" icon="md-eye" name="Password">
-          </fiv-app-bar-tab>
-          <fiv-app-bar-tab right tab="#" href="#" icon="md-more" name="Buttons">
-          </fiv-app-bar-tab>
-        </fiv-app-bar>
-      </ion-tabs>
+  <ion-tabs #tabs>
+    <fiv-app-bar (fivFabClick)="presentToast('Floating action button clicked')" slot="bottom"
+      [titleLayout]="titleLayout" #bar [position]="position" [fabVisible]="fabVisible" [icon]="icon">
+      <fiv-app-bar-tab left tab="#" href="#" icon="md-home" name="App Bar">
+      </fiv-app-bar-tab>
+      <fiv-app-bar-tab left tab="#" href="#" icon="md-resize" name="Expandable" [badge]="1">
+      </fiv-app-bar-tab>
+      <fiv-app-bar-tab right tab="#" href="#" icon="md-eye" name="Password">
+      </fiv-app-bar-tab>
+      <fiv-app-bar-tab right tab="#" href="#" icon="md-more" name="Buttons">
+      </fiv-app-bar-tab>
+    </fiv-app-bar>
+  </ion-tabs>
 </ion-footer>

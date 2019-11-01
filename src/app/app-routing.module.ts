@@ -19,7 +19,6 @@ const routes: Routes = [
   { path: 'bottom-sheet', loadChildren: './pages/fivethree/components/bottom-sheet/bottom-sheet.module#BottomSheetPageModule' },
   { path: 'gallery', loadChildren: './pages/fivethree/components/gallery/gallery.module#GalleryPageModule' },
   { path: 'stepper', loadChildren: './pages/fivethree/components/stepper/stepper.module#StepperPageModule' },
-  { path: 'any', loadChildren: './pages/fivethree/components/any/any.module#AnyPageModule' },
   { path: 'feature-discovery', loadChildren: './pages/fivethree/components/feature-discovery/feature-discovery.module#FeatureDiscoveryPageModule' },
   { path: 'dialog', loadChildren: './pages/fivethree/components/dialog/dialog.module#DialogPageModule' },
   { path: 'editable-label', loadChildren: './pages/fivethree/components/editable-label/editable-label.module#EditableLabelPageModule' },
@@ -27,6 +26,13 @@ const routes: Routes = [
   { path: 'searchbar', loadChildren: './pages/fivethree/components/searchbar/searchbar.module#SearchbarPageModule' },
   { path: 'fab', loadChildren: './pages/fivethree/components/fab/fab.module#FabPageModule' },
   { path: 'icon', loadChildren: './pages/fivethree/components/icon/icon.module#IconPageModule' },
+  { path: 'loading', loadChildren: './pages/fivethree/components/loading/loading.module#LoadingPageModule' },
+  { path: 'password', loadChildren: './pages/fivethree/components/password/password.module#PasswordPageModule' },
+  { path: 'refresh', loadChildren: './pages/fivethree/components/refresh/refresh.module#RefreshPageModule' },
+  { path: 'viewport', loadChildren: './pages/fivethree/components/viewport/viewport.module#ViewportPageModule' },
+  { path: 'buttons', loadChildren: './pages/fivethree/components/buttons/buttons.module#ButtonsPageModule' },
+
+
 
 ];
 

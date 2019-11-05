@@ -25,6 +25,11 @@ export class AppComponent {
       title: 'Yannbf',
       url: '/yannbf',
       icon: 'home'
+    },
+    {
+      title: 'Angular Material',
+      url: '/home',
+      icon: 'home'
     }
 
   ];

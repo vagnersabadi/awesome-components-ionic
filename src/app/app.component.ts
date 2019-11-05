@@ -20,7 +20,13 @@ export class AppComponent {
       title: 'Fivethree',
       url: '/fivethree',
       icon: 'home'
+    },
+    {
+      title: 'Yannbf',
+      url: '/yannbf',
+      icon: 'home'
     }
+
   ];
 
   constructor(

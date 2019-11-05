@@ -10,6 +10,19 @@
 </ion-header>
 
 <ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle><a href="https://fivethree.io/">https://fivethree.io/</a></ion-card-subtitle>
+      <ion-card-title> Fivethree </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label class="ion-text-wrap">
+        Component library for ionic 4, inspired by Material Design
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+
   <ion-list>
     <ion-item [routerLink]="['/app-bar']" detail>
       <ion-label>
@@ -21,19 +34,9 @@
         Bottom Sheet
       </ion-label>
     </ion-item>
-    <ion-item [routerLink]="['/gallery']" detail>
+    <ion-item [routerLink]="['/buttons']" detail>
       <ion-label>
-        Gallery
-      </ion-label>
-    </ion-item>
-    <ion-item [routerLink]="['/stepper']" detail>
-      <ion-label>
-        Stepper
-      </ion-label>
-    </ion-item>
-    <ion-item [routerLink]="['/feature-discovery']" detail>
-      <ion-label>
-        Feature Discovery
+        Buttons
       </ion-label>
     </ion-item>
     <ion-item [routerLink]="['/dialog']" detail>
@@ -51,14 +54,20 @@
         Expandable
       </ion-label>
     </ion-item>
-    <ion-item [routerLink]="['/searchbar']" detail>
-      <ion-label>
-        Searchbar
-      </ion-label>
-    </ion-item>
     <ion-item [routerLink]="['/fab']" detail>
       <ion-label>
         Fab
+      </ion-label>
+    </ion-item>
+    <ion-item [routerLink]="['/feature-discovery']" detail>
+      <ion-label>
+        Feature Discovery
+      </ion-label>
+      <ion-badge slot="end" color="danger"> BUG </ion-badge>
+    </ion-item>
+    <ion-item [routerLink]="['/gallery']" detail>
+      <ion-label>
+        Gallery
       </ion-label>
     </ion-item>
     <ion-item [routerLink]="['/icon']" detail>
@@ -81,16 +90,22 @@
         Refresh
       </ion-label>
     </ion-item>
+    <ion-item [routerLink]="['/searchbar']" detail>
+      <ion-label>
+        Searchbar
+      </ion-label>
+    </ion-item>
+    <ion-item [routerLink]="['/stepper']" detail>
+      <ion-label>
+        Stepper
+      </ion-label>
+    </ion-item>
     <ion-item [routerLink]="['/viewport']" detail>
       <ion-label>
         Viewport
       </ion-label>
     </ion-item>
-    <ion-item [routerLink]="['/buttons']" detail>
-      <ion-label>
-        Buttons
-      </ion-label>
-    </ion-item>
+
 
   </ion-list>
 </ion-content>

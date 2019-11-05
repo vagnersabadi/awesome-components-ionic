@@ -47,6 +47,10 @@ const routes: Routes = [
   { path: 'timeline', loadChildren: './pages/yannbf/components/timeline/timeline.module#TimelinePageModule' },
   { path: 'slides', loadChildren: './pages/yannbf/components/slides/slides.module#SlidesPageModule' },
   { path: 'theming', loadChildren: './pages/yannbf/components/theming/theming.module#ThemingPageModule' },
+  // angular-material
+  { path: 'angular-material', loadChildren: './pages/angular-material/angular-material.module#AngularMaterialPageModule' },
+  { path: 'expansion', loadChildren: './pages/angular-material/components/expansion/expansion.module#ExpansionPageModule' },
+
 
 
 
@@ -59,4 +63,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

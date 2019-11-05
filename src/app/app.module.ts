@@ -17,7 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    BrowserAnimationsModule // <-- Fivethree Ionic 4 UI Library
+    BrowserAnimationsModule 
   ],
   providers: [
     StatusBar,

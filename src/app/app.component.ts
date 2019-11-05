@@ -28,7 +28,7 @@ export class AppComponent {
     },
     {
       title: 'Angular Material',
-      url: '/home',
+      url: '/angular-material',
       icon: 'home'
     }
 

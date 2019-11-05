@@ -68,8 +68,9 @@ const routes: Routes = [
   { path: 'tinder-cards', loadChildren: './pages/yannbf/components/miscellaneous/tinder-cards/tinder-cards.module#TinderCardsPageModule' },
   { path: 'item-ribbon', loadChildren: './pages/yannbf/components/miscellaneous/item-ribbon/item-ribbon.module#ItemRibbonPageModule' },
   { path: 'autosizing-text-area', loadChildren: './pages/yannbf/components/miscellaneous/autosizing-text-area/autosizing-text-area.module#AutosizingTextAreaPageModule' },
-
-
+  // angular-material
+  { path: 'angular-material', loadChildren: './pages/angular-material/angular-material.module#AngularMaterialPageModule' },
+  { path: 'expansion', loadChildren: './pages/angular-material/components/expansion/expansion.module#ExpansionPageModule' },
 
 
 

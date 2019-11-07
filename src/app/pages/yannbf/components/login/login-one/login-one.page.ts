@@ -19,19 +19,23 @@ export class LoginOnePage implements OnInit {
   ngOnInit() { }
 
 
-  login() {
-    const loading = this.loadingCtrl.create({
-      duration: 500
+  async login() {
+    const loading = await this.loadingCtrl.create({
+      duration: 500,
+      message: 'Please wait...',
     });
+    await loading.present();
 
-    loading.then(() => {
-      const alert = this.alertCtrl.create({
-        header: 'Logged in!',
-        subHeader: 'Thanks for logging in.',
-        buttons: ['Dismiss']
+    await loading.onDidDismiss()
+      .then(async () => {
+        const alert = await this.alertCtrl.create({
+          header: 'Logged in!',
+          subHeader: 'Thanks for logging in.',
+          buttons: ['Dismiss']
+        });
+
+        await alert.present();
       });
-
-    });
   }
 
   goToSignup() { }

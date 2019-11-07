@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Login One</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" fullscreen>
+  <div class="ion-padding">
+    <ion-row>
+      <ion-col>
+        <img class="logo" src="assets/yannbf/img/logo/logo-mailchimp.png" />
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list inset class="no-border">
+          <ion-item>
+            <ion-label position="fixed">Username</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="fixed">Password</ion-label>
+            <ion-input type="password"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button class="login-button" (click)="login()">Login</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div (click)="goToSignup()">
+          <span>Or create a new account.</span>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

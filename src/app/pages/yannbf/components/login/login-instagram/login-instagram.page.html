@@ -1,9 +1,35 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>login-instagram</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Login Instagram</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding ">
 
+  <img class="logo" src="assets/yannbf/img/logo/logo-instagram.png" />
+  <div class="ion-padding">
+    <ion-item>
+      <ion-input type="text" placeholder="Username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" placeholder="Password"></ion-input>
+    </ion-item>
+    <ion-button expand="block" fill="outline" (click)="login()" color="light" class="login-button">Login</ion-button>
+  </div>
+  <div class="strike">
+    <span>OR</span>
+  </div>
+  <ion-button expand="block" fill="clear" (click)="login()" color="light" class="login-button">
+    <ion-icon name="logo-facebook"></ion-icon> Login with Facebook
+  </ion-button>
 </ion-content>
+<ion-footer>
+  <ion-toolbar class="footer">
+    <div (click)="goToSignup()">
+      <span>Don't have an account? <strong>Sign up here</strong>.</span>
+    </div>
+  </ion-toolbar>
+</ion-footer>

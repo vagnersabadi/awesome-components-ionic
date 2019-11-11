@@ -21,7 +21,7 @@ export class LoginPage implements OnInit {
     },
     {
       title: 'Login with video background',
-      page: '/login-background-videos'
+      page: '/login-background-video'
     },
     {
       title: 'Login with slider background',

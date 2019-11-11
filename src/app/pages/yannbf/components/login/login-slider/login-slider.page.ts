@@ -14,6 +14,12 @@ export class LoginSliderPage implements OnInit {
   public loginForm: any;
   public backgroundImage = 'assets/img/background/background-6.jpg';
 
+  slideOpts = {
+    slidesPerView: 1,
+    initialSlide: 0,
+    speed: 400
+  };
+
   constructor(
     public loadingCtrl: LoadingController,
     public alertCtrl: AlertController,

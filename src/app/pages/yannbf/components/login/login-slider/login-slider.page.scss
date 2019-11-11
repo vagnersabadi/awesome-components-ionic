@@ -1,5 +1,10 @@
 $base-color: rgb(24, 72, 90);
+
+ion-toolbar {
+  --background: transparent !important;
+}
 // Fullscreen centered image background
+
 ion-content {
   --background: none;
   background-image: url("/assets/yannbf/img/background/background-6.jpg");
@@ -7,6 +12,9 @@ ion-content {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+
+
 // Slider
 .content-slider {
   ion-slides,
@@ -112,4 +120,8 @@ ion-item {
   right: 0;
   margin: 0 auto;
   width: 200px;
+}
+
+.group-btn{
+  margin-top: 50%;
 }

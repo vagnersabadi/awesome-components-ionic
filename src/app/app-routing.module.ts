@@ -46,11 +46,12 @@ const routes: Routes = [
   { path: 'side-menu', loadChildren: './pages/yannbf/components/side-menu/side-menu.module#SideMenuPageModule' },
   { path: 'timeline', loadChildren: './pages/yannbf/components/timeline/timeline.module#TimelinePageModule' },
   { path: 'slides', loadChildren: './pages/yannbf/components/slides/slides.module#SlidesPageModule' },
-  { path: 'theming', loadChildren: './pages/yannbf/components/theming/theming.module#ThemingPageModule' },  { path: 'login-one', loadChildren: './pages/yannbf/components/login/login-one/login-one.module#LoginOnePageModule' },
+  { path: 'theming', loadChildren: './pages/yannbf/components/theming/theming.module#ThemingPageModule' },
+  { path: 'login-one', loadChildren: './pages/yannbf/components/login/login-one/login-one.module#LoginOnePageModule' },
   { path: 'login-instagram', loadChildren: './pages/yannbf/components/login/login-instagram/login-instagram.module#LoginInstagramPageModule' },
   { path: 'login-slider', loadChildren: './pages/yannbf/components/login/login-slider/login-slider.module#LoginSliderPageModule' },
-  { path: 'login-background-videos', loadChildren: './pages/yannbf/components/login/login-background-videos/login-background-videos.module#LoginBackgroundVideosPageModule' },
   { path: 'login-background-slider', loadChildren: './pages/yannbf/components/login/login-background-slider/login-background-slider.module#LoginBackgroundSliderPageModule' },
+  { path: 'login-background-video', loadChildren: './pages/yannbf/components/login/login-background-video/login-background-video.module#LoginBackgroundVideoPageModule' },
 
 
 

@@ -3,11 +3,10 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-title>Login Slider</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen>
 
   <ion-slides #slider class="content-slider" direction="vertical">
     <ion-slide>
@@ -46,25 +45,9 @@
           </ion-col>
         </ion-row>
 
-        <!-- <ion-row size="12">
-         
-            <ion-slides>
-              <ion-slide>
-                <h3> Really nice stuff </h3>
-              </ion-slide>
-              <ion-slide>
-                <img src="assets/yannbf/img/misc/emoji.png" />
-              </ion-slide>
-              <ion-slide>
-                <h3> Unique experiences given to you for just a couple bucks </h3>
-              </ion-slide>
-              <ion-slide>
-                <h3> Share what you love </h3>
-              </ion-slide>
-            </ion-slides>
-        </ion-row> -->
+      
 
-        <ion-row>
+        <ion-row class="group-btn">
           <ion-col size="6">
             <ion-button shape="round" color="light" class="login-button" (click)="goToLogin()">SIGN IN</ion-button>
           </ion-col>

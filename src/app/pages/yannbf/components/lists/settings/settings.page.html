@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Settings List</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      Settings
+    </ion-list-header>
+    <ion-item>
+      <ion-icon name="airplane" slot="start" color="danger"></ion-icon>
+      <ion-label>Airplane Mode</ion-label>
+      <ion-toggle color="secondary" slot="end" ></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="wifi" slot="start" color="primary"></ion-icon>
+      <ion-label>Wi-Fi</ion-label>
+      <ion-note slot="end">The Interwebz</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="bluetooth" slot="start" color="primary"></ion-icon>
+      <ion-label>Bluetooth</ion-label>
+      <ion-note slot="end">Off</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="call" slot="start" color="secondary"></ion-icon>
+      <ion-label>Cellular</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="link" slot="start" color="secondary"></ion-icon>
+      <ion-label>Personal Hotspot</ion-label>
+      <ion-note slot="end">Off</ion-note>
+    </ion-item>
+  </ion-list>
+  <ion-list radio-group>
+    <ion-list-header>
+      Silence Phone
+    </ion-list-header>
+    <ion-item>
+      <ion-label color="dark">Always</ion-label>
+      <ion-radio value="always" checked></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label color="dark">Only while phone is locked</ion-label>
+      <ion-radio value="locked"></ion-radio>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header>
+      Apps Installed
+    </ion-list-header>
+    <ion-item>
+      <ion-icon name="logo-ionic" slot="start" color="primary"></ion-icon>
+      <ion-label>Ionic View</ion-label>
+      <ion-button fill="outline" slot="end">Uninstall</ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="brush" slot="start" color="primary"></ion-icon>
+      <ion-label>Ionic Creator</ion-label>
+      <ion-button fill="outline" slot="end">Uninstall</ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="logo-octocat" slot="start" color="dark"></ion-icon>
+      <ion-label>Hubstruck</ion-label>
+      <ion-button fill="outline" slot="end">Uninstall</ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="paw" slot="start" color="danger"></ion-icon>
+      <ion-label>Barkpark</ion-label>
+      <ion-button fill="outline" slot="end">Uninstall</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

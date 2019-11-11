@@ -51,7 +51,10 @@ const routes: Routes = [
   { path: 'login-instagram', loadChildren: './pages/yannbf/components/login/login-instagram/login-instagram.module#LoginInstagramPageModule' },
   { path: 'login-slider', loadChildren: './pages/yannbf/components/login/login-slider/login-slider.module#LoginSliderPageModule' },
   { path: 'login-background-slider', loadChildren: './pages/yannbf/components/login/login-background-slider/login-background-slider.module#LoginBackgroundSliderPageModule' },
-  { path: 'login-background-video', loadChildren: './pages/yannbf/components/login/login-background-video/login-background-video.module#LoginBackgroundVideoPageModule' },
+  { path: 'login-background-video', loadChildren: './pages/yannbf/components/login/login-background-video/login-background-video.module#LoginBackgroundVideoPageModule' },  { path: 'settings', loadChildren: './pages/yannbf/components/lists/settings/settings.module#SettingsPageModule' },
+  { path: 'sliding-item', loadChildren: './pages/yannbf/components/lists/sliding-item/sliding-item.module#SlidingItemPageModule' },
+  { path: 'delete-items', loadChildren: './pages/yannbf/components/lists/delete-items/delete-items.module#DeleteItemsPageModule' },
+
 
 
 

@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { AccordionListPage } from './accordion-list.page';
+import { AccordionListComponentModule } from 'src/app/components/yannbf/accordion-list/accordion-list.component.module';
 
 const routes: Routes = [
   {
@@ -19,7 +20,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    AccordionListComponentModule
   ],
   declarations: [AccordionListPage]
 })

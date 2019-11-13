@@ -5,13 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AccordionListPage } from './accordion-list.page';
-import { YannbfComponentsModule } from 'src/app/components/yannbf/yannbf.components.module';
+import { ExpandableHeaderPage } from './expandable-header.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: AccordionListPage
+    component: ExpandableHeaderPage
   }
 ];
 
@@ -20,9 +19,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes),
-    YannbfComponentsModule
+    RouterModule.forChild(routes)
   ],
-  declarations: [AccordionListPage]
+  declarations: [ExpandableHeaderPage]
 })
-export class AccordionListPageModule {}
+export class ExpandableHeaderPageModule {}

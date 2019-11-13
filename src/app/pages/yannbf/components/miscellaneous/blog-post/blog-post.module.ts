@@ -5,13 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AccordionListPage } from './accordion-list.page';
-import { YannbfComponentsModule } from 'src/app/components/yannbf/yannbf.components.module';
+import { BlogPostPage } from './blog-post.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: AccordionListPage
+    component: BlogPostPage
   }
 ];
 
@@ -20,9 +19,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes),
-    YannbfComponentsModule
+    RouterModule.forChild(routes)
   ],
-  declarations: [AccordionListPage]
+  declarations: [BlogPostPage]
 })
-export class AccordionListPageModule {}
+export class BlogPostPageModule {}

@@ -11,6 +11,7 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule)
   },
+  // fivethree
   {
     path: 'fivethree',
     loadChildren: () => import('./pages/fivethree/fivethree.module').then(m => m.FivethreePageModule)
@@ -31,6 +32,46 @@ const routes: Routes = [
   { path: 'refresh', loadChildren: './pages/fivethree/components/refresh/refresh.module#RefreshPageModule' },
   { path: 'viewport', loadChildren: './pages/fivethree/components/viewport/viewport.module#ViewportPageModule' },
   { path: 'buttons', loadChildren: './pages/fivethree/components/buttons/buttons.module#ButtonsPageModule' },
+  // yannbf
+  { path: 'yannbf', loadChildren: './pages/yannbf/yannbf.module#YannbfPageModule' },
+  { path: 'accordion-list', loadChildren: './pages/yannbf/components/accordion-list/accordion-list.module#AccordionListPageModule' },
+  { path: 'login', loadChildren: './pages/yannbf/components/login/login.module#LoginPageModule' },
+  { path: 'lists', loadChildren: './pages/yannbf/components/lists/lists.module#ListsPageModule' },
+  { path: 'miscellaneous', loadChildren: './pages/yannbf/components/miscellaneous/miscellaneous.module#MiscellaneousPageModule' },
+  { path: 'modal-with-navigation', loadChildren: './pages/yannbf/components/modal-with-navigation/modal-with-navigation.module#ModalWithNavigationPageModule' },
+  { path: 'popup-modal', loadChildren: './pages/yannbf/components/popup-modal/popup-modal.module#PopupModalPageModule' },
+  { path: 'popup-fab', loadChildren: './pages/yannbf/components/popup-fab/popup-fab.module#PopupFabPageModule' },
+  { path: 'popup-menu', loadChildren: './pages/yannbf/components/popup-menu/popup-menu.module#PopupMenuPageModule' },
+  { path: 'profile', loadChildren: './pages/yannbf/components/profile/profile.module#ProfilePageModule' },
+  { path: 'side-menu', loadChildren: './pages/yannbf/components/side-menu/side-menu.module#SideMenuPageModule' },
+  { path: 'timeline', loadChildren: './pages/yannbf/components/timeline/timeline.module#TimelinePageModule' },
+  { path: 'slides', loadChildren: './pages/yannbf/components/slides/slides.module#SlidesPageModule' },
+  { path: 'theming', loadChildren: './pages/yannbf/components/theming/theming.module#ThemingPageModule' },
+  { path: 'login-one', loadChildren: './pages/yannbf/components/login/login-one/login-one.module#LoginOnePageModule' },
+  { path: 'login-instagram', loadChildren: './pages/yannbf/components/login/login-instagram/login-instagram.module#LoginInstagramPageModule' },
+  { path: 'login-slider', loadChildren: './pages/yannbf/components/login/login-slider/login-slider.module#LoginSliderPageModule' },
+  { path: 'login-background-slider', loadChildren: './pages/yannbf/components/login/login-background-slider/login-background-slider.module#LoginBackgroundSliderPageModule' },
+  { path: 'login-background-video', loadChildren: './pages/yannbf/components/login/login-background-video/login-background-video.module#LoginBackgroundVideoPageModule' },
+  { path: 'settings', loadChildren: './pages/yannbf/components/lists/settings/settings.module#SettingsPageModule' },
+  { path: 'sliding-item', loadChildren: './pages/yannbf/components/lists/sliding-item/sliding-item.module#SlidingItemPageModule' },
+  { path: 'delete-items', loadChildren: './pages/yannbf/components/lists/delete-items/delete-items.module#DeleteItemsPageModule' },
+  { path: 'blog-post', loadChildren: './pages/yannbf/components/miscellaneous/blog-post/blog-post.module#BlogPostPageModule' },
+  { path: 'charts', loadChildren: './pages/yannbf/components/miscellaneous/charts/charts.module#ChartsPageModule' },
+  { path: 'chat', loadChildren: './pages/yannbf/components/miscellaneous/chat/chat.module#ChatPageModule' },
+  { path: 'concert-card', loadChildren: './pages/yannbf/components/miscellaneous/concert-card/concert-card.module#ConcertCardPageModule' },
+  { path: 'countdown', loadChildren: './pages/yannbf/components/miscellaneous/countdown/countdown.module#CountdownPageModule' },
+  { path: 'expandable-header', loadChildren: './pages/yannbf/components/miscellaneous/expandable-header/expandable-header.module#ExpandableHeaderPageModule' },
+  { path: 'flash-card', loadChildren: './pages/yannbf/components/miscellaneous/flash-card/flash-card.module#FlashCardPageModule' },
+  { path: 'pinterest-masonry-cards', loadChildren: './pages/yannbf/components/miscellaneous/pinterest-masonry-cards/pinterest-masonry-cards.module#PinterestMasonryCardsPageModule' },
+  { path: 'real-estate-listing', loadChildren: './pages/yannbf/components/miscellaneous/real-estate-listing/real-estate-listing.module#RealEstateListingPageModule' },
+  { path: 'testimonials', loadChildren: './pages/yannbf/components/miscellaneous/testimonials/testimonials.module#TestimonialsPageModule' },
+  { path: 'tinder-cards', loadChildren: './pages/yannbf/components/miscellaneous/tinder-cards/tinder-cards.module#TinderCardsPageModule' },
+  { path: 'item-ribbon', loadChildren: './pages/yannbf/components/miscellaneous/item-ribbon/item-ribbon.module#ItemRibbonPageModule' },
+  { path: 'autosizing-text-area', loadChildren: './pages/yannbf/components/miscellaneous/autosizing-text-area/autosizing-text-area.module#AutosizingTextAreaPageModule' },
+
+
+
+
 
 
 
@@ -42,4 +83,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

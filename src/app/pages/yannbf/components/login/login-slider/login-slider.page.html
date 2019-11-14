@@ -1,0 +1,120 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+  <ion-slides #slider class="content-slider" direction="vertical">
+    <ion-slide>
+      <!-- <div class="ion-padding">
+        <img class="logo" src="assets/yannbf/img/logo/logo-pr.png" />
+         <ion-slides class="text-slider" >
+          <ion-slide>
+            <h3> Really nice stuff </h3>
+          </ion-slide>
+          <ion-slide>
+            <img src="assets/yannbf/img/misc/emoji.png" />
+          </ion-slide>
+          <ion-slide>
+            <h3> Unique experiences given to you for just a couple bucks </h3>
+          </ion-slide>
+          <ion-slide>
+            <h3> Share what you love </h3>
+          </ion-slide>
+        </ion-slides> 
+        <ion-grid >
+          <ion-row>
+            <ion-col size="6">
+              <ion-button shape="round" color="light" class="login-button" (click)="goToLogin()">SIGN IN</ion-button>
+            </ion-col>
+            <ion-col size="6">
+              <ion-button shape="round" color="light" class="login-button" (click)="goToSignup()">SIGN UP</ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div> -->
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+            <img class="logo" src="assets/yannbf/img/logo/logo-pr.png" />
+          </ion-col>
+        </ion-row>
+
+      
+
+        <ion-row class="group-btn">
+          <ion-col size="6">
+            <ion-button shape="round" color="light" class="login-button" (click)="goToLogin()">SIGN IN</ion-button>
+          </ion-col>
+          <ion-col size="6">
+            <ion-button shape="round" color="light" class="login-button" (click)="goToSignup()">SIGN UP</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-slide>
+    <ion-slide class="zoom swiper-no-swiping">
+      <ion-slides #innerSlider class="content-slider">
+        <ion-slide class="swiper-no-swiping">
+          <div style="padding: 20% 32px 32px 32px">
+            <ion-item>
+              <ion-label position="floating">Username</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Password</ion-label>
+              <ion-input type="password"></ion-input>
+            </ion-item>
+            <ion-button expand="block" shape="round" (click)="login()" color="light" class="login-button">Login
+            </ion-button>
+            <ion-button fill="clear" (click)="slideNext()" color="light" class="forgot-button">FORGOT PASSWORD?
+            </ion-button>
+          </div>
+          <ion-button fill="clear" (click)="goToSignup()" class="slide-button position-bottom">GO TO SIGNUP<ion-icon
+              name="arrow-down"></ion-icon>
+          </ion-button>
+        </ion-slide>
+        <ion-slide class="swiper-no-swiping">
+          <div style="padding: 20% 32px 32px 32px">
+            <ion-item>
+              <ion-label floating>E-mail</ion-label>
+              <ion-input type="email"></ion-input>
+            </ion-item>
+            <ion-button expand="block" shape="round" (click)="resetPassword()" color="light" class="login-button">RESET
+              PASSWORD</ion-button>
+            <ion-button fill="clear" (click)="slidePrevious()" color="light" class="goback-button">
+              <ion-icon name="arrow-back"></ion-icon> GO BACK
+            </ion-button>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </ion-slide>
+    <ion-slide class="zoom swiper-no-swiping">
+      <ion-button fill="clear" (click)="goToLogin()" class="slide-button">
+        GO TO LOGIN
+        <ion-icon name="arrow-up"></ion-icon>
+      </ion-button>
+      <div style="padding: 32px">
+        <ion-item>
+          <ion-label floating>Username</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Password</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+        <ion-item class="margin-bottom">
+          <ion-label floating>Confirm Password</ion-label>
+          <ion-input type="password"></ion-input>
+        </ion-item>
+        <ion-button expand="block" shape="round" (click)="signup()" color="light" class="login-button">SIGN UP
+        </ion-button>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

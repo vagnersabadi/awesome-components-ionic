@@ -57,11 +57,11 @@ export class MiscellaneousPage implements OnInit {
     },
     {
       title: 'Tinder Cards',
-      page: 'tinder-cards'
+      page: '/tinder-cards'
     },
     {
       title: 'Item Ribbon',
-      page: 'item-ribbon'
+      page: '/item-ribbon'
     },
   ];
 

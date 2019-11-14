@@ -66,7 +66,8 @@ const routes: Routes = [
   { path: 'real-estate-listing', loadChildren: './pages/yannbf/components/miscellaneous/real-estate-listing/real-estate-listing.module#RealEstateListingPageModule' },
   { path: 'testimonials', loadChildren: './pages/yannbf/components/miscellaneous/testimonials/testimonials.module#TestimonialsPageModule' },
   { path: 'tinder-cards', loadChildren: './pages/yannbf/components/miscellaneous/tinder-cards/tinder-cards.module#TinderCardsPageModule' },
-  { path: 'item-ribbon', loadChildren: './pages/yannbf/components/miscellaneous/item-ribbon/item-ribbon.module#ItemRibbonPageModule' },  { path: 'autosizing-text-area', loadChildren: './pages/yannbf/components/miscellaneous/autosizing-text-area/autosizing-text-area.module#AutosizingTextAreaPageModule' },
+  { path: 'item-ribbon', loadChildren: './pages/yannbf/components/miscellaneous/item-ribbon/item-ribbon.module#ItemRibbonPageModule' },
+  { path: 'autosizing-text-area', loadChildren: './pages/yannbf/components/miscellaneous/autosizing-text-area/autosizing-text-area.module#AutosizingTextAreaPageModule' },
 
 
 
@@ -82,4 +83,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

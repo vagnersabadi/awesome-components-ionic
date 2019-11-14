@@ -24,8 +24,8 @@ export class MiscellaneousPage implements OnInit {
       page: '/chat'
     },
     {
-      title: 'Convert Card',
-      page: '/convert-card'
+      title: 'Concert Card',
+      page: '/concert-card'
     },
     {
       title: 'Countdown',

@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Accordion List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <p>Accordion list example - Best places to visit:</p>
+
+  <app-component-accordion-list 
+  *ngFor="let item of items; let index = index" 
+  [title]="item.name" 
+  [textColor]="'#FFF'"
+  [hasMargin]="false" 
+  [headerColor]="'#F53D3D'" 
+  [expanded]="index === 0"
+  [contentColor]="'#F9F9F9'"
+  >
+
+    <img [src]="item.imageUrl">
+    <p class="ion-text-justify">{{item.description}}</p>
+
+  </app-component-accordion-list>
+</ion-content>

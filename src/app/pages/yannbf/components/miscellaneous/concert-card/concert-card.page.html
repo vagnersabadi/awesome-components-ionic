@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Concert Card</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides class="ion-margin-bottom ion-margin-top">
+    <ion-slides autoplay="2000">
+      <ion-slide *ngFor="let concert of concerts">
+        <ion-card>
+          <div class="the-header">
+            <div class="header-text">
+              <h1>{{concert.artistName}}</h1>
+              <p>{{concert.name}}</p>
+            </div>
+            <div class="background" [style.background]="concert.color">
+              <img [src]="concert.artistImage" />
+            </div>
+            <button ion-fab>
+              <ion-icon name="musical-notes"></ion-icon>
+            </button>
+          </div>
+          <div class="ion-padding the-content">
+            <h2>POWER PASS</h2>
+            <div class="ion-padding">
+              <small>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                totam
+                rem aperiam,
+                eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+              </small>
+            </div>
+            <h2>SOMETHING ELSE</h2>
+            <div class="ion-padding">
+              <small>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque. dicta sunt
+                explicabo.
+              </small>
+            </div>
+            <ion-button expand="block" [style.background]="concert.color">Purchase</ion-button>
+          </div>
+        </ion-card>
+      </ion-slide>
+    </ion-slides>
+  </ion-slides>
+</ion-content>

@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Yannbf
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle><a
+          href="https://github.com/yannbf/ionic3-components">https://github.com/yannbf/ionic3-components</a>
+      </ion-card-subtitle>
+      <ion-card-title> Yannbf Components </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label class="ion-text-wrap">
+        This repository was made in order to help people learn and speed up their development process. You will find
+        many many different components, pages, pipes, services, of which can be very useful to you. Note though that
+        these are all experimental!
+
+        The content here is a mix of tutorials found online, a few adapted codepen stuff, a few dribbble inspired
+        layouts, and also other stuff made by the amazing contributors of this project.
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-item [routerLink]="['/accordion-list']" detail>
+      <ion-label>
+        Accordion List
+      </ion-label>
+    </ion-item>
+
+    <ion-item [routerLink]="['/lists']" detail>
+      <ion-label>
+        Lists
+      </ion-label>
+    </ion-item>
+
+    <ion-item [routerLink]="['/login']" detail>
+      <ion-label>
+        Login
+      </ion-label>
+    </ion-item>
+
+    <ion-item [routerLink]="['/timeline']" detail>
+      <ion-badge slot="end" color="danger"> BUG </ion-badge>
+      <ion-label>
+        Timeline
+      </ion-label>
+    </ion-item>
+
+    <ion-item [routerLink]="['/miscellaneous']" detail>
+      <ion-label>
+        Miscellaneous
+      </ion-label>
+    </ion-item>
+
+
+
+
+  </ion-list>
+</ion-content>

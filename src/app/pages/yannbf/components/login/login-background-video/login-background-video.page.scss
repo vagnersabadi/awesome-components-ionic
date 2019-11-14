@@ -1,0 +1,61 @@
+ion-toolbar {
+  --background: transparent !important;
+}
+ion-content {
+  --background: none;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+video#bgvid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+}
+.logo {
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.buttons {
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 10px;
+  width: 90%;
+  transition: all 1s ease;
+
+  ion-button {
+    --color: white;
+  }
+
+  .login-button {
+    width: 100%;
+    height: 3rem;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: none !important;
+  }
+  .facebook {
+    --background: rgba(59, 89, 152, 0.7) !important;
+    &.activated {
+      --background: rgba(59, 89, 152, 1) !important;
+    }
+  }
+  .google {
+    --background: rgba(219, 68, 55, 0.7) !important;
+    &.activated {
+      --background: rgba(219, 68, 55, 1) !important;
+    }
+  }
+}

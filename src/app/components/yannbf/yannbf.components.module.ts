@@ -1,3 +1,4 @@
+import { FlashCardComponent } from './flash-card/flash-card.component';
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { TimelineComponent, TimelineItemComponent, TimelineTimeComponent } from './timeline-item/timeline-item.component';
@@ -8,7 +9,8 @@ export const components = [
   TimelineComponent,
   TimelineItemComponent,
   TimelineTimeComponent,
-  AccordionListComponent
+  AccordionListComponent,
+  FlashCardComponent
 
 
 ];

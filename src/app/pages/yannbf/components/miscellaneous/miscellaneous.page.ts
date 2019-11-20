@@ -43,10 +43,6 @@ export class MiscellaneousPage implements OnInit {
       title: 'Pinterest Masonry Cards',
       page: '/pinterest-masonry-cards'
     },
-        {
-      title: 'Pinterest Masonry Cards',
-      page: '/pinterest-masonry-cards'
-    },
     {
       title: 'Real Estate Listing',
       page: '/real-estate-listing'

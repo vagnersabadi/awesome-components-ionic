@@ -26,6 +26,10 @@ And add `SwingModule` to your NgModule:
   providers: []
 })```
 
+<<<<<<< develop
 3 - follow this tutorial: https://github.com/fluster/ionic-swing
 
 4- bug ´Error: Global and doMove´ -> https://github.com/fluster/ionic-swing/issues/9#issuecomment-462636668
+=======
+3 - follow this tutorial: https://github.com/fluster/ionic-swing
+>>>>>>> Expandble

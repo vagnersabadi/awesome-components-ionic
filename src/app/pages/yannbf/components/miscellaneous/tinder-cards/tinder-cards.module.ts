@@ -6,7 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { TinderCardsPage } from './tinder-cards.page';
-
+import { HttpClientModule } from '@angular/common/http';
+import { SwingModule } from 'angular2-swing';
 const routes: Routes = [
   {
     path: '',
@@ -19,7 +20,9 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    HttpClientModule,
+    SwingModule
   ],
   declarations: [TinderCardsPage]
 })

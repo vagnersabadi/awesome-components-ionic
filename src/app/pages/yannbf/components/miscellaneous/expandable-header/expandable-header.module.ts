@@ -1,3 +1,4 @@
+import { ExpandableComponentDirective } from './../../../../../components/yannbf/expandable/expandable.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -19,8 +20,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
   ],
-  declarations: [ExpandableHeaderPage]
+  declarations: [ExpandableHeaderPage, ExpandableComponentDirective] //<-- import directive
 })
-export class ExpandableHeaderPageModule {}
+export class ExpandableHeaderPageModule { }

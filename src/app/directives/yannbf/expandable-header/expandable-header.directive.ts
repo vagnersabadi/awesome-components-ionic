@@ -1,12 +1,12 @@
-import { Directive, Input, OnInit, ElementRef, Renderer2, NgZone } from '@angular/core';
-import { Platform, DomController } from '@ionic/angular';
+import { Directive, Input, ElementRef, Renderer2 } from '@angular/core';
+import { DomController } from '@ionic/angular';
 
 @Directive({
-  selector: '[myScrollVanish]'
+  selector: '[appExpandableHeader]'
 })
-export class ExpandableComponentDirective implements OnInit {
+export class ExpandableHeaderDirective {
 
-  @Input('myScrollVanish') scrollArea;
+  @Input('appExpandableHeader') scrollArea;
 
   private hidden: boolean = false;
   private triggerDistance: number = 0;
@@ -45,7 +45,7 @@ export class ExpandableComponentDirective implements OnInit {
       this.renderer.setStyle(this.element.nativeElement, 'height', '0px');
       this.renderer.setStyle(this.element.nativeElement, 'opacity', '0');
       this.renderer.setStyle(this.element.nativeElement, 'padding', '0');
-      
+
     });
     this.hidden = true;
   }
@@ -59,4 +59,5 @@ export class ExpandableComponentDirective implements OnInit {
     });
     this.hidden = false;
   }
+
 }

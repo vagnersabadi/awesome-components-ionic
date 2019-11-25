@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { ModalWithNavigationPage } from './modal-with-navigation.page';
+import { MoveDocumentPageModule } from './move-document/move-document.module';
+import { ModalNavPageModule } from './modal-nav/modal-nav.module';
 
 const routes: Routes = [
   {
@@ -19,7 +21,9 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    ModalNavPageModule,
+    MoveDocumentPageModule
   ],
   declarations: [ModalWithNavigationPage]
 })

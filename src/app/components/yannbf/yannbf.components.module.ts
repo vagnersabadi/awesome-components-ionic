@@ -15,14 +15,13 @@ export const components = [
   AccordionListComponent,
   FlashCardComponent,
   TimerProgressComponent,
-  TimerComponent
-
+  TimerComponent,
 
 ];
 
 @NgModule({
   declarations: [components],
-  imports: [IonicModule,CommonModule],
+  imports: [IonicModule, CommonModule],
   exports: [components]
 })
 export class YannbfComponentsModule { }

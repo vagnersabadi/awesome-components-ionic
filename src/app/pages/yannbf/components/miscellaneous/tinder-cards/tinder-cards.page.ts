@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewChildren, QueryList } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-tinder-cards',
@@ -10,6 +12,8 @@ export class TinderCardsPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
+
 
 }

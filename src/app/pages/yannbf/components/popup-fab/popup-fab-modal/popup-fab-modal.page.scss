@@ -1,0 +1,51 @@
+ion-slide {
+  animation: fade-in 0.8s ease-in-out;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+ion-content {
+  --background: #00ccb2;
+}
+
+ion-icon,
+div {
+  color: white;
+  font-weight: bold;
+}
+
+ion-slides {
+  height: 100%;
+
+  .slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-direction: column;
+    img {
+      max-width: 150px;
+    }
+    &.slide-1 {
+      background: dodgerblue;
+      color: white;
+    }
+    &.slide-2 {
+      background: #f28131;
+      color: white;
+    }
+    &.slide-3 {
+      background: #9f5afd;
+      color: white;
+    }
+  }
+}

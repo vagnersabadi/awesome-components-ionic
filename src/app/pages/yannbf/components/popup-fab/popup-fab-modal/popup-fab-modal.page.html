@@ -1,8 +1,8 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-button slot="icon-only" (click)="dismiss()">
-        Fechar
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()" fill="clear">
+        <ion-icon name="close" slot="icon-only" color="primary" ></ion-icon>
       </ion-button>
     </ion-buttons>
 
@@ -11,7 +11,9 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-    <ion-slides pager="true" [options]="slideOpts">
+  
+  
+  <ion-slides pager="true" [options]="slideOpts">
       <ion-slide>
         <div class="slide slide-1">
           <div>

@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { PopupFabPage } from './popup-fab.page';
+import { PopupFabModalPageModule } from './popup-fab-modal/popup-fab-modal.module';
 
 const routes: Routes = [
   {
@@ -19,7 +20,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    PopupFabModalPageModule
   ],
   declarations: [PopupFabPage]
 })

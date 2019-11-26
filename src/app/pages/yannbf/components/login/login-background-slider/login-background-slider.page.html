@@ -6,7 +6,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen>
+<ion-content [fullscreen]="true">
   <ion-slides pager="false" [options]="slideOpts" >
     <ion-slide class="slide-background swiper-no-swiping" *ngFor="let background of backgrounds"
       [ngStyle]="{'background-image': 'url(' + background +')'}">

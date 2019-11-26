@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen elestic-header>
+<ion-content [fullscreen]="true" elestic-header>
   <section class="housing-image" [ngStyle]="{ 'background-image': 'url(' + estateProperty.image + ')'}">
     <section class="ion-padding housing-banner">
       <span class="housing-title">{{estateProperty.name}}</span>

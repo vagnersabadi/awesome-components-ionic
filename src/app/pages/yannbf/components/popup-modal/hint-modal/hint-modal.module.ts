@@ -6,8 +6,6 @@ import { IonicModule } from '@ionic/angular';
 
 import { HintModalPage } from './hint-modal.page';
 
-
-
 @NgModule({
   imports: [
     CommonModule,
@@ -18,4 +16,4 @@ import { HintModalPage } from './hint-modal.page';
   entryComponents: [HintModalPage]
 
 })
-export class HintModalPageModule {}
+export class HintModalPageModule { }

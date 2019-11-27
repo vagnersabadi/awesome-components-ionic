@@ -26,6 +26,10 @@ export class WalkthroughModalPage implements OnInit {
     },
   ];
 
+  slideOpts = {
+    loop: true,
+  };
+
   constructor(
     private modaCtrl: ModalController
 

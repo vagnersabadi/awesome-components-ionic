@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="modalCtrl.dismiss()" fill="clear">
+        <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Popup Menu Two</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="ion-padding">
+  <div class="popup-menu">
+    <div class="popup-menu-toggle" (click)="togglePopupMenu()" [ngClass]="{'out': openMenu}">
+      <ion-icon name="apps"></ion-icon>
+    </div>
+    <div class="popup-menu-overlay" [ngClass]="{'in': openMenu}" (click)="togglePopupMenu()"></div>
+    <div class="popup-menu-panel" [ngClass]="{'in': openMenu}">
+      <div class="popup-menu-item" (click)="goToHome()">
+        <ion-icon name="home"></ion-icon>
+        <ion-badge>25</ion-badge>
+        <span>HOME</span>
+      </div>
+      <div class="popup-menu-item" (click)="goToCups()">
+        <ion-icon name="trophy"></ion-icon>
+        <span>CUPS</span>
+      </div>
+      <div class="popup-menu-item" (click)="goToLeaderboard()">
+        <ion-icon name="podium"></ion-icon>
+        <ion-badge>10</ion-badge>
+        <span>LEADERBOARD</span>
+      </div>
+      <div class="popup-menu-item" (click)="goToHelp()">
+        <ion-icon name="help"></ion-icon>
+        <span>HELP</span>
+      </div>
+      <div class="popup-menu-item" (click)="goToAccount()">
+        <ion-icon name="person"></ion-icon>
+        <ion-badge>5</ion-badge>
+        <span>ACCOUNT</span>
+      </div>
+      <div class="popup-menu-item" (click)="goToShop()">
+        <ion-icon name="cart"></ion-icon>
+        <ion-badge>25</ion-badge>
+        <span>SHOP</span>
+      </div>
+    </div>
+  </div>
+</ion-content>

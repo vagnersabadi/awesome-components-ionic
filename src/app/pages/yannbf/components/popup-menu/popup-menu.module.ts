@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { PopupMenuPage } from './popup-menu.page';
+import { PopupMenuTwoPageModule } from './popup-menu-two/popup-menu-two.module';
+import { PopupMenuOnePageModule } from './popup-menu-one/popup-menu-one.module';
 
 const routes: Routes = [
   {
@@ -19,7 +21,9 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    PopupMenuOnePageModule,
+    PopupMenuTwoPageModule
   ],
   declarations: [PopupMenuPage]
 })

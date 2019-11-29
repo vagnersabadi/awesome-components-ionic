@@ -9,7 +9,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "gh-pages": "ng build --base-href 'https://vagnersabadi.github.io/awesome-components-ionic/' && npx ngh --dir=www"
   },
   "private": true,
   "dependencies": {
@@ -20,7 +21,9 @@
     "@angular/forms": "~8.1.2",
     "@angular/platform-browser": "~8.1.2",
     "@angular/platform-browser-dynamic": "~8.1.2",
+    "@angular/pwa": "^0.803.20",
     "@angular/router": "~8.1.2",
+    "@angular/service-worker": "~8.1.2",
     "@fivethree/core": "^0.9.6",
     "@ionic-native/core": "^5.0.0",
     "@ionic-native/splash-screen": "^5.0.0",

@@ -44,7 +44,6 @@ const routes: Routes = [
   { path: 'popup-menu', loadChildren: './pages/yannbf/components/popup-menu/popup-menu.module#PopupMenuPageModule' },
   { path: 'profile', loadChildren: './pages/yannbf/components/profile/profile.module#ProfilePageModule' },
   { path: 'side-menu', loadChildren: './pages/yannbf/components/side-menu/side-menu.module#SideMenuPageModule' },
-  { path: 'timeline', loadChildren: './pages/yannbf/components/timeline/timeline.module#TimelinePageModule' },
   { path: 'slides', loadChildren: './pages/yannbf/components/slides/slides.module#SlidesPageModule' },
   { path: 'theming', loadChildren: './pages/yannbf/components/theming/theming.module#ThemingPageModule' },
   { path: 'login-one', loadChildren: './pages/yannbf/components/login/login-one/login-one.module#LoginOnePageModule' },

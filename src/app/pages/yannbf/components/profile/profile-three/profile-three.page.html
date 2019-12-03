@@ -1,0 +1,65 @@
+<ion-content class="container transparent-header">
+  <div class="card-profile">
+    <div class="card-profile_visual"></div>
+    <div class="card-profile_user-infos">
+      <span class="infos_name">{{user.name}}</span>
+      <span class="infos_nick">{{user.twitter}}</span>
+      <a href="#"></a>
+    </div>
+    <div class="card-profile_user-stats">
+      <div class="stats-holder">
+        <div class="user-stats">
+          <strong>Tweets</strong>
+          <span>{{user.tweets}}</span>
+        </div>
+        <div class="user-stats">
+          <strong>Following</strong>
+          <span>{{user.following}}</span>
+        </div>
+        <div class="user-stats">
+          <strong>Followers</strong>
+          <span>{{user.followers}}</span>
+        </div>
+      </div>
+    </div>
+    <div id="posts">
+      <ion-card *ngFor="let post of posts">
+        <ion-item>
+          <ion-avatar slot="start">
+            <img [src]="user.profileImage">
+          </ion-avatar>
+          <ion-label>
+            <h2 class="sticky">{{user.name}}</h2>
+            <p>{{post.date}}</p>
+          </ion-label>
+        </ion-item>
+        <img [src]="post.postImageUrl" (click)="imageTapped(post)">
+        <ion-card-content>
+          <p>{{post.text}}</p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col>
+            <ion-button color="purple" fill="clear" size="small" (click)="like(post)">
+              <ion-icon name='thumbs-up' slot="start"></ion-icon>
+              {{post.likes}} Likes
+            </ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button color="purple" fill="clear" size="small" (click)="comment(post)">
+              <ion-icon name='text' slot="start"></ion-icon>
+              {{post.comments}} Comments
+            </ion-button>
+          </ion-col>
+          <ion-col align-self-center class="ion-text-center">
+            <ion-label> 
+                <p>
+                    {{post.timestamp}}
+                  </p>  
+            </ion-label>
+            
+          </ion-col>
+        </ion-row>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

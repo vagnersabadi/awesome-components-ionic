@@ -2,15 +2,69 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-button (click)="dismiss()" fill="clear">
-        <ion-icon name="arrow-back" slot="icon-only" color="primary"></ion-icon>
+        <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
       </ion-button>
     </ion-buttons>
-
-    <ion-title>Tip for you</ion-title>
+    <ion-title>User Settings</ion-title>
   </ion-toolbar>
 </ion-header>
-
-
 <ion-content>
-
+  <ion-list>
+    <ion-item lines="full">
+      <ion-avatar slot="start" (click)="updateProfileImage()">
+        <img [src]="user.imageUrl ? user.imageUrl : placeholderPicture">
+      </ion-avatar>
+      <ion-label>
+        <p class="username">{{user.name}}</p>
+        <p>Owner</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-list no-border>
+    <ion-list-header>
+      General
+    </ion-list-header>
+    <ion-item lines="inset">
+      <ion-icon name='settings' slot="start"></ion-icon>
+      <ion-label class="label">App Language</ion-label>
+      <ion-select [(ngModel)]="language">
+        <ion-select-option *ngFor="let language of languages" [value]="language">{{language}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-icon name='notifications' slot="start"></ion-icon>
+      <ion-label class="label"> Enable notifications </ion-label>
+      <ion-toggle [(ngModel)]="enableNotifications" (click)="toggleNotifications()" slot="end"></ion-toggle>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header>
+      Currency
+    </ion-list-header>
+    <ion-item lines="inset">
+      <ion-icon name='card' slot="start"></ion-icon>
+      <ion-label class="label">Payment Method</ion-label>
+      <ion-select [(ngModel)]="paymentMethod">
+        <ion-select-option *ngFor="let method of paymentMethods" [value]="method">{{method}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-icon name='logo-usd' slot="start"></ion-icon>
+      <ion-label class="label">Currency</ion-label>
+      <ion-select [(ngModel)]="currency">
+        <ion-select-option *ngFor="let currency of currencies" [value]="currency">{{currency}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-list-header>
+      Other
+    </ion-list-header>
+    <ion-item lines="none">
+      <ion-icon name='power' slot="start"></ion-icon>
+      <ion-button (click)="logOut()" slot="end">
+        Logout
+      </ion-button>
+    </ion-item>
+  </ion-list>
 </ion-content>

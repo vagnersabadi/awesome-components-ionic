@@ -1,3 +1,4 @@
+import { Camera } from '@ionic-native/camera/ngx';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -14,7 +15,8 @@ import { ProfileSettingsPage } from './profile-settings.page';
     IonicModule,
   ],
   declarations: [ProfileSettingsPage],
-  entryComponents: [ProfileSettingsPage]
+  entryComponents: [ProfileSettingsPage],
+  providers: [Camera] // <-- PLUGN FOR CAMERA
 
 })
-export class ProfileSettingsPageModule {}
+export class ProfileSettingsPageModule { }

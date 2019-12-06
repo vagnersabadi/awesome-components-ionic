@@ -1,9 +1,11 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>slide-nested</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Slide Nested</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
   <ion-slides pager>
     <ion-slide *ngFor="let slide of slides">

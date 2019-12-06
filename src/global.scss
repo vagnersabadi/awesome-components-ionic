@@ -30,3 +30,7 @@
   transition: opacity 0.25s ease-in-out;
   padding: 20vh 10vw;
 }
+
+.radius-modal{
+  --border-radius: 8% 8% 4% 4%  !important;
+}

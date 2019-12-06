@@ -1,0 +1,15 @@
+h2 {
+  color: white;
+}
+ion-slides,
+.swiper-container {
+  height: 100%;
+  width: 100%;
+}
+.swiper-slide {
+  background-size: cover !important;
+  background-position: center !important;
+}
+.swiper-pagination-bullet {
+  background-color: white;
+}

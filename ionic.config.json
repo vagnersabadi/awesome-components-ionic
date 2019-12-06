@@ -1,5 +1,7 @@
 {
   "name": "ionic-components",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

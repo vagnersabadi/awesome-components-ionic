@@ -7,7 +7,7 @@ import { ModalController } from '@ionic/angular';
   styleUrls: ['./hint-modal.page.scss'],
 })
 export class HintModalPage implements OnInit {
-  @Input() myParam: string;
+  myParam: string;
 
   constructor(
     private modaCtrl: ModalController

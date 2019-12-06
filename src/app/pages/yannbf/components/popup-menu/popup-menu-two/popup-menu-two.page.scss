@@ -1,0 +1,186 @@
+ion-badge {
+  right: calc(50% - 30px) !important;
+  top: -5px;
+  position: absolute;
+  right: 4%;
+  padding: 1px 6px;
+  height: auto;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.popup-menu-overlay {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  background-image: -webkit-linear-gradient(rgba(68, 68, 68, 0.5) 0%, rgba(68, 68, 68, 0.25) 100%);
+  background-image: linear-gradient(rgba(68, 68, 68, 0.5) 0%, rgba(68, 68, 68, 0.25) 100%);
+}
+.popup-menu-overlay.in {
+  opacity: 1;
+  visibility: visible;
+}
+.popup-menu-toggle {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  bottom: 10px;
+  left: 50%;
+  margin-left: -20px;
+  background-color: rgb(15, 157, 88);
+  border-radius: 50%;
+  z-index: 101;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+
+  ion-icon {
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+  }
+}
+.popup-menu-toggle:before {
+  position: absolute;
+  //   content: "\f10a";
+  font-family: "Ionicons";
+  width: 40px;
+  height: 40px;
+  top: 0px;
+  left: 0px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 28px;
+  color: white;
+  opacity: 1;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  -webkit-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.popup-menu-toggle.out {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+.popup-menu-toggle.out:before {
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+}
+.popup-menu-panel {
+  position: fixed;
+  width: 300px;
+  height: 180px;
+  border-radius: 5%;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -150px;
+  padding: 0px 5px;
+  background-color: rgb(15, 157, 88);
+  z-index: 102;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.popup-menu-panel .popup-menu-item {
+  margin: auto;
+  -webkit-box-flex: 1 0 30%;
+  -webkit-flex: 1 0 30%;
+  -moz-box-flex: 1 0 30%;
+  -moz-flex: 1 0 30%;
+  -ms-flex: 1 0 30%;
+  flex: 1 0 30%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+
+  ion-icon {
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+    margin-left: 29px;
+  }
+}
+.popup-menu-panel .popup-menu-item i {
+  margin: auto 0px 5px 0px;
+  padding: 0px;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+}
+.popup-menu-panel .popup-menu-item span {
+  padding: 0px;
+  margin: 0px 0px auto 0px;
+  color: white;
+  text-align: center;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 11px;
+}
+.popup-menu-panel .popup-menu-item:active i {
+  color: rgb(221, 65, 53);
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+}
+.popup-menu-panel .popup-menu-item:active span {
+  color: rgb(221, 65, 53);
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+}
+.popup-menu-panel.in {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+.popup-menu-panel.in .popup-menu-item {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}

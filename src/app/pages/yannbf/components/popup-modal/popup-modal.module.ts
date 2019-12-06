@@ -1,3 +1,4 @@
+import { HintModalPageModule } from './hint-modal/hint-modal.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -8,7 +9,6 @@ import { IonicModule } from '@ionic/angular';
 import { PopupModalPage } from './popup-modal.page';
 import { WalkthroughModalPageModule } from './walkthrough-modal/walkthrough-modal.module';
 import { SignupModalPageModule } from './signup-modal/signup-modal.module';
-import { HintModalPageModule } from './hint-modal/hint-modal.module';
 
 const routes: Routes = [
   {
@@ -24,8 +24,8 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes),
     WalkthroughModalPageModule,
-    // SignupModalPageModule,
-    // HintModalPageModule
+    SignupModalPageModule,
+    HintModalPageModule
   ],
   declarations: [PopupModalPage]
 })

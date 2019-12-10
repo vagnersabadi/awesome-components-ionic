@@ -9,7 +9,7 @@ import { MenuController } from '@ionic/angular';
 export class SideMenuPage implements OnInit {
 
   MENU = {
-    DEFAULT: 'first',
+    DEFAULT: 'menu-first',
     MATERIAL: 'menu-material',
     AVATAR: 'menu-avatar',
     RIGHT: 'menu-right',
@@ -20,10 +20,6 @@ export class SideMenuPage implements OnInit {
 
   // Only enables right side menu for this page. Testing purposes.
   ngOnInit() {
-    this.menuCtrl.enable(true, 'menu-right');
-  }
-
-  ionViewWillLeave() {
     this.menuCtrl.enable(false, 'menu-right');
   }
 
@@ -37,7 +33,7 @@ export class SideMenuPage implements OnInit {
     this.menuCtrl.open(menu);
   }
 
-  changeMenuRight(){
+  changeMenuRight() {
     this.menuCtrl.enable(true, 'menu-right');
     this.menuCtrl.open('menu-right');
   }

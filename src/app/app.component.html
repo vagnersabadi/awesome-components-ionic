@@ -1,7 +1,7 @@
-<ion-app>
+<!-- <ion-app> -->
+
   <ion-split-pane contentId="my-content">
-    <!-- MENU COMPONENTS -->
-    <ion-menu contentId="my-content" menuId="first" side="start" id="menu-components">
+    <ion-menu contentId="my-content" menuId="menu-first" side="start">
       <ion-header>
         <ion-toolbar>
           <ion-title>Menu</ion-title>
@@ -21,8 +21,7 @@
       </ion-content>
     </ion-menu>
 
-    <!-- MENU RIGHT -->
-    <ion-menu contentId="my-content" menuId="menu-right" side="end" id="menu-right">
+    <!-- <ion-menu contentId="my-content" side="end" id="menu-right">
       <ion-header>
         <ion-toolbar>
           <ion-title>Menu Right</ion-title>
@@ -42,17 +41,16 @@
       </ion-content>
     </ion-menu>
 
-    <!-- MENU AVATAR -->
     <ion-menu contentId="my-content" menuId="menu-avatar" id="menu-avatar">
       <ion-content>
         <div #header>
           <ion-grid>
-            <ion-row align-items-center>
-              <ion-col class="col-icon" align-items-start>
+            <ion-row class="ion-align-items-center">
+              <ion-col class="col-icon" class="ion-align-items-start">
                 <img src="assets/yannbf/icon/icon-email.svg" />
                 <ion-badge class="icon-badge" color="danger">11</ion-badge>
               </ion-col>
-              <ion-col align-items-center>
+              <ion-col class="ion-align-items-center">
                 <ion-avatar>
                   <img class="user-avatar" src='assets/yannbf/img/avatar/girl-avatar.png' />
                 </ion-avatar>
@@ -79,7 +77,6 @@
       </ion-content>
     </ion-menu>
 
-    <!-- MENU MATERIAL -->
     <ion-menu contentId="my-content" menuId="menu-material" id="menu-material">
       <ion-content>
         <div class="menu-header">
@@ -100,8 +97,8 @@
           </ion-menu-toggle>
         </ion-list>
       </ion-content>
-    </ion-menu>
+    </ion-menu> -->
 
-    <ion-router-outlet id="my-content" main></ion-router-outlet>
+    <ion-router-outlet id="my-content" ></ion-router-outlet>
   </ion-split-pane>
-</ion-app>
+<!-- </ion-app> -->

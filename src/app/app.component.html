@@ -1,6 +1,7 @@
 <ion-app>
   <ion-split-pane contentId="my-content">
-    <ion-menu contentId="my-content">
+    <!-- MENU COMPONENTS -->
+    <ion-menu contentId="my-content" menuId="first" side="start" id="menu-components">
       <ion-header>
         <ion-toolbar>
           <ion-title>Menu</ion-title>
@@ -19,6 +20,88 @@
         </ion-list>
       </ion-content>
     </ion-menu>
-    <ion-router-outlet id="my-content"></ion-router-outlet>
+
+    <!-- MENU RIGHT -->
+    <ion-menu contentId="my-content" menuId="menu-right" side="end" id="menu-right">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Menu Right</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <!-- MENU AVATAR -->
+    <ion-menu contentId="my-content" menuId="menu-avatar" id="menu-avatar">
+      <ion-content>
+        <div #header>
+          <ion-grid>
+            <ion-row align-items-center>
+              <ion-col class="col-icon" align-items-start>
+                <img src="assets/yannbf/icon/icon-email.svg" />
+                <ion-badge class="icon-badge" color="danger">11</ion-badge>
+              </ion-col>
+              <ion-col align-items-center>
+                <ion-avatar>
+                  <img class="user-avatar" src='assets/yannbf/img/avatar/girl-avatar.png' />
+                </ion-avatar>
+              </ion-col>
+              <ion-col class="col-icon" style="text-align: center;">
+                <img src="assets/yannbf/icon/icon-calendar.svg" />
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+          <ion-row style="justify-content: center;">
+            <h3>Paula Bolliger</h3>
+          </ion-row>
+        </div>
+        <ion-list>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <!-- MENU MATERIAL -->
+    <ion-menu contentId="my-content" menuId="menu-material" id="menu-material">
+      <ion-content>
+        <div class="menu-header">
+          <ion-avatar>
+            <img class="user-avatar round" [src]="'assets/yannbf/img/avatar/girl-avatar.png'" />
+          </ion-avatar>
+          <p class="name">Paula Bolliger</p>
+          <p class="e-mail">pbolliger@email.com</p>
+        </div>
+        <ion-list>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <ion-router-outlet id="my-content" main></ion-router-outlet>
   </ion-split-pane>
 </ion-app>

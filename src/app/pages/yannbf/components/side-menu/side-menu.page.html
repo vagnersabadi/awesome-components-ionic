@@ -1,9 +1,23 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>side-menu</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Side Menu</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button slot="icon-only" (click)="changeMenuRight()">
+        <ion-icon name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+  <p>The home icon on the right is a small width sidemenu.</p>
+  <ion-button expand="block" color="secondary" (click)="changeMenu(MENU.DEFAULT)">Default sidemenu</ion-button>
+  <ion-button expand="block" color="danger" (click)="changeMenu(MENU.AVATAR)">Sidemenu with avatar</ion-button>
+  <ion-button expand="block" (click)="changeMenu(MENU.MATERIAL)">Material Design</ion-button>
+  <ion-button expand="block" (click)="changeMenu(MENU.RIGHT)">Menu Right</ion-button>
 
 </ion-content>

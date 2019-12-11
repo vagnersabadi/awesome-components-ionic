@@ -79,6 +79,17 @@ const routes: Routes = [
   { path: 'mat-input', loadChildren: './pages/angular-material/components/mat-input/mat-input.module#MatInputPageModule' },  { path: 'mat-grid', loadChildren: './pages/angular-material/components/mat-grid/mat-grid.module#MatGridPageModule' },
 
 
+  // angular-material
+  { path: 'angular-material', loadChildren: './pages/angular-material/angular-material.module#AngularMaterialPageModule' },
+  { path: 'expansion', loadChildren: './pages/angular-material/components/expansion/expansion.module#ExpansionPageModule' },
+  { path: 'mat-card', loadChildren: './pages/angular-material/components/mat-card/mat-card.module#MatCardPageModule' },
+  { path: 'mat-stepper', loadChildren: './pages/angular-material/components/mat-stepper/mat-stepper.module#MatStepperPageModule' },
+  { path: 'mat-sort-header', loadChildren: './pages/angular-material/components/mat-sort-header/mat-sort-header.module#MatSortHeaderPageModule' },
+  { path: 'mat-table', loadChildren: './pages/angular-material/components/mat-table/mat-table.module#MatTablePageModule' },
+  { path: 'mat-drag-drop', loadChildren: './pages/angular-material/components/mat-drag-drop/mat-drag-drop.module#MatDragDropPageModule' },
+  { path: 'mat-input', loadChildren: './pages/angular-material/components/mat-input/mat-input.module#MatInputPageModule' },  { path: 'mat-grid', loadChildren: './pages/angular-material/components/mat-grid/mat-grid.module#MatGridPageModule' },
+
+
 
 
 

@@ -25,7 +25,6 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     HttpClientModule,
     SwingModule
-    Expandble
   ],
   declarations: [TinderCardsPage]
 })

@@ -5,13 +5,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ExpansionPage } from './expansion.page';
-import { MatExpansionModule } from '@angular/material/expansion';
+import { MatGridPage } from './mat-grid.page';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 const routes: Routes = [
   {
     path: '',
-    component: ExpansionPage
+    component: MatGridPage
   }
 ];
 
@@ -21,8 +21,8 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    MatExpansionModule,
+    MatGridListModule
   ],
-  declarations: [ExpansionPage]
+  declarations: [MatGridPage]
 })
-export class ExpansionPageModule { }
+export class MatGridPageModule { }

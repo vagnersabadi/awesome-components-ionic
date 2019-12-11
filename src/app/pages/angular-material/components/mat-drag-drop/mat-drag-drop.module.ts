@@ -5,13 +5,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ExpansionPage } from './expansion.page';
-import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDragDropPage } from './mat-drag-drop.page';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 const routes: Routes = [
   {
     path: '',
-    component: ExpansionPage
+    component: MatDragDropPage
   }
 ];
 
@@ -21,8 +21,8 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    MatExpansionModule,
+    DragDropModule
   ],
-  declarations: [ExpansionPage]
+  declarations: [MatDragDropPage]
 })
-export class ExpansionPageModule { }
+export class MatDragDropPageModule { }

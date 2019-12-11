@@ -5,13 +5,14 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ExpansionPage } from './expansion.page';
-import { MatExpansionModule } from '@angular/material/expansion';
+import { MatTablePage } from './mat-table.page';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 const routes: Routes = [
   {
     path: '',
-    component: ExpansionPage
+    component: MatTablePage
   }
 ];
 
@@ -21,8 +22,10 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    MatExpansionModule,
+    MatTableModule,
+    MatPaginatorModule
+
   ],
-  declarations: [ExpansionPage]
+  declarations: [MatTablePage]
 })
-export class ExpansionPageModule { }
+export class MatTablePageModule { }

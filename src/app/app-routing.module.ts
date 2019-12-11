@@ -44,6 +44,7 @@ const routes: Routes = [
   { path: 'popup-menu', loadChildren: './pages/yannbf/components/popup-menu/popup-menu.module#PopupMenuPageModule' },
   { path: 'profile', loadChildren: './pages/yannbf/components/profile/profile.module#ProfilePageModule' },
   { path: 'side-menu', loadChildren: './pages/yannbf/components/side-menu/side-menu.module#SideMenuPageModule' },
+  { path: 'timeline', loadChildren: './pages/yannbf/components/timeline/timeline.module#TimelinePageModule' },
   { path: 'slides', loadChildren: './pages/yannbf/components/slides/slides.module#SlidesPageModule' },
   { path: 'theming', loadChildren: './pages/yannbf/components/theming/theming.module#ThemingPageModule' },
   { path: 'login-one', loadChildren: './pages/yannbf/components/login/login-one/login-one.module#LoginOnePageModule' },
@@ -67,6 +68,69 @@ const routes: Routes = [
   { path: 'tinder-cards', loadChildren: './pages/yannbf/components/miscellaneous/tinder-cards/tinder-cards.module#TinderCardsPageModule' },
   { path: 'item-ribbon', loadChildren: './pages/yannbf/components/miscellaneous/item-ribbon/item-ribbon.module#ItemRibbonPageModule' },
   { path: 'autosizing-text-area', loadChildren: './pages/yannbf/components/miscellaneous/autosizing-text-area/autosizing-text-area.module#AutosizingTextAreaPageModule' },
+  { path: 'angular-material', loadChildren: './pages/angular-material/angular-material.module#AngularMaterialPageModule' },
+  { path: 'expansion', loadChildren: './pages/angular-material/components/expansion/expansion.module#ExpansionPageModule' },
+  { path: 'mat-card', loadChildren: './pages/angular-material/components/mat-card/mat-card.module#MatCardPageModule' },
+  { path: 'mat-stepper', loadChildren: './pages/angular-material/components/mat-stepper/mat-stepper.module#MatStepperPageModule' },
+  { path: 'mat-sort-header', loadChildren: './pages/angular-material/components/mat-sort-header/mat-sort-header.module#MatSortHeaderPageModule' },
+  { path: 'mat-table', loadChildren: './pages/angular-material/components/mat-table/mat-table.module#MatTablePageModule' },
+  { path: 'mat-drag-drop', loadChildren: './pages/angular-material/components/mat-drag-drop/mat-drag-drop.module#MatDragDropPageModule' },
+  { path: 'mat-input', loadChildren: './pages/angular-material/components/mat-input/mat-input.module#MatInputPageModule' },
+  { path: 'mat-grid', loadChildren: './pages/angular-material/components/mat-grid/mat-grid.module#MatGridPageModule' },
+
+
+  {
+    path: 'slide-color-changing', loadChildren: () =>
+      import('./pages/yannbf/components/slides/slide-color-changing/slide-color-changing.module')
+        .then(m => m.SlideColorChangingPageModule)
+  },
+  {
+    path: 'slide-custom-pagination', loadChildren: () =>
+      import('./pages/yannbf/components/slides/slide-custom-pagination/slide-custom-pagination.module')
+        .then(m => m.SlideCustomPaginationPageModule)
+  },
+  {
+    path: 'slide-nested', loadChildren: () =>
+      import('./pages/yannbf/components/slides/slide-nested/slide-nested.module')
+        .then(m => m.SlideNestedPageModule)
+  },
+  {
+    path: 'slide-free-mode', loadChildren: () =>
+      import('./pages/yannbf/components/slides/slide-free-mode/slide-free-mode.module')
+        .then(m => m.SlideFreeModePageModule)
+  },
+
+  {
+    path: 'slide-photo-gallery', loadChildren: () =>
+      import('./pages/yannbf/components/slides/slide-photo-gallery/slide-photo-gallery.module')
+        .then(m => m.SlidePhotoGalleryPageModule)
+  },
+
+  {
+    path: 'slide-rtl', loadChildren: () =>
+      import('./pages/yannbf/components/slides/slide-rtl/slide-rtl.module')
+        .then(m => m.SlideRtlPageModule)
+  },
+  {
+    path: 'slide-transitions', loadChildren: () =>
+      import('./pages/yannbf/components/slides/slide-transitions/slide-transitions.module')
+        .then(m => m.SlideTransitionsPageModule)
+  },
+  {
+    path: 'slide-walkthrough', loadChildren: () =>
+      import('./pages/yannbf/components/slides/slide-walkthrough/slide-walkthrough.module')
+        .then(m => m.SlideWalkthroughPageModule)
+  },
+  {
+    path: 'slide-list', loadChildren: () =>
+      import('./pages/yannbf/components/slides/slide-list/slide-list.module')
+        .then(m => m.SlideListPageModule)
+  },
+  {
+    path: 'slide-with-arrows', loadChildren: () =>
+      import('./pages/yannbf/components/slides/slide-with-arrows/slide-with-arrows.module')
+        .then(m => m.SlideWithArrowsPageModule)
+  },
 
 
 

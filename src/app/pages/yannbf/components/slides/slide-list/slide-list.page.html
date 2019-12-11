@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Slide List</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list class="ion-no-margin" *ngFor="let item of items">
+    <ion-slides [pager]="true" [options]="slideOptsProgressbar">
+      <ion-slide *ngFor="let slide of item.slides" class="text-center slider-item"
+        [ngStyle]="{'background-image': 'url(' + slide.imageUrl +')'}">
+        <div class="slide-text">
+          <h2>{{slide.title}}</h2>
+          <p>{{slide.songs}} songs</p>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </ion-list>
+</ion-content>

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-// import { HintModalPage } from './hint-modal/hint-modal.page';
 import { WalkthroughModalPage } from './walkthrough-modal/walkthrough-modal.page';
-// import { SignupModalPage } from './signup-modal/signup-modal.page';
+import { SignupModalPage } from './signup-modal/signup-modal.page';
+import { HintModalPage } from './hint-modal/hint-modal.page';
 
 @Component({
   selector: 'app-popup-modal',
@@ -20,24 +20,21 @@ export class PopupModalPage implements OnInit {
   }
 
   openHintModal() {
-    // this.openModal(HintModalPage);
+    this.openModal(HintModalPage, ['inset-modal']);
   }
 
   openWalkthroughModal() {
-    this.openModal(WalkthroughModalPage);
+    this.openModal(WalkthroughModalPage, ['inset-modal', 'radius-modal']);
   }
 
   openSignupModal() {
-    // this.openModal(SignupModalPage);
+    this.openModal(SignupModalPage, ['inset-modal']);
   }
 
-  async openModal(pageName) {
-    // this.modalCtrl.create(pageName, null, { cssClass: 'inset-modal' })
-    // .present();
-
+  async openModal(pageName, css: string[]) {
     const modal = await this.modalCtrl.create({
       component: pageName,
-      cssClass: 'inset-modal'
+      cssClass: css // Global.scss
     });
     await modal.present();
   }

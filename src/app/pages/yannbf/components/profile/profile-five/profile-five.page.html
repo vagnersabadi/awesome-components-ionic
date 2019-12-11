@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismiss()" fill="clear">
+        <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Profile five</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content parallax-header no-bounce>
+  <div class="header-image"></div>
+  <div class="main-content ion-text-wrap ion-text-center">
+    <div class="circular"></div>
+    <ion-label>
+    <h2>{{user.name}}</h2>
+    <p>{{user.occupation}} &bull; {{user.location}}</p>
+    <p class="profile-description">{{user.description}}</p>
+    </ion-label>
+
+    <hr>
+    <ion-list no-lines>
+      <ion-item>
+        <ion-icon name="mail" color="primary" slot="start"></ion-icon>
+        <ion-label>
+          <p>Email</p>
+          <h3>{{user.email}}</h3>
+        </ion-label>
+        <ion-button href="mailto:{{user.email}}" color="primary" slot="end" >Open App</ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="call" color="danger"></ion-icon>
+        <ion-label>
+          <p>Mobile</p>
+          <h3>{{user.phone}}</h3>
+        </ion-label>
+        <ion-button href="tel:{{user.phone}}" color="danger" slot="end" >Poke me</ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="logo-whatsapp" color="secondary"></ion-icon>
+        <ion-label>
+          <p>Whatsapp</p>
+          <h3> {{user.whatsapp}} </h3>
+        </ion-label>
+        <ion-button color="secondary" slot="end" 
+          href="whatsapp://send?text=Hi from ionic&phone=+{{user.phone}}&abid=+{{user.phone}}">Open App
+        </ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="pin" color="twitter"></ion-icon>
+        <ion-label>
+          <p>{{user.address}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-label>
+      <h2>Get in touch</h2>
+    </ion-label>
+    <hr>
+    <ion-button expand="block" color="secondary">
+      <ion-icon name='logo-linkedin' slot="start"></ion-icon>
+      LinkedIn
+    </ion-button>
+    <ion-button expand="block" color="primary">
+      <ion-icon name='logo-facebook' slot="start"></ion-icon>
+      Facebook
+    </ion-button>
+    <ion-button expand="block" color="danger">
+      <ion-icon name='logo-youtube' slot="start"></ion-icon>
+      Youtube
+    </ion-button>
+  </div>
+
+</ion-content>

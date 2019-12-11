@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Stepper</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <mat-vertical-stepper linear="false" #stepper>
+
+    <mat-step [stepControl]="userForm">
+      <form [formGroup]="userForm">
+        <ng-template matStepLabel>Personal Data</ng-template>
+
+      </form>
+    </mat-step>
+
+    <mat-step [stepControl]="userForm" label="Shipping Info">
+      <form [formGroup]="userForm">
+
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step label="Confirm Order">
+      By clicking finish you accept our Terms & Conditions.
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+
+  </mat-vertical-stepper>
+</ion-content>

@@ -1,19 +1,17 @@
-import { NgModule, ElementRef } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { TinderCardsPage } from './tinder-cards.page';
-import { HttpClientModule } from '@angular/common/http';
-
-import { SwingModule } from 'angular2-swing';
+import { MatDragDropPage } from './mat-drag-drop.page';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 const routes: Routes = [
   {
     path: '',
-    component: TinderCardsPage
+    component: MatDragDropPage
   }
 ];
 
@@ -23,9 +21,8 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    HttpClientModule,
-    SwingModule
+    DragDropModule
   ],
-  declarations: [TinderCardsPage]
+  declarations: [MatDragDropPage]
 })
-export class TinderCardsPageModule { }
+export class MatDragDropPageModule { }

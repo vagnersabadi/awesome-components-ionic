@@ -1,19 +1,18 @@
-import { NgModule, ElementRef } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { TinderCardsPage } from './tinder-cards.page';
-import { HttpClientModule } from '@angular/common/http';
-
-import { SwingModule } from 'angular2-swing';
+import { MatTablePage } from './mat-table.page';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 const routes: Routes = [
   {
     path: '',
-    component: TinderCardsPage
+    component: MatTablePage
   }
 ];
 
@@ -23,9 +22,10 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    HttpClientModule,
-    SwingModule
+    MatTableModule,
+    MatPaginatorModule
+
   ],
-  declarations: [TinderCardsPage]
+  declarations: [MatTablePage]
 })
-export class TinderCardsPageModule { }
+export class MatTablePageModule { }

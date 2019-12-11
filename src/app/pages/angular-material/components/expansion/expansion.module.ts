@@ -1,19 +1,17 @@
-import { NgModule, ElementRef } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { TinderCardsPage } from './tinder-cards.page';
-import { HttpClientModule } from '@angular/common/http';
-
-import { SwingModule } from 'angular2-swing';
+import { ExpansionPage } from './expansion.page';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 const routes: Routes = [
   {
     path: '',
-    component: TinderCardsPage
+    component: ExpansionPage
   }
 ];
 
@@ -23,9 +21,8 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    HttpClientModule,
-    SwingModule
+    MatExpansionModule,
   ],
-  declarations: [TinderCardsPage]
+  declarations: [ExpansionPage]
 })
-export class TinderCardsPageModule { }
+export class ExpansionPageModule { }

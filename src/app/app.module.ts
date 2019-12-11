@@ -23,8 +23,6 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     BrowserAnimationsModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }), // <-- Fivethree Ionic 4 UI Library
-    // SwingModule,
-    // IonicSwingModule
   ],
   providers: [
     StatusBar,

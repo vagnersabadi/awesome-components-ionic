@@ -1,19 +1,17 @@
-import { NgModule, ElementRef } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { TinderCardsPage } from './tinder-cards.page';
-import { HttpClientModule } from '@angular/common/http';
-
-import { SwingModule } from 'angular2-swing';
+import { MatCardPage } from './mat-card.page';
+import {MatCardModule} from '@angular/material/card';
 
 const routes: Routes = [
   {
     path: '',
-    component: TinderCardsPage
+    component: MatCardPage
   }
 ];
 
@@ -23,9 +21,8 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    HttpClientModule,
-    SwingModule
+    MatCardModule
   ],
-  declarations: [TinderCardsPage]
+  declarations: [MatCardPage]
 })
-export class TinderCardsPageModule { }
+export class MatCardPageModule {}

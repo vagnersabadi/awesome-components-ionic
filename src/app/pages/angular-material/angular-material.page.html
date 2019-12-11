@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Angular Material
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle><a href="https://material.angular.io/">https://material.angular.io/</a></ion-card-subtitle>
+      <ion-card-title> Angular Material </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label class="ion-text-wrap">
+        Material Design components for Angular
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-item [routerLink]="['/mat-card']" detail>
+      <ion-label>
+        Card
+      </ion-label>
+    </ion-item>
+
+    <ion-item [routerLink]="['/mat-grid']" detail>
+      <ion-label>
+        Grid
+      </ion-label>
+    </ion-item>
+
+    <ion-item [routerLink]="['/mat-input']" detail>
+      <ion-label>
+        Inputs
+      </ion-label>
+    </ion-item>
+
+    <ion-item [routerLink]="['/mat-drag-drop']" detail>
+      <ion-label>
+        Drag Drop
+      </ion-label>
+    </ion-item>
+
+    <ion-item [routerLink]="['/expansion']" detail>
+      <ion-label>
+        Expansion
+      </ion-label>
+    </ion-item>
+
+    <ion-item [routerLink]="['/mat-stepper']" detail>
+      <ion-label>
+        Stepper
+      </ion-label>
+    </ion-item>
+
+
+    <ion-item [routerLink]="['/mat-sort-header']" detail>
+      <ion-label>
+        Sort Header
+      </ion-label>
+    </ion-item>
+
+    <ion-item [routerLink]="['/mat-table']" detail>
+      <ion-label>
+        Table
+      </ion-label>
+    </ion-item>
+
+
+
+
+
+  </ion-list>
+</ion-content>

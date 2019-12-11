@@ -75,10 +75,10 @@ const routes: Routes = [
   { path: 'mat-sort-header', loadChildren: './pages/angular-material/components/mat-sort-header/mat-sort-header.module#MatSortHeaderPageModule' },
   { path: 'mat-table', loadChildren: './pages/angular-material/components/mat-table/mat-table.module#MatTablePageModule' },
   { path: 'mat-drag-drop', loadChildren: './pages/angular-material/components/mat-drag-drop/mat-drag-drop.module#MatDragDropPageModule' },
-  { path: 'mat-input', loadChildren: './pages/angular-material/components/mat-input/mat-input.module#MatInputPageModule' },  { path: 'mat-grid', loadChildren: './pages/angular-material/components/mat-grid/mat-grid.module#MatGridPageModule' },
+  { path: 'mat-input', loadChildren: './pages/angular-material/components/mat-input/mat-input.module#MatInputPageModule' },
+  { path: 'mat-grid', loadChildren: './pages/angular-material/components/mat-grid/mat-grid.module#MatGridPageModule' },
 
 
-  // angular-material
   {
     path: 'slide-color-changing', loadChildren: () =>
       import('./pages/yannbf/components/slides/slide-color-changing/slide-color-changing.module')
@@ -99,7 +99,6 @@ const routes: Routes = [
       import('./pages/yannbf/components/slides/slide-free-mode/slide-free-mode.module')
         .then(m => m.SlideFreeModePageModule)
   },
-  // angular-material
 
   {
     path: 'slide-photo-gallery', loadChildren: () =>

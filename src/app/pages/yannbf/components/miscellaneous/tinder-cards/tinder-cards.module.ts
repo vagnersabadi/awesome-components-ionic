@@ -7,15 +7,9 @@ import { IonicModule } from '@ionic/angular';
 
 import { TinderCardsPage } from './tinder-cards.page';
 import { HttpClientModule } from '@angular/common/http';
-<<<<<<< develop
-<<<<<<< develop
 
-=======
 import { SwingModule } from 'angular2-swing';
->>>>>>> Expandble
-=======
 
->>>>>>> Reset page tinder cards
 const routes: Routes = [
   {
     path: '',
@@ -29,16 +23,9 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-<<<<<<< develop
-<<<<<<< develop
-
-=======
     HttpClientModule,
     SwingModule
->>>>>>> Expandble
-=======
-
->>>>>>> Reset page tinder cards
+    Expandble
   ],
   declarations: [TinderCardsPage]
 })

@@ -68,7 +68,6 @@ const routes: Routes = [
   { path: 'tinder-cards', loadChildren: './pages/yannbf/components/miscellaneous/tinder-cards/tinder-cards.module#TinderCardsPageModule' },
   { path: 'item-ribbon', loadChildren: './pages/yannbf/components/miscellaneous/item-ribbon/item-ribbon.module#ItemRibbonPageModule' },
   { path: 'autosizing-text-area', loadChildren: './pages/yannbf/components/miscellaneous/autosizing-text-area/autosizing-text-area.module#AutosizingTextAreaPageModule' },
-  // angular-material
   { path: 'angular-material', loadChildren: './pages/angular-material/angular-material.module#AngularMaterialPageModule' },
   { path: 'expansion', loadChildren: './pages/angular-material/components/expansion/expansion.module#ExpansionPageModule' },
   { path: 'mat-card', loadChildren: './pages/angular-material/components/mat-card/mat-card.module#MatCardPageModule' },
@@ -80,21 +79,6 @@ const routes: Routes = [
 
 
   // angular-material
-  { path: 'angular-material', loadChildren: './pages/angular-material/angular-material.module#AngularMaterialPageModule' },
-  { path: 'expansion', loadChildren: './pages/angular-material/components/expansion/expansion.module#ExpansionPageModule' },
-  { path: 'mat-card', loadChildren: './pages/angular-material/components/mat-card/mat-card.module#MatCardPageModule' },
-  { path: 'mat-stepper', loadChildren: './pages/angular-material/components/mat-stepper/mat-stepper.module#MatStepperPageModule' },
-  { path: 'mat-sort-header', loadChildren: './pages/angular-material/components/mat-sort-header/mat-sort-header.module#MatSortHeaderPageModule' },
-  { path: 'mat-table', loadChildren: './pages/angular-material/components/mat-table/mat-table.module#MatTablePageModule' },
-  { path: 'mat-drag-drop', loadChildren: './pages/angular-material/components/mat-drag-drop/mat-drag-drop.module#MatDragDropPageModule' },
-  { path: 'mat-input', loadChildren: './pages/angular-material/components/mat-input/mat-input.module#MatInputPageModule' },  { path: 'mat-grid', loadChildren: './pages/angular-material/components/mat-grid/mat-grid.module#MatGridPageModule' },
-
-
-  {
-    path: 'slide-carousel', loadChildren: () =>
-      import('./pages/yannbf/components/slides/slide-carousel/slide-carousel.module')
-        .then(m => m.SlideCarouselPageModule)
-  },
   {
     path: 'slide-color-changing', loadChildren: () =>
       import('./pages/yannbf/components/slides/slide-color-changing/slide-color-changing.module')
@@ -115,6 +99,7 @@ const routes: Routes = [
       import('./pages/yannbf/components/slides/slide-free-mode/slide-free-mode.module')
         .then(m => m.SlideFreeModePageModule)
   },
+  // angular-material
 
   {
     path: 'slide-photo-gallery', loadChildren: () =>

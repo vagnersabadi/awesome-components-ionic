@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ExpansionPage } from './expansion.page';
-import { MatExpansionModule } from '@angular/material/expansion';
+import { MatStepperPage } from './mat-stepper.page';
+import { MatStepperModule } from '@angular/material/stepper';
 
 const routes: Routes = [
   {
     path: '',
-    component: ExpansionPage
+    component: MatStepperPage
   }
 ];
 
@@ -21,8 +21,9 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    MatExpansionModule,
+    ReactiveFormsModule,
+    MatStepperModule
   ],
-  declarations: [ExpansionPage]
+  declarations: [MatStepperPage]
 })
-export class ExpansionPageModule { }
+export class MatStepperPageModule { }

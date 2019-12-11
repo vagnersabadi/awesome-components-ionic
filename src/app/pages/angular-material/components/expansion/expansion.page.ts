@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExpansionPage implements OnInit {
   panelOpenState: boolean;
-  
   constructor() { }
 
   ngOnInit() {

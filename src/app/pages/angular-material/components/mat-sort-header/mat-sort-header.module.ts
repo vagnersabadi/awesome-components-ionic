@@ -5,13 +5,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ExpansionPage } from './expansion.page';
-import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSortHeaderPage } from './mat-sort-header.page';
+import {MatSortModule} from '@angular/material/sort';
 
 const routes: Routes = [
   {
     path: '',
-    component: ExpansionPage
+    component: MatSortHeaderPage
   }
 ];
 
@@ -21,8 +21,8 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    MatExpansionModule,
+    MatSortModule
   ],
-  declarations: [ExpansionPage]
+  declarations: [MatSortHeaderPage]
 })
-export class ExpansionPageModule { }
+export class MatSortHeaderPageModule {}

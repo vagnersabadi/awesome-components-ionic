@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UtilService } from '../services/util.service';
+import { icons, Icon } from '../services/icons';
 
 @Component({
   selector: 'app-icon',
@@ -13,7 +13,7 @@ export class IconPage implements OnInit {
   off = false;
   dot = false;
 
-  constructor(private util: UtilService) {}
+  constructor() {}
 
   ngOnInit() {}
 
@@ -27,8 +27,12 @@ export class IconPage implements OnInit {
   }
 
   getNewIcon() {
-    const icon = this.util.getRandomIcon();
+    const icon = this.getRandomIcon();
     this.icon = icon.icons[1] || icon.icons[0];
+  }
+
+  getRandomIcon(): Icon {
+    return icons.icons[Math.floor(Math.random() * icons.icons.length)];
   }
 
 }

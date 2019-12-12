@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Popup Modal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-button expand="block" color="primary"   (click)="openHintModal()">       Hint Modal        </ion-button>
+    <ion-button expand="block" color="danger"    (click)="openSignupModal()">     Signup with slider</ion-button>
+    <ion-button expand="block" color="secondary" (click)="openWalkthroughModal()">Walkthrough modal </ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Item Ribbon</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+
+
+    <ion-item *ngFor="let item of thumbnails">
+
+      <ion-thumbnail slot="start" class="item-ribbon">
+        <span class="ribbon {{ item.class }}">
+          <span>{{ item.ribbonText }}</span>
+        </span>
+        <img [src]="item.image">
+      </ion-thumbnail>
+      <ion-label>{{ item.title }}</ion-label>
+    </ion-item>
+
+
+    <ion-item class="item-ribbon">
+      <span class="ribbon cruzeiro">
+        <span>Ionic</span>
+      </span>
+      <ion-thumbnail slot="start">
+        <img src="assets/yannbf/img/ribbon/ionic.png">
+      </ion-thumbnail>
+      <ion-label>Awesome framework</ion-label>
+    </ion-item>
+
+    <ion-item class="item-ribbon">
+      <span class="ribbon javascript">
+        <span>JS</span>
+      </span>
+      <ion-thumbnail slot="start">
+        <img src="assets/yannbf/img/ribbon/js.png">
+      </ion-thumbnail>
+      <ion-label>Awesome language</ion-label>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

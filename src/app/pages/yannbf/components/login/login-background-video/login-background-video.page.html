@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true"  class="ion-padding ion-text-center">
+  <img class="logo" src="assets/yannbf/img/logo/logo-canon.png" />
+  <div class="buttons">
+    <ion-button class="login-button facebook" (click)="goToLogin()">Continue with Facebook</ion-button>
+    <ion-button class="login-button google" (click)="goToLogin()">Login</ion-button>
+    <ion-button class="login-button" color="dark" (click)="goToSignup()">Create account</ion-button>
+  </div>
+  <video #player playsinline autoplay muted loop poster="assets/yannbf/video/video-cover.jpg" id="bgvid">
+    <source src="assets/yannbf/video/background-480.mp4" type="video/mp4"> Your browser does not support the video tag.
+  </video>
+</ion-content>

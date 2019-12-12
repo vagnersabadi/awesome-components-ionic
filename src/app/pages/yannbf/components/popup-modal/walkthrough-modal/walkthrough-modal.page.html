@@ -1,0 +1,18 @@
+<ion-content>
+  <ion-slides [pager]="true" [options]="slideOpts" class="round">
+    <ion-slide *ngFor="let slide of slides" class="ion-text-center slider-item"
+      [ngStyle]="{'background-image': 'url(' + slide.imageUrl +')'}">
+      <div class="slide-text">
+        <h2>{{slide.title}}</h2>
+        <p>{{slide.songs}} songs</p>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+<ion-footer>
+  <ion-button size="large" expand="full" class="ion-no-margin footer-button" (click)="dismiss()">
+    <span>
+        Let's get started!
+    </span>
+  </ion-button>
+</ion-footer>

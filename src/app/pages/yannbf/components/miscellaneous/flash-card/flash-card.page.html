@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Flash Card</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-flash-card-component *ngFor="let card of flashCards">
+    <ion-card class="fc-front">
+      <img [src]="card.front.image" />
+      <ion-card-header>
+        <ion-card-subtitle>{{card.front.subtitle}}</ion-card-subtitle>
+        <ion-card-title>{{card.front.title}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{card.front.content}}
+      </ion-card-content>
+    </ion-card>
+    <ion-card class="fc-back">
+      <img [src]="card.front.image" />
+      <ion-card-header>
+        <ion-card-subtitle>{{card.back.subtitle}}</ion-card-subtitle>
+        <ion-card-title>{{card.back.title}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{card.back.content}}
+      </ion-card-content>
+    </ion-card>
+  </app-flash-card-component>
+</ion-content>

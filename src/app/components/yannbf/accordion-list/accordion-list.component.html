@@ -1,0 +1,17 @@
+<ion-list class="accordion-list">
+
+  <ion-item lines="none"  [style]="getDynamicColor(headerColor)" (click)="toggleAccordion()"
+    class="accordion-header" [class.active]="expanded">
+    <ion-icon slot="start" name="ios-arrow-forward"> </ion-icon>
+    <ion-label> {{ title }} </ion-label>
+  </ion-item>
+  <div class="expand">
+    <section #accordionContent [style.background]="contentColor" [class.active]="expanded" class="accordion-content">
+      <ng-content></ng-content>
+    </section>
+
+  </div>
+
+
+
+</ion-list>

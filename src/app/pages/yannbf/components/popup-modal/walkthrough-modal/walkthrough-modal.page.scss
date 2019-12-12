@@ -1,0 +1,31 @@
+.slide-text {
+  position: relative;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+}
+
+.round {
+  border-radius: 3%;
+}
+
+.background-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-color: transparent;
+}
+
+.slider-item {
+  height: 30vh;
+  width: 100%;
+  background-size: cover;
+}
+
+.footer-button {
+  --background: #578be4 !important;
+  span {
+    font-size: 12px;
+  }
+}

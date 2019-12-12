@@ -1,0 +1,53 @@
+ion-fab-button {
+  --background: #00ccb2;
+}
+
+.expand {
+  animation: expand 0.5s cubic-bezier(0.66, 0.35, 0.96, 0.38) forwards;
+}
+
+.contract {
+  animation: contract 0.4s cubic-bezier(0.75, 0.8, 0.25, 0) forwards;
+}
+
+ion-content {
+--background: #82e850;
+}
+
+@keyframes contract {
+  0% {
+    transform: scale(100);
+    border-radius: 100%;
+    margin: 0;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes expand {
+  50% {
+    transform: scale(100);
+  }
+  100% {
+    transform: scale(100);
+    border-radius: 100%;
+    margin: 0;
+  }
+}
+
+ion-card {
+  position: relative;
+  height: 80vh;
+  background: white;
+
+  h4 {
+    left: 5%;
+    bottom: 3%;
+    position: absolute;
+  }
+}
+
+ion-icon {
+  transition: display 1s ease-in;
+}

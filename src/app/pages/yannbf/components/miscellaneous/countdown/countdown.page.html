@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title> Countdown </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+    <h2>Countdown Timer</h2>
+    <app-timer #countdownTimer [timeInSeconds]="2700"></app-timer>
+    <app-timer-progress #countdownTimerProgress [timeInSeconds]="2700"></app-timer-progress>
+  
+</ion-content>

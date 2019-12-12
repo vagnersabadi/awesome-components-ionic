@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Masonry Cards</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="pins">
+
+    <ion-card class="pin" *ngFor="let post of posts">
+      <img [src]="post.image" />
+
+      <ion-card-header>
+        <ion-card-subtitle>
+          <div *ngIf="post.description" class="post-description">
+            <small>{{ post.description }}</small>
+          </div>
+        </ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content class="ion-no-padding">
+        <ion-item lines="none">
+          <ion-avatar slot="start">
+            <img src="assets/yannbf/img/avatar/marty-avatar.png">
+          </ion-avatar>
+          <ion-label>
+            <h3>McFly</h3>
+            <p>Category</p>
+          </ion-label>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+</ion-content>

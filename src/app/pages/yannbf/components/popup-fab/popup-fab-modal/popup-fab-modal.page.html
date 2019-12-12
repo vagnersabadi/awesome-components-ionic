@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()" fill="clear">
+        <ion-icon name="close" slot="icon-only" color="primary" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Popup fab modal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  
+  <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide>
+        <div class="slide slide-1">
+          <div>
+            <h1 class="slideTitle">Slide 1</h1>
+          </div>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide slide-2">
+          <div>
+            <h1 class="slideTitle">Slide 2</h1>
+          </div>
+        </div>
+      </ion-slide>
+  
+      <ion-slide>
+        <div class="slide slide-3">
+          <div>
+            <h1 class="slideTitle">Slide 3</h1>
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </ion-content>

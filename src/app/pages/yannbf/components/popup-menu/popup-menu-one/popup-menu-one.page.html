@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="modalCtrl.dismiss()" fill="clear">
+        <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Popup Menu One</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="popup-menu">
+    <div class="popup-menu-toggle" [ngClass]="{'out': openMenu}" (click)="togglePopupMenu()">
+      <ion-icon name="home"></ion-icon>
+    </div>
+    <div class="popup-menu-overlay" [ngClass]="{'in': openMenu}" (click)="togglePopupMenu()"></div>
+
+    <div class="popup-menu-panel" [ngClass]="{'in': openMenu}">
+      <ion-grid class="ion-no-padding">
+        <ion-row align-items-center>
+          <ion-col size="4" class="ion-no-padding">
+            <ion-tab-button (click)="goToHome()">
+              <ion-icon name="home"></ion-icon>
+              <ion-label>HOME</ion-label>
+            </ion-tab-button>
+          </ion-col>
+          <ion-col size="4" class="ion-no-padding">
+            <ion-tab-button (click)="goToCups()">
+              <ion-icon name="trophy"></ion-icon>
+              <ion-label>CUPS</ion-label>
+            </ion-tab-button>
+          </ion-col>
+          <ion-col size="4" class="ion-no-padding">
+            <ion-tab-button (click)="goToLeaderboard()">
+              <ion-icon name="podium"></ion-icon>
+              <ion-label>LEADERBOARD</ion-label>
+            </ion-tab-button>
+          </ion-col>
+        </ion-row>
+
+        <ion-row align-items-center>
+          <ion-col size="4" class="ion-no-padding">
+            <ion-tab-button (click)="goToHelp()">
+              <ion-icon name="help"></ion-icon>
+              <ion-label>HELP</ion-label>
+            </ion-tab-button>
+          </ion-col>
+          <ion-col size="4" class="ion-no-padding">
+            <ion-tab-button (click)="goToAccount()">
+              <ion-icon name="person"></ion-icon>
+              <ion-label>ACCOUNT</ion-label>
+            </ion-tab-button>
+          </ion-col>
+          <ion-col size="4" class="ion-no-padding">
+            <ion-tab-button (click)="goToShop()">
+              <ion-icon name="cart"></ion-icon>
+              <ion-label>SHOP</ion-label>
+            </ion-tab-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>

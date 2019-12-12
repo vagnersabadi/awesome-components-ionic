@@ -1,0 +1,24 @@
+ion-slides {
+    --bullet-background: white;
+    --bullet-background-active: #fa3;
+}
+
+.slider-item {
+  height: 35vh;
+  width: 100%;
+  background-size: cover;
+}
+.slide-zoom {
+  height: 100%;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.22)) !important;
+}
+.slide-text {
+  position: relative;
+  text-align: center;
+  //   top: 50%;
+  transform: translateY(-50%);
+}
+.text-center {
+  text-align: center;
+  color: white;
+}

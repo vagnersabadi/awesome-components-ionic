@@ -1,0 +1,34 @@
+.accordion-header {
+  color: white;
+  --background: var(--myvar);
+
+  .item-inner {
+    margin-left: 0 !important;
+  }
+
+  ion-icon {
+    color: white;
+
+    transition: all 0.25s ease-in;
+    transform: rotate(0);
+  }
+}
+
+.active ion-icon {
+  transform: rotate(90deg);
+}
+
+.accordion-content {
+  transition: 0.3s ease-in-out;
+  &.active {
+    padding: 0.75rem;
+  }
+}
+
+.label {
+  margin: 0px;
+}
+
+.expand {
+  margin: -4px;
+}

@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Slide Walkthrough</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content fullscreen="true" class="no-padding-top">
+  <ion-slides #slider pager="true" [options]="slideOpts1" (ionSlideWillChange)="onSlideChanged()">
+    <ion-slide *ngFor="let slide of slides" class="slide-background"
+      [ngStyle]="{'background-image': 'url(' + slide.imageUrl +')'}">
+      <div class="text-wrapper">
+        <div class="slide-text">
+          <h2 class="slide-title" [innerHTML]="slide.title"></h2><br>
+          <p [innerHTML]="slide.description"></p>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slides>
+  <div class="floating-buttons pop-in" *ngIf="slideIndex >= slides.length - 1">
+    <ion-button fill="clear" size="large" expand="full" (click)="goToApp()">Let's go!</ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Slide Carousel</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h2>Welcome to Sliders!</h2>
+
+  <ion-slides #mySlider class="outerSlide">
+
+    <ion-slide class="innerSlides" *ngFor="let city of citiesSlides">
+      <ion-item class="outerIonItem">
+        <div class="favImgDiv">
+          <div class="imgDiv">
+            <img (click)="goToCityPage(city, $event)" src="{{city.image}}" />
+          </div>
+
+          <ion-button (click)="toggleFavorite(city, $event)" fill="clear" color="danger" class="favDiv">
+            <ion-icon ios="ios-heart" md="md-heart" *ngIf="city.favorited"></ion-icon>
+            <ion-icon class="favDivInactiveHeart" ios="ios-heart-outline" md="md-heart-outline" *ngIf="!city.favorited">
+            </ion-icon>
+          </ion-button>
+
+        </div>
+
+      </ion-item>
+
+
+        <ion-item lines="none" class="profilePicCityName">
+          <h2>
+            {{city.name}}
+          </h2>
+          <ion-avatar (click)="goToProfilePage()" slot="end" class="profilePicAvatar">
+            <img class="profilePic" src="{{city.authorPic}}" />
+          </ion-avatar>
+        </ion-item>
+
+        <ion-row class="ion-no-padding">
+          <ion-col>
+            <ion-button (click)="toggleFavorite(city, $event)" fill="clear" size="small" color="primary">
+              <ion-icon slot="start" ios="ios-heart" md="md-heart" *ngIf="city.favorited"></ion-icon>
+              <ion-icon slot="start" ios="ios-heart-outline" md="md-heart-outline" *ngIf="!city.favorited"></ion-icon>
+              <label class="ion-text-capitalize">{{city.favoriteCount}}</label>
+            </ion-button>
+
+          </ion-col>
+          <ion-col class="ion-text-center">
+            <ion-button fill="clear" size="small" color="primary">
+              <ion-icon slot="start" name="chatbubbles"></ion-icon>
+              <label class="ion-text-capitalize">{{" " + city.comments.length}}</label>
+            </ion-button>
+          </ion-col>
+          <ion-col class="ion-text-right">
+            <ion-button fill="clear" size="small" color="primary">
+              <ion-icon slot="start" name='share-alt'></ion-icon>
+              <label class="ion-text-capitalize">Share</label>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+
+    </ion-slide>
+
+  </ion-slides>
+
+  <ion-button (click)="addingNewCity()">
+    New Slide
+  </ion-button>
+
+  <ion-button (click)="changeCities()">
+    Exchange Sliders
+  </ion-button>
+</ion-content>

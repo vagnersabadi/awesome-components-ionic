@@ -1,0 +1,9 @@
+<div class="fc-container" (click)="flip()" [class.fc-back]="flipped" #fcContainer>
+    <div class="front" #front>
+        <ng-content  select=".fc-front"></ng-content>
+    </div>
+ 
+    <div class="back" #back>
+        <ng-content select=".fc-back"></ng-content>
+    </div>
+</div>

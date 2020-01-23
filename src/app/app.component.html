@@ -1,47 +1,9 @@
-<!-- <ion-app> -->
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    
+    
 
-  <ion-split-pane contentId="my-content">
-    <ion-menu contentId="my-content" menuId="menu-first" side="start">
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Menu</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content>
-        <ion-list>
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
-              <ion-icon slot="start" [name]="p.icon"></ion-icon>
-              <ion-label>
-                {{p.title}}
-              </ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-        </ion-list>
-      </ion-content>
-    </ion-menu>
-
-    <!-- <ion-menu contentId="my-content" side="end" id="menu-right">
-      <ion-header>
-        <ion-toolbar>
-          <ion-title>Menu Right</ion-title>
-        </ion-toolbar>
-      </ion-header>
-      <ion-content>
-        <ion-list>
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
-              <ion-icon slot="start" [name]="p.icon"></ion-icon>
-              <ion-label>
-                {{p.title}}
-              </ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-        </ion-list>
-      </ion-content>
-    </ion-menu>
-
-    <ion-menu contentId="my-content" menuId="menu-avatar" id="menu-avatar">
+    <ion-menu side="start" contentId="main-content" menuId="menu-avatar" id="menu-avatar">
       <ion-content>
         <div #header>
           <ion-grid>
@@ -77,7 +39,7 @@
       </ion-content>
     </ion-menu>
 
-    <ion-menu contentId="my-content" menuId="menu-material" id="menu-material">
+    <ion-menu side="start" contentId="main-content" menuId="menu-material" id="menu-material">
       <ion-content>
         <div class="menu-header">
           <ion-avatar>
@@ -97,8 +59,48 @@
           </ion-menu-toggle>
         </ion-list>
       </ion-content>
-    </ion-menu> -->
+    </ion-menu>
 
-    <ion-router-outlet id="my-content" ></ion-router-outlet>
+    <ion-menu side="start" contentId="main-content"  menuId="menu-principal" id="menu-principal">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Menu</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <ion-menu side="end" contentId="main-content" menuId="menu-right" id="menu-right">
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Menu Right</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        <ion-list>
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+
+    <ion-router-outlet id="main-content"></ion-router-outlet>
   </ion-split-pane>
-<!-- </ion-app> -->
+</ion-app>

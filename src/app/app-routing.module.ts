@@ -83,6 +83,12 @@ const routes: Routes = [
   { path: 'mat-drag-drop', loadChildren: () => import('./pages/angular-material/components/mat-drag-drop/mat-drag-drop.module').then(m => m.MatDragDropPageModule) },
   { path: 'mat-input', loadChildren: () => import('./pages/angular-material/components/mat-input/mat-input.module').then(m => m.MatInputPageModule) },
   { path: 'mat-grid', loadChildren: () => import('./pages/angular-material/components/mat-grid/mat-grid.module').then(m => m.MatGridPageModule) },
+ 
+  {
+    path: 'timeline',
+    loadChildren: () => import('./pages/yannbf/components/timeline/timeline.module').then( m => m.TimelinePageModule)
+  },
+
 
 ];
 

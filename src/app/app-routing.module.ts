@@ -71,6 +71,7 @@ const routes: Routes = [
   { path: 'slide-walkthrough', loadChildren: () => import('./pages/yannbf/components/slides/slide-walkthrough/slide-walkthrough.module').then(m => m.SlideWalkthroughPageModule) },
   { path: 'slide-list', loadChildren: () => import('./pages/yannbf/components/slides/slide-list/slide-list.module').then(m => m.SlideListPageModule) },
   { path: 'slide-with-arrows', loadChildren: () => import('./pages/yannbf/components/slides/slide-with-arrows/slide-with-arrows.module').then(m => m.SlideWithArrowsPageModule) },
+  { path: 'slide-carousel', loadChildren: () => import('./pages/yannbf/components/slides/slide-carousel/slide-carousel.module').then(m => m.SlideCarouselPageModule) },
 
   // Angular Material
   { path: 'angular-material', loadChildren: () => import('./pages/angular-material/angular-material.module').then(m => m.AngularMaterialPageModule) },

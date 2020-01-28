@@ -9,7 +9,7 @@ import { MenuController } from '@ionic/angular';
 export class SideMenuPage implements OnInit {
 
   MENU = {
-    DEFAULT: 'menu-first',
+    DEFAULT: 'menu-principal',
     MATERIAL: 'menu-material',
     AVATAR: 'menu-avatar',
     RIGHT: 'menu-right',
@@ -25,6 +25,8 @@ export class SideMenuPage implements OnInit {
 
   changeMenu(menu) {
 
+    console.log(menu);
+    
     // Disables all other sidemenus
     Object.keys(this.MENU).map(k => this.menuCtrl.enable(false, this.MENU[k]));
 

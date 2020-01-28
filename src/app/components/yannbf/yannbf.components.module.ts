@@ -5,6 +5,7 @@ import { AccordionListComponent } from './accordion-list/accordion-list.componen
 import { TimerProgressComponent } from './timer-progress/timer-progress.component';
 import { TimerComponent } from './timer/timer.component';
 import { CommonModule } from '@angular/common';
+import { TimelineItemComponent, TimelineComponent } from './timeline/timeline.component';
 
 
 export const components = [
@@ -12,6 +13,8 @@ export const components = [
   FlashCardComponent,
   TimerProgressComponent,
   TimerComponent,
+  TimelineComponent,
+  TimelineItemComponent
 
 ];
 

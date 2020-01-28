@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Timeline cards</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <timeline>
+    <timeline-item *ngFor="let item of items">
+      <ion-icon [name]="'calendar'" [style.background]="item.color" class="icon-timeline"></ion-icon>
+      <ion-card>
+        <ion-card-header>
+          {{item.title}}
+        </ion-card-header>
+        <ion-card-content>
+          {{item.content}}
+        </ion-card-content>
+      </ion-card>
+    </timeline-item>
+  </timeline>
+</ion-content>

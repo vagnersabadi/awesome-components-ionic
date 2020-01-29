@@ -91,6 +91,10 @@ const routes: Routes = [
     path: 'crypto-list',
     loadChildren: () => import('./pages/yannbf/components/lists/crypto-list/crypto-list.module').then( m => m.CryptoListPageModule)
   },
+  {
+    path: 'list-card-ui',
+    loadChildren: () => import('./pages/yannbf/components/lists/list-card-ui/list-card-ui.module').then( m => m.ListCardUiPageModule)
+  },
 
 
 

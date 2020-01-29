@@ -28,6 +28,14 @@ export class ListsPage implements OnInit {
     {
       title: 'List Card UI',
       page: '/list-card-ui'
+    },
+    {
+      title: 'Reactive List Label',
+      page: '/reactive-list-label'
+    },
+    {
+      title: 'Users',
+      page: '/users'
     }
   ];
 

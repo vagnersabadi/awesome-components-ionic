@@ -10,6 +10,10 @@ export class ListsPage implements OnInit {
 
   items: Array<{ title: string, page: any }> = [
     {
+      title: 'Cripto List',
+      page: '/crypto-list'
+    },
+    {
       title: 'Settings List',
       page: '/settings'
     },

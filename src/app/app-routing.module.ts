@@ -95,6 +95,14 @@ const routes: Routes = [
     path: 'list-card-ui',
     loadChildren: () => import('./pages/yannbf/components/lists/list-card-ui/list-card-ui.module').then( m => m.ListCardUiPageModule)
   },
+  {
+    path: 'reactive-list-label',
+    loadChildren: () => import('./pages/yannbf/components/lists/reactive-list-label/reactive-list-label.module').then( m => m.ReactiveListLabelPageModule)
+  },
+  {
+    path: 'users',
+    loadChildren: () => import('./pages/yannbf/components/lists/users/users.module').then( m => m.UsersPageModule)
+  },
 
 
 

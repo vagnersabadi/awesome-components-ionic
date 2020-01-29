@@ -87,7 +87,11 @@ const routes: Routes = [
   {
     path: 'timeline',
     loadChildren: () => import('./pages/yannbf/components/timeline/timeline.module').then( m => m.TimelinePageModule)
+  },  {
+    path: 'crypto-list',
+    loadChildren: () => import('./pages/yannbf/components/lists/crypto-list/crypto-list.module').then( m => m.CryptoListPageModule)
   },
+
 
 
 ];

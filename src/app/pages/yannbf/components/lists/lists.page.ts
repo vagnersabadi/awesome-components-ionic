@@ -37,6 +37,14 @@ export class ListsPage implements OnInit {
       title: 'Users',
       page: '/users'
     }
+
+    ,
+    {
+      title: 'Timeline',
+      page: '/timeline'
+    }
+
+    
   ];
 
 

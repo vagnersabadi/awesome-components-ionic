@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Users</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list lines="none">
+    <ion-item *ngFor="let user of users">
+      <ion-avatar slot="start">
+        <img src="assets/yannbf/img/avatar/ian-avatar.png">
+      </ion-avatar>
+      <ion-label>
+        <h2>John Doe</h2>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam sint consectetur, neque cum porro iste
+          aperiam eveniet, corporis earum error similique. Cupiditate consequuntur autem doloribus nihil totam quibusdam
+          aliquid omnis? </p>
+
+      </ion-label>
+
+      <div class="rating">
+        <ion-icon icon="md-star"></ion-icon>
+        <ion-icon icon="md-star"></ion-icon>
+        <ion-icon icon="md-star"></ion-icon>
+        <ion-icon icon="md-star"></ion-icon>
+        <ion-icon icon="md-star"></ion-icon>
+      </div>
+      <ion-button fill="clear" slot="end">
+        <ion-badge slot="end" class="number-circle">5</ion-badge>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

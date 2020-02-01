@@ -1,0 +1,76 @@
+$timeline-primary-color: #32a7b5;
+
+:host ::ng-deep .timeline {
+  .card-item {
+    ion-card-content {
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+    }
+  }
+  margin: 16px 0 0 0;
+  padding: 0;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: $timeline-primary-color;
+    border-left: 2px dotted #999;
+    left: 8%;
+    margin-left: -10px;
+  }
+  timeline-item {
+    position: relative;
+    display: block;
+
+    .icon-timeline {
+      width: 15px;
+      height: 15px;
+      font-size: 1.4em;
+      position: absolute;
+      color: #fff;
+      background: $timeline-primary-color;
+      border-radius: 50%;
+      padding: 4px;
+      text-align: center;
+      left: 8%;
+      top: 0;
+      margin: 10px 0 0 -18px;
+      &:after {
+        left: 46px;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-left-color: #afdcf8;
+        border-width: 10px;
+        top: 10px;
+      }
+    }
+    &:last-child {
+      width: 100%;
+      ion-icon {
+        box-shadow: none;
+        &:after {
+          border-width: 0;
+        }
+      }
+    }
+  }
+  .no-card {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    ion-card-header,
+    ion-card-content {
+      padding: 5px 5px 5px 0;
+    }
+  }
+}

@@ -83,6 +83,28 @@ const routes: Routes = [
   { path: 'mat-drag-drop', loadChildren: () => import('./pages/angular-material/components/mat-drag-drop/mat-drag-drop.module').then(m => m.MatDragDropPageModule) },
   { path: 'mat-input', loadChildren: () => import('./pages/angular-material/components/mat-input/mat-input.module').then(m => m.MatInputPageModule) },
   { path: 'mat-grid', loadChildren: () => import('./pages/angular-material/components/mat-grid/mat-grid.module').then(m => m.MatGridPageModule) },
+ 
+  {
+    path: 'timeline',
+    loadChildren: () => import('./pages/yannbf/components/timeline/timeline.module').then( m => m.TimelinePageModule)
+  },  {
+    path: 'crypto-list',
+    loadChildren: () => import('./pages/yannbf/components/lists/crypto-list/crypto-list.module').then( m => m.CryptoListPageModule)
+  },
+  {
+    path: 'list-card-ui',
+    loadChildren: () => import('./pages/yannbf/components/lists/list-card-ui/list-card-ui.module').then( m => m.ListCardUiPageModule)
+  },
+  {
+    path: 'reactive-list-label',
+    loadChildren: () => import('./pages/yannbf/components/lists/reactive-list-label/reactive-list-label.module').then( m => m.ReactiveListLabelPageModule)
+  },
+  {
+    path: 'users',
+    loadChildren: () => import('./pages/yannbf/components/lists/users/users.module').then( m => m.UsersPageModule)
+  },
+
+
 
 ];
 

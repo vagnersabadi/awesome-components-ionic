@@ -1,13 +1,13 @@
 <ion-header no-border>
-  <ion-toolbar translucent>
+  <ion-toolbar >
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
+    <ion-title>Login Background Slider</ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-slides pager="false" [options]="slideOpts" >
+<ion-content fullscreen>
+  <ion-slides pager="false" [options]="slideOpts">
     <ion-slide class="slide-background swiper-no-swiping" *ngFor="let background of backgrounds"
       [ngStyle]="{'background-image': 'url(' + background +')'}">
     </ion-slide>

@@ -1,3 +1,7 @@
+.item-arrow-back{
+  --background: transparent !important;
+}
+
 $transparent-white: rgba(255, 255, 255, 0.6);
 // This is just to make the header transparent and button/icon with white color
 
@@ -25,6 +29,7 @@ ion-footer {
 }
 // Fullscreen animated rainbow gradient
 ion-content {
+    
   --background: none;
   background: linear-gradient(316deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
   background-size: 1800% 1800%;

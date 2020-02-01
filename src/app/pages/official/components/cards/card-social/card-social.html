@@ -12,7 +12,7 @@
 <ion-content>
   <ion-card *ngFor="let card of cards">
     <ion-item>
-      <ion-avatar item-start>
+      <ion-avatar slot="start">
         <img [src]="card.avatarImageUrl" (click)="avatarTapped(card)">
       </ion-avatar>
       <h2>{{card.name}}</h2>
@@ -24,18 +24,18 @@
     </ion-card-content>
     <ion-row>
       <ion-col>
-        <button ion-button color="primary" clear small icon-left (click)="like(card)">
-        <ion-icon name='thumbs-up'></ion-icon>
+        <ion-button color="primary" fill="clear" size="small" (click)="like(card)">
+        <ion-icon name='thumbs-up'slot="start"></ion-icon>
         {{card.likes}} Likes
-      </button>
+      </ion-button>
       </ion-col>
       <ion-col>
-        <button ion-button color="primary" clear small icon-left (click)="comment(card)">
-        <ion-icon name='text'></ion-icon>
+        <ion-button color="primary" fill="clear" size="small"  (click)="comment(card)">
+        <ion-icon name='text' slot="start"></ion-icon>
         {{card.comments}} Comments
-      </button>
+      </ion-button>
       </ion-col>
-      <ion-col center text-center>
+      <ion-col  class="ion-text-center">
         <ion-note>
           {{card.timestamp}}
         </ion-note>

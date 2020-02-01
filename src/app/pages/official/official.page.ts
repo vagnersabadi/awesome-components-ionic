@@ -16,6 +16,10 @@ export class OfficialPage implements OnInit {
       namePage: 'Alerts',
       router: '/alerts',
     },
+    {
+      namePage: 'Cards',
+      router: '/official/cards',
+    },
   ];
 
   constructor() { }

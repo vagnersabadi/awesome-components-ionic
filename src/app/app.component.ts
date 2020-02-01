@@ -25,17 +25,17 @@ export class AppComponent {
     {
       title: 'Fivethree',
       url: '/fivethree',
-      icon: 'home'
+      icon: 'at'
     },
     {
       title: 'Yannbf',
       url: '/yannbf',
-      icon: 'home'
+      icon: 'person'
     },
     {
       title: 'Angular Material',
       url: '/angular-material',
-      icon: 'home'
+      icon: 'logo-angular'
     }
 
   ];

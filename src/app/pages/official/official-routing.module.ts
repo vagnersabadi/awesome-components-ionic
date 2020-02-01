@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: OfficialPage
+  },
+  {
+    path: 'cards',
+    loadChildren: () => import('./components/cards/cards.module').then( m => m.CardsPageModule)
   }
 ];
 

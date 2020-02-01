@@ -18,6 +18,11 @@ export class AppComponent {
       icon: 'home'
     },
     {
+      title: 'Ionic official',
+      url: '/official',
+      icon: 'logo-ionic'
+    },
+    {
       title: 'Fivethree',
       url: '/fivethree',
       icon: 'home'

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Yannbf
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle><a
+          href="https://ionicframework.com/docs/components">https://ionicframework.com/docs/components</a>
+      </ion-card-subtitle>
+      <ion-card-title> Ionic official Components </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label class="ion-text-wrap">
+        Ionic apps are made of high-level building blocks called Components, which allow you to quickly construct the UI
+        for your app. Ionic comes stock with a number of components, including cards, lists, and tabs. Once you’re
+        familiar with the basics, refer to the API Index for a complete list of each component and sub-component.
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-item *ngFor="let item of pages" [routerLink]="[item.router]" detail>
+      <ion-label>
+        {{ item.namePage }}
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

@@ -29,7 +29,16 @@ export class AppBarPage implements OnInit {
   async presentToast(text: string) {
     const toast = await this.toastController.create({
       message: text,
-      duration: 2000
+      duration: 2000,
+      buttons: [
+        {
+          text: 'Close',
+          role: 'cancel',
+          handler: () => {
+            console.log('Close clicked');
+          }
+        }
+      ]
     });
     toast.present();
   }

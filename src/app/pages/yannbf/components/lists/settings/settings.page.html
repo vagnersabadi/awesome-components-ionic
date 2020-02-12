@@ -9,12 +9,14 @@
 <ion-content>
   <ion-list>
     <ion-list-header>
-      Settings
+
+      <ion-label>Settings</ion-label>
+
     </ion-list-header>
     <ion-item>
       <ion-icon name="airplane" slot="start" color="danger"></ion-icon>
       <ion-label>Airplane Mode</ion-label>
-      <ion-toggle color="secondary" slot="end" ></ion-toggle>
+      <ion-toggle color="secondary" slot="end"></ion-toggle>
     </ion-item>
     <ion-item>
       <ion-icon name="wifi" slot="start" color="primary"></ion-icon>
@@ -36,22 +38,30 @@
       <ion-note slot="end">Off</ion-note>
     </ion-item>
   </ion-list>
-  <ion-list radio-group>
-    <ion-list-header>
-      Silence Phone
-    </ion-list-header>
-    <ion-item>
-      <ion-label color="dark">Always</ion-label>
-      <ion-radio value="always" checked></ion-radio>
-    </ion-item>
-    <ion-item>
-      <ion-label color="dark">Only while phone is locked</ion-label>
-      <ion-radio value="locked"></ion-radio>
-    </ion-item>
+  <ion-list>
+    <ion-radio-group value="always">
+      <ion-list-header>
+        <ion-label>Silence Phone</ion-label>
+
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>Always</ion-label>
+        <ion-radio value="always" slot="end"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Only while phone is locked</ion-label>
+        <ion-radio value="locked" slot="end"></ion-radio>
+      </ion-item>
+
+    </ion-radio-group>
   </ion-list>
+
   <ion-list>
     <ion-list-header>
-      Apps Installed
+      <ion-label> Apps Installed </ion-label>
+
     </ion-list-header>
     <ion-item>
       <ion-icon name="logo-ionic" slot="start" color="primary"></ion-icon>

@@ -9,7 +9,11 @@
 
 <ion-content class="chats">
   <ion-list>
-    <ion-list-header>Today</ion-list-header>
+    <ion-list-header>
+
+      <ion-label>Today</ion-label>
+
+    </ion-list-header>
     <ion-item *ngFor="let chat of chats" (click)="viewMessages(chat)">
       <ion-avatar slot="start">
         <img [src]="chat.imageUrl">
@@ -22,7 +26,9 @@
     </ion-item>
   </ion-list>
   <ion-list>
-    <ion-list-header>Yesterday</ion-list-header>
+    <ion-list-header>
+      <ion-label>Yesterday</ion-label>
+    </ion-list-header>
     <ion-item>
       <ion-avatar slot="start">
         <img src="assets/yannbf/img/avatar/marty-avatar.png">
@@ -55,7 +61,11 @@
     </ion-item>
   </ion-list>
   <ion-list>
-    <ion-list-header>Last Week</ion-list-header>
+    <ion-list-header>
+
+      <ion-label>Last Week</ion-label>
+
+    </ion-list-header>
     <ion-item>
       <ion-avatar slot="start">
         <img src="assets/yannbf/img/avatar/marty-avatar.png">

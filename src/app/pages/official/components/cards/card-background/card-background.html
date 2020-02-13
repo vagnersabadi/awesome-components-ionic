@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()" fill="clear">
+        <ion-icon name="close" slot="icon-only" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Card Background List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let card of cards" (click)="cardTapped(card)">
+    <img [src]="card.imageUrl" />
+    <div class="card-title">{{card.title}}</div>
+    <div class="card-subtitle">{{card.subtitle}}</div>
+  </ion-card>
+</ion-content>
+

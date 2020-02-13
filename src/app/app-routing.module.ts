@@ -87,7 +87,8 @@ const routes: Routes = [
   {
     path: 'timeline',
     loadChildren: () => import('./pages/yannbf/components/timeline/timeline.module').then( m => m.TimelinePageModule)
-  },  {
+  },
+  {
     path: 'crypto-list',
     loadChildren: () => import('./pages/yannbf/components/lists/crypto-list/crypto-list.module').then( m => m.CryptoListPageModule)
   },
@@ -103,6 +104,21 @@ const routes: Routes = [
     path: 'users',
     loadChildren: () => import('./pages/yannbf/components/lists/users/users.module').then( m => m.UsersPageModule)
   },
+
+  {
+    path: 'official',
+    loadChildren: () => import('./pages/official/official.module').then( m => m.OfficialPageModule)
+  },
+
+  {
+    path: 'buttons-official',
+    loadChildren: () => import('./pages/official/components/buttons/buttons.module').then( m => m.ButtonsPageModule)
+  },
+  {
+    path: 'alerts',
+    loadChildren: () => import('./pages/official/components/alerts/alerts.module').then( m => m.AlertsPageModule)
+  },
+  
 
 
 

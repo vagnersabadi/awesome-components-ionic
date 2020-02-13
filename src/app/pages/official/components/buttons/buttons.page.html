@@ -1,0 +1,130 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Buttons</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <h4>Colors</h4>
+  <ion-button>Default</ion-button>
+  <ion-button color="secondary">Secondary</ion-button>
+  <ion-button color="danger">Danger</ion-button>
+  <ion-button color="light">Light</ion-button>
+  <ion-button color="dark">Dark</ion-button>
+
+  <h4>Shapes</h4>
+  <ion-button expand="full">Full Button</ion-button>
+  <ion-button expand="block">Block Button</ion-button>
+  <ion-button shape="round">Round Button</ion-button>
+
+  <h4>Outlines</h4>
+  <ion-button color="secondary" expand="full" fill="outline">Outline" + Full</ion-button>
+  <ion-button color="secondary" expand="block" fill="outline">Outline + Block</ion-button>
+  <ion-button color="secondary" shape="round" fill="outline">Outline + Round</ion-button>
+
+  <h4>Icons</h4>
+  <ion-button slot="end" color="dark">
+    <ion-icon name="star"></ion-icon>
+    Left Icon
+  </ion-button>
+  <ion-button slot="start" color="dark">
+    Right Icon
+    <ion-icon name="star"></ion-icon>
+  </ion-button>
+  <ion-button slot="icon-only" color="dark">
+    <ion-icon name="star"></ion-icon>
+  </ion-button>
+  <ion-button color="light" slot="end">
+    <ion-icon name='arrow-back'></ion-icon>
+    Back
+  </ion-button>
+  <ion-button color="light" slot="icon-only">
+    <ion-icon name='arrow-down'></ion-icon>
+  </ion-button>
+  <ion-button color="light" slot="icon-only">
+    <ion-icon name='arrow-up'></ion-icon>
+  </ion-button>
+  <ion-button color="light" slot="start">
+    Next
+    <ion-icon name='arrow-forward'></ion-icon>
+  </ion-button>
+  <ion-button slot="end">
+    <ion-icon name='home'></ion-icon>
+    Home
+  </ion-button>
+  <ion-button fill="outline" slot="end">
+    <ion-icon name='briefcase' is-active="false"></ion-icon>
+    Work
+  </ion-button>
+  <ion-button clear slot="end">
+    <ion-icon name='beer' is-active="false"></ion-icon>
+    Pub
+  </ion-button>
+  <ion-button color="secondary" slot="end">
+    <ion-icon name='people'></ion-icon>
+    Friends
+  </ion-button>
+  <ion-button color="secondary" fill="outline" slot="end">
+    <ion-icon name='paw' is-active="false"></ion-icon>
+    Best Friend
+  </ion-button>
+  <ion-button color="danger" slot="end">
+    <ion-icon name='close'></ion-icon>
+    Remove
+  </ion-button>
+  <ion-button color="danger" fill="outline">
+    <ion-icon name='remove-circle' slot="icon-only" is-active="false"></ion-icon>
+  </ion-button>
+  <ion-button color="danger" fill="clear">
+    <ion-icon name='trash' is-active="false" slot="icon-only"></ion-icon>
+  </ion-button>
+  <ion-button color="dark" shape="round" slot="end">
+    <ion-icon name='construct' is-active="false"></ion-icon>
+    Tools
+  </ion-button>
+  <ion-button color="dark" fill="clear">
+    <ion-icon name='hammer' slot="icon-only" is-active="false"></ion-icon>
+  </ion-button>
+
+  <h4>Sizes</h4>
+  <ion-button size="large">Large</ion-button>
+  <ion-button>Default</ion-button>
+  <ion-button size="small">Small</ion-button>
+
+  <!-- Float Action Buttons -->
+  <!-- fab placed to the top end -->
+
+
+  <h4>In components</h4>
+  <ion-card>
+    <ion-card-content>
+      <img src="assets/yannbf/img/misc/img-icon.png" />
+    </ion-card-content>
+    <ion-item>
+      <ion-button fill="clear" slot="start">Like</ion-button>
+      <ion-button fill="clear" slot="end">Comment</ion-button>
+    </ion-item>
+  </ion-card>
+  <ion-list>
+    <ion-item>
+      Inner Button
+      <ion-button slot="end" fill="outline">Outline</ion-button>
+    </ion-item>
+    <ion-item>
+      Left Icon Button
+      <ion-button  fill="outline" slot="end">
+        <ion-icon name='star' slot="end"></ion-icon>
+        Left Icon
+      </ion-button>
+    </ion-item>
+    <ion-item>
+      Right Icon Button
+      <ion-button  fill="outline" slot="end">
+        Right Icon
+        <ion-icon name='star'slot="start"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

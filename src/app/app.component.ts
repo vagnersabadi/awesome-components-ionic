@@ -18,19 +18,24 @@ export class AppComponent {
       icon: 'home'
     },
     {
+      title: 'Ionic official',
+      url: '/official',
+      icon: 'logo-ionic'
+    },
+    {
       title: 'Fivethree',
       url: '/fivethree',
-      icon: 'home'
+      icon: 'at'
     },
     {
       title: 'Yannbf',
       url: '/yannbf',
-      icon: 'home'
+      icon: 'person'
     },
     {
       title: 'Angular Material',
       url: '/angular-material',
-      icon: 'home'
+      icon: 'logo-angular'
     }
 
   ];
@@ -41,8 +46,14 @@ export class AppComponent {
     private statusBar: StatusBar,
     public menuCtrl: MenuController
   ) {
+
+
+
+
+
     this.initializeApp();
-    // menuCtrl.enable(false, 'menu-components');
+
+
   }
 
   initializeApp() {
@@ -51,4 +62,31 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
+
+  darkTheme(event) {
+    if (event.detail.checked) {
+      // Use matchMedia to check the user preference
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+      toggleDarkTheme(prefersDark.matches);
+      // Listen for changes to the prefers-color-scheme media query
+      prefersDark.addListener((mediaQuery) => toggleDarkTheme(mediaQuery.matches));
+      // Add or remove the "dark" class based on if the media query matches
+      function toggleDarkTheme(shouldAdd) {
+        document.body.classList.toggle('dark', shouldAdd);
+      }
+
+    } else {
+      // Use matchMedia to check the user preference
+      const prefersDark = window.matchMedia('(prefers-color-scheme: :root)');
+      toggleDarkTheme(prefersDark.matches);
+      // Listen for changes to the prefers-color-scheme media query
+      prefersDark.addListener((mediaQuery) => toggleDarkTheme(mediaQuery.matches));
+      // Add or remove the "dark" class based on if the media query matches
+      function toggleDarkTheme(shouldAdd) {
+        document.body.classList.toggle('dark', shouldAdd);
+      }
+    }
+
+  }
+
 }

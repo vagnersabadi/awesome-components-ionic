@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()" fill="clear">
+        <ion-icon name="bulb" slot="icon-only" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Social Cards</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let card of cards">
+    <ion-item>
+      <ion-avatar slot="start">
+        <img [src]="card.avatarImageUrl" (click)="avatarTapped(card)">
+      </ion-avatar>
+      <h2>{{card.name}}</h2>
+      <p>{{card.date}}</p>
+    </ion-item>
+    <img [src]="card.postImageUrl" (click)="imageTapped(card)">
+    <ion-card-content>
+      <p>{{card.postText}}</p>
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <ion-button color="primary" fill="clear" size="small" (click)="like(card)">
+        <ion-icon name='thumbs-up'slot="start"></ion-icon>
+        {{card.likes}} Likes
+      </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="primary" fill="clear" size="small"  (click)="comment(card)">
+        <ion-icon name='text' slot="start"></ion-icon>
+        {{card.comments}} Comments
+      </ion-button>
+      </ion-col>
+      <ion-col  class="ion-text-center">
+        <ion-note>
+          {{card.timestamp}}
+        </ion-note>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>

@@ -1,8 +1,6 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
     
-    
-
     <ion-menu side="start" contentId="main-content" menuId="menu-avatar" id="menu-avatar">
       <ion-content>
         <div #header>
@@ -35,6 +33,12 @@
               </ion-label>
             </ion-item>
           </ion-menu-toggle>
+
+          <ion-item>
+            <ion-icon slot="start" name="moon"></ion-icon>
+            <ion-label>Dark Theme</ion-label>
+            <ion-toggle (ionChange)="darkTheme($event)"></ion-toggle>
+          </ion-item>
         </ion-list>
       </ion-content>
     </ion-menu>
@@ -57,6 +61,13 @@
               </ion-label>
             </ion-item>
           </ion-menu-toggle>
+
+          <ion-item>
+            <ion-icon slot="start" name="moon"></ion-icon>
+            <ion-label>Dark Theme</ion-label>
+            <ion-toggle (ionChange)="darkTheme($event)"></ion-toggle>
+          </ion-item>
+
         </ion-list>
       </ion-content>
     </ion-menu>
@@ -77,6 +88,13 @@
               </ion-label>
             </ion-item>
           </ion-menu-toggle>
+
+          <ion-item>
+            <ion-icon slot="start" name="moon"></ion-icon>
+            <ion-label>Dark Theme</ion-label>
+            <ion-toggle (ionChange)="darkTheme($event)"></ion-toggle>
+          </ion-item>
+
         </ion-list>
       </ion-content>
     </ion-menu>
@@ -97,6 +115,13 @@
               </ion-label>
             </ion-item>
           </ion-menu-toggle>
+
+          <ion-item>
+            <ion-icon slot="start" name="moon"></ion-icon>
+            <ion-label>Dark Theme</ion-label>
+            <ion-toggle (ionChange)="darkTheme($event)"></ion-toggle>
+          </ion-item>
+
         </ion-list>
       </ion-content>
     </ion-menu>

@@ -40,8 +40,8 @@
     "ionic-swing": "^4.1.1",
     "moment": "^2.24.0",
     "rxjs": "~6.5.4",
-    "tslib": "^1.10.0",
-    "zone.js": "~0.10.3"
+    "tslib": "^1.11.1",
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
     "@angular-devkit/architect": "^0.900.6",

@@ -157,6 +157,10 @@ const routes: Routes = [
     path: 'stepper',
     loadChildren: () => import('./pages/fivethree/components/stepper/stepper.module').then( m => m.StepperPageModule)
   },
+  {
+    path: 'viewport',
+    loadChildren: () => import('./pages/fivethree/components/viewport/viewport.module').then( m => m.ViewportPageModule)
+  },
 
 
 

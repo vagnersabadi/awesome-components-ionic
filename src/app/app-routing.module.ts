@@ -125,6 +125,10 @@ const routes: Routes = [
     path: 'expandable',
     loadChildren: () => import('./pages/fivethree/components/expandable/expandable.module').then( m => m.ExpandablePageModule)
   },
+  {
+    path: 'fab',
+    loadChildren: () => import('./pages/fivethree/components/fab/fab.module').then( m => m.FabPageModule)
+  },
 
 
 

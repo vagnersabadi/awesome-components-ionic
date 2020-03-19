@@ -6,7 +6,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { ButtonsPage } from './buttons.page';
-import { FivButtonsModule } from '@fivethree/core';
 
 const routes: Routes = [
   {
@@ -21,7 +20,6 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    FivButtonsModule
   ],
   declarations: [ButtonsPage]
 })

@@ -25,7 +25,6 @@ const routes: Routes = [
   { path: 'password', loadChildren: () => import('./pages/fivethree/components/password/password.module').then(m => m.PasswordPageModule) },
   { path: 'refresh', loadChildren: () => import('./pages/fivethree/components/refresh/refresh.module').then(m => m.RefreshPageModule) },
   { path: 'viewport', loadChildren: () => import('./pages/fivethree/components/viewport/viewport.module').then(m => m.ViewportPageModule) },
-  { path: 'buttons', loadChildren: () => import('./pages/fivethree/components/buttons/buttons.module').then(m => m.ButtonsPageModule) },
   // Yannbf
   { path: 'yannbf', loadChildren: () => import('./pages/yannbf/yannbf.module').then(m => m.YannbfPageModule) },
   { path: 'accordion-list', loadChildren: () => import('./pages/yannbf/components/accordion-list/accordion-list.module').then(m => m.AccordionListPageModule) },

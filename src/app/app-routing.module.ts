@@ -129,6 +129,10 @@ const routes: Routes = [
     path: 'fab',
     loadChildren: () => import('./pages/fivethree/components/fab/fab.module').then( m => m.FabPageModule)
   },
+  {
+    path: 'feature-discovery',
+    loadChildren: () => import('./pages/fivethree/components/feature-discovery/feature-discovery.module').then( m => m.FeatureDiscoveryPageModule)
+  },
 
 
 

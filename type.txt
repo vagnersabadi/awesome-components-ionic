@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/57216110/the-angular-compiler-requires-typescript-3-4-0-and-3-5-0-but-3-5-3-was-found
+npm install typescript@">=3.4.0 and <3.5.0" --save

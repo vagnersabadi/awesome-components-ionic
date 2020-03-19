@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { LoadingPage } from './loading.page';
-import { FivCenterModule, FivLoadingSpinnerModule, FivLoadingProgressBarModule } from '@fivethree/core';
+import { FivCenterModule, FivLoadingProgressBarModule } from '@fivethree/core';
 
 const routes: Routes = [
   {
@@ -22,7 +22,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes),
     FivLoadingProgressBarModule,
-    FivLoadingSpinnerModule,
     FivCenterModule
   ],
   declarations: [LoadingPage]

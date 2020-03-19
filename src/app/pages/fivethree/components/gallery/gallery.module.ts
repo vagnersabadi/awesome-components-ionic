@@ -8,7 +8,6 @@ import { IonicModule } from '@ionic/angular';
 import { GalleryPage } from './gallery.page';
 import {
   FivGalleryModule,
-  FivLoadingSpinnerModule,
   FivCenterModule
 } from '@fivethree/core';
 
@@ -26,7 +25,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes),
     FivGalleryModule,
-    FivLoadingSpinnerModule,
     FivCenterModule  ],
   declarations: [GalleryPage]
 })

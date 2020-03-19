@@ -117,6 +117,10 @@ const routes: Routes = [
     path: 'dialog',
     loadChildren: () => import('./pages/fivethree/components/dialog/dialog.module').then( m => m.DialogPageModule)
   },
+  {
+    path: 'editable-label',
+    loadChildren: () => import('./pages/fivethree/components/editable-label/editable-label.module').then( m => m.EditableLabelPageModule)
+  },
 
 
 

@@ -113,6 +113,10 @@ const routes: Routes = [
     path: 'bottom-sheet',
     loadChildren: () => import('./pages/fivethree/components/bottom-sheet/bottom-sheet.module').then( m => m.BottomSheetPageModule)
   },
+  {
+    path: 'dialog',
+    loadChildren: () => import('./pages/fivethree/components/dialog/dialog.module').then( m => m.DialogPageModule)
+  },
 
 
 

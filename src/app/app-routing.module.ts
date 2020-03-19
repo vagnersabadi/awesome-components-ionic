@@ -133,6 +133,10 @@ const routes: Routes = [
     path: 'feature-discovery',
     loadChildren: () => import('./pages/fivethree/components/feature-discovery/feature-discovery.module').then( m => m.FeatureDiscoveryPageModule)
   },
+  {
+    path: 'gallery',
+    loadChildren: () => import('./pages/fivethree/components/gallery/gallery.module').then( m => m.GalleryPageModule)
+  },
 
 
 

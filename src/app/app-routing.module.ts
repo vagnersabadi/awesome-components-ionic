@@ -121,6 +121,10 @@ const routes: Routes = [
     path: 'editable-label',
     loadChildren: () => import('./pages/fivethree/components/editable-label/editable-label.module').then( m => m.EditableLabelPageModule)
   },
+  {
+    path: 'expandable',
+    loadChildren: () => import('./pages/fivethree/components/expandable/expandable.module').then( m => m.ExpandablePageModule)
+  },
 
 
 

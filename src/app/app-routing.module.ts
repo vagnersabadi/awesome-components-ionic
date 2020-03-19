@@ -109,7 +109,11 @@ const routes: Routes = [
   {
     path: 'app-bar',
     loadChildren: () => import('./pages/fivethree/components/app-bar/app-bar.module').then( m => m.AppBarPageModule)
+  },  {
+    path: 'bottom-sheet',
+    loadChildren: () => import('./pages/fivethree/components/bottom-sheet/bottom-sheet.module').then( m => m.BottomSheetPageModule)
   },
+
 
 
   

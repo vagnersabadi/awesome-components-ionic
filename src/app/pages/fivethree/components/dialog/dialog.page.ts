@@ -24,4 +24,9 @@ export class DialogPage implements OnInit {
   ngOnInit() {
   }
 
+  close() { }
+
+  over() { }
+
+
 }

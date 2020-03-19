@@ -137,6 +137,14 @@ const routes: Routes = [
     path: 'gallery',
     loadChildren: () => import('./pages/fivethree/components/gallery/gallery.module').then( m => m.GalleryPageModule)
   },
+  {
+    path: 'icon',
+    loadChildren: () => import('./pages/fivethree/components/icon/icon.module').then( m => m.IconPageModule)
+  },
+  {
+    path: 'loading',
+    loadChildren: () => import('./pages/fivethree/components/loading/loading.module').then( m => m.LoadingPageModule)
+  },
 
 
 

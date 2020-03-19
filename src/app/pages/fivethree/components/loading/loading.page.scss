@@ -1,0 +1,32 @@
+ion-card {
+    top: 16px;
+  }
+  
+  ion-list {
+    padding-bottom: 8px;
+  }
+  
+  .progress-bar {
+    width: 80%;
+    height: 5px;
+    background: var(--ion-color-light);
+  }
+  
+  :host {
+    --fiv-color-fab: var(--ion-color-light);
+  }
+  
+  fiv-loading-progress-bar {
+    --background-progress-bar: purple;
+    --color-spin-0: red;
+    --color-spin-50: green;
+    --color-spin-100: yellow;
+  }
+  
+  ion-item-divider {
+    border-bottom: 0;
+  }
+  ion-item {
+    --border-style: none;
+  }
+  

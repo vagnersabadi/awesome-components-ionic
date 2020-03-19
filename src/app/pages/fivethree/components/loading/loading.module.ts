@@ -7,13 +7,21 @@ import { IonicModule } from '@ionic/angular';
 import { LoadingPageRoutingModule } from './loading-routing.module';
 
 import { LoadingPage } from './loading.page';
+import {
+  FivLoadingProgressBarModule,
+  FivSpinnerModule,
+  FivCenterModule
+} from '@fivethree/core';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    LoadingPageRoutingModule
+    LoadingPageRoutingModule,
+    FivLoadingProgressBarModule,
+    FivSpinnerModule,
+    FivCenterModule
   ],
   declarations: [LoadingPage]
 })

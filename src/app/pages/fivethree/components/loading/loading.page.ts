@@ -7,9 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoadingPage implements OnInit {
 
-  constructor() { }
+  mode = 'determinate';
+  value = 0;
 
-  ngOnInit() {
+  constructor() {}
+
+  ngOnInit() {}
+
+  fabComplete() {}
+
+  buttonComplete() {}
+
+  showHint(refresher) {
+    refresher.showHint();
   }
+
+  onRefresh(refresher) {
+    setTimeout(() => {
+      refresher.completeRefresh();
+    }, 2000);
+  }
+
+  complete() {}
 
 }

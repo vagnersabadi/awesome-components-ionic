@@ -1,0 +1,18 @@
+<fiv-searchbar [smallWidth]="120" #search title="Searchbar" placeholder="Search ...."
+  (fivInputChange)="onSearchInputChanged($event)" (fivClose)="closeSearch();" [small]="small">
+  <!-- <ion-menu-button start menu="menuId"></ion-menu-button> -->
+  <ion-back-button start defaultHref="/fivethree"></ion-back-button>
+</fiv-searchbar>
+
+<ion-content>
+
+  <p *ngIf="searchInput">searching for {{searchInput}}</p>
+
+  <ion-item>
+    <ion-label>Small Searchbar</ion-label>
+    <ion-checkbox (ionChange)="checkChanged($event)" [checked]="small" slot="start"></ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-label>Query: {{searchInput}}</ion-label>
+  </ion-item>
+</ion-content>

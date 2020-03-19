@@ -149,6 +149,10 @@ const routes: Routes = [
     path: 'refresh',
     loadChildren: () => import('./pages/fivethree/components/refresh/refresh.module').then( m => m.RefreshPageModule)
   },
+  {
+    path: 'searchbar',
+    loadChildren: () => import('./pages/fivethree/components/searchbar/searchbar.module').then( m => m.SearchbarPageModule)
+  },
 
 
 

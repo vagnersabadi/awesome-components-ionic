@@ -12,12 +12,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { FivExpandableModule, FivRouterItemModule, FivCollapsableModule } from '@fivethree/core';
 // import { SwingModule } from 'angular2-swing';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
+    FivCollapsableModule,
+    FivRouterItemModule,
+    FivExpandableModule,
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,

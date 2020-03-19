@@ -101,8 +101,18 @@ const routes: Routes = [
     path: 'alerts',
     loadChildren: () => import('./pages/official/components/alerts/alerts.module').then( m => m.AlertsPageModule)
   },
-  
+  // Fivethree
+  {
+    path: 'fivethree',
+    loadChildren: () => import('./pages/fivethree/fivethree.module').then( m => m.FivethreePageModule)
+  },
+  {
+    path: 'app-bar',
+    loadChildren: () => import('./pages/fivethree/components/app-bar/app-bar.module').then( m => m.AppBarPageModule)
+  },
 
+
+  
 
 
 ];

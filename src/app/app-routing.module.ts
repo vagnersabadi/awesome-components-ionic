@@ -153,6 +153,10 @@ const routes: Routes = [
     path: 'searchbar',
     loadChildren: () => import('./pages/fivethree/components/searchbar/searchbar.module').then( m => m.SearchbarPageModule)
   },
+  {
+    path: 'stepper',
+    loadChildren: () => import('./pages/fivethree/components/stepper/stepper.module').then( m => m.StepperPageModule)
+  },
 
 
 

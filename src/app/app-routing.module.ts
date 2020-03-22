@@ -145,7 +145,8 @@ const routes: Routes = [
   {
     path: 'loading',
     loadChildren: () => import('./pages/fivethree/components/loading/loading.module').then( m => m.LoadingPageModule)
-  },  {
+  },
+  {
     path: 'refresh',
     loadChildren: () => import('./pages/fivethree/components/refresh/refresh.module').then( m => m.RefreshPageModule)
   },
@@ -161,6 +162,13 @@ const routes: Routes = [
     path: 'viewport',
     loadChildren: () => import('./pages/fivethree/components/viewport/viewport.module').then( m => m.ViewportPageModule)
   },
+
+  // SAMPLES
+  {
+    path: 'samples',
+    loadChildren: () => import('./pages/samples/samples.module').then( m => m.SamplesPageModule)
+  }
+
 
 
 

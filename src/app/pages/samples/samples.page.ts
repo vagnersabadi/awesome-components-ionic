@@ -9,17 +9,14 @@ export class SamplesPage implements OnInit {
   
   pages = [
     {
+      namePage: 'Wordpress',
+      router: '/samples/blogs',
+    },
+    {
       namePage: 'Walkthrough',
       router: '/samples/walkthrough',
     },
-    {
-      namePage: 'Alerts',
-      router: '/alerts',
-    },
-    {
-      namePage: 'Cards',
-      router: '/official/cards',
-    },
+  
   ];
 
 

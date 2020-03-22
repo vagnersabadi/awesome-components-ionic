@@ -10,12 +10,21 @@ const routes: Routes = [
   },
   {
     path: 'walkthrough',
-    loadChildren: () => import('./components/walkthrough/walkthrough.module').then( m => m.WalkthroughPageModule)
+    loadChildren: () => import('./components/walkthrough/walkthrough.module').then(m => m.WalkthroughPageModule)
+  },
+  {
+    path: 'blogs',
+    loadChildren: () => import('./components/wordpress/blogs/blogs.module').then(m => m.BlogsPageModule)
+  },
+  {
+    path: 'blogpage',
+    loadChildren: () => import('./components/wordpress/blogpage/blogpage.module').then( m => m.BlogpagePageModule)
   }
+
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class SamplesPageRoutingModule {}
+export class SamplesPageRoutingModule { }

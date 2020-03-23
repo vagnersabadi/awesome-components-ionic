@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/fivethree"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Refresh</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <fiv-refresher #refresher></fiv-refresher>
+
+  
+  <ion-item>
+    <ion-label>Show Header</ion-label>
+    <ion-checkbox slot="end" [(ngModel)]="header"></ion-checkbox>
+  </ion-item>
+  <ion-toolbar color="translucent">
+    <ion-buttons slot="end">
+      <ion-button shape="round" fill="outline" color="primary" (click)="refresher.showHint()">
+        Show hint
+      </ion-button>
+      <ion-button shape="round" fill="outline" color="primary" (click)="refresher.refresh()">
+        Refresh
+      </ion-button>
+      <ion-button shape="round" fill="outline" color="primary" (click)="refresher.complete()">
+        complete
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <div class="scroll"></div>
+</ion-content>

@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/fivethree"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Viewport</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p *ngIf="!visible">
+    scroll to reveal the button
+  </p>
+  <div class="container">
+
+    <ion-button [fivCenter] fivViewport (fivAppear)="appear($event)" (fivDisappear)="disappear($event)">
+      Click me
+    </ion-button>
+
+  </div>
+
+</ion-content>

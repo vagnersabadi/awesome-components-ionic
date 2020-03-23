@@ -2,7 +2,7 @@ import { ModalController } from '@ionic/angular';
 import { WordpressService } from './../../../../../services/wordpress/wordpress.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { BlogpagePage } from '../blogpage/blogpage.page';
+import { BlogpagePage } from './blogpage/blogpage.page';
 
 @Component({
   selector: 'app-blogs',

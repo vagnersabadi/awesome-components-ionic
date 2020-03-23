@@ -17,8 +17,8 @@ const routes: Routes = [
     loadChildren: () => import('./components/wordpress/blogs/blogs.module').then(m => m.BlogsPageModule)
   },
   {
-    path: 'blogpage',
-    loadChildren: () => import('./components/wordpress/blogpage/blogpage.module').then( m => m.BlogpagePageModule)
+    path: 'grids',
+    loadChildren: () => import('./components/grids/grids.module').then( m => m.GridsPageModule)
   }
 
 ];

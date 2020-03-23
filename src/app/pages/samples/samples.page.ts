@@ -9,6 +9,10 @@ export class SamplesPage implements OnInit {
   
   pages = [
     {
+      namePage: 'Grids',
+      router: '/samples/grids',
+    },
+    {
       namePage: 'Wordpress',
       router: '/samples/blogs',
     },

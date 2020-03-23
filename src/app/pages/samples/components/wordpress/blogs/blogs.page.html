@@ -12,7 +12,7 @@
 
 <ion-content>
 
-  <div class="video-list" *ngFor="let item of blogPosts" no-padding mode="md" (click)="openBlog(item.id)">
+  <div class="video-list ion-no-padding" *ngFor="let item of blogPosts" mode="md" (click)="openBlog(item.id)">
     <div class="imagediv" [ngStyle]="{'background-image' :'url('+ item.jetpack_featured_media_url + ')'}">
     </div>
     <div class="details">

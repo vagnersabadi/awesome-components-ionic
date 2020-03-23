@@ -6,7 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { BlogsPage } from './blogs.page';
-import { BlogpagePageModule } from '../blogpage/blogpage.module';
+import { BlogpagePageModule } from './blogpage/blogpage.module';
 
 const routes: Routes = [
   {
@@ -25,4 +25,4 @@ const routes: Routes = [
   ],
   declarations: [BlogsPage]
 })
-export class BlogsPageModule {}
+export class BlogsPageModule { }

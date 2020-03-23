@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Clones UI
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> Main apps interfaces </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label class="ion-text-wrap">
+        Interfaces (UI) of some applications used daily, and known. Using ionic structure.
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-item *ngFor="let item of pages" [routerLink]="[item.router]" detail>
+      <ion-label>
+        {{ item.namePage }}
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

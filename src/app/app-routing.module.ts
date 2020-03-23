@@ -167,7 +167,11 @@ const routes: Routes = [
   {
     path: 'samples',
     loadChildren: () => import('./pages/samples/samples.module').then( m => m.SamplesPageModule)
+  },  {
+    path: 'clones-ui',
+    loadChildren: () => import('./pages/clones-ui/clones-ui.module').then( m => m.ClonesUiPageModule)
   }
+
 
 
 

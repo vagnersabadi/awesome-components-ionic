@@ -40,8 +40,15 @@ export class AppComponent {
     {
       title: 'My Samples',
       url: '/samples',
-      icon: 'logo-angular'
+      icon: 'bug'
+    },
+    {
+      title: 'Clones UI',
+      url: '/clones-ui',
+      icon: 'apps'
     }
+
+    
 
   ];
 

@@ -161,6 +161,10 @@ const routes: Routes = [
     path: 'viewport',
     loadChildren: () => import('./pages/fivethree/components/viewport/viewport.module').then( m => m.ViewportPageModule)
   },
+  {
+    path: 'slide-pagination',
+    loadChildren: () => import('./pages/yannbf/components/slides/slide-pagination/slide-pagination.module').then( m => m.SlidePaginationPageModule)
+  },
 
 
 

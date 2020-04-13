@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Slide Pagination</ion-title>
+  </ion-toolbar>
+  <ion-segment #segment scrollable (ionChange)="stageSegmentChanged($event)" value="0">
+    <ion-segment-button [value]="i" *ngFor="let stagesSegment of [0,1,2,3,4,5,6,7,8,9]; let i = index">
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+
+<ion-content>
+
+
+
+  <ion-slides pager="true" [options]="sliderConfig" #slider (ionSlideTransitionEnd)="activeSlide()">
+    <ion-slide *ngFor="let stage of [0,1,2,3,4,5,6,7,8,9]">
+
+      <div class="content-stage">
+        <ion-item class="trasnparent title-stage" lines="none">
+          <ion-button slot="icon-only" fill="clear" slot="start" (click)="prevStage()">
+            <ion-icon name="chevron-back" color="grey-seven"></ion-icon>
+          </ion-button>
+          <ion-label>
+            <ion-text color="grey-seven">
+              <p>
+                <b> SQL - No-Show</b>
+              </p>
+              <p>
+                6 R$ 0,00 &bull; R$ 0,00
+              </p>
+            </ion-text>
+          </ion-label>
+          <ion-button slot="icon-only" fill="clear" slot="end" (click)="nextStage()">
+            <ion-icon name="chevron-forward" color="grey-seven"></ion-icon>
+          </ion-button>
+        </ion-item>
+        <ion-list>
+
+          <ion-card *ngFor="let stage of [0,1,2,3,4,5,6,7,8,9]">
+            <img src="assets/yannbf/img/lists/wishlist-1.jpg" />
+            <ion-card-header>
+              <ion-card-subtitle>Destination</ion-card-subtitle>
+              <ion-card-title>Madison, WI</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the capital of the
+              Wisconsin Territory in 1836.
+            </ion-card-content>
+          </ion-card>
+
+        </ion-list>
+      </div>
+
+    </ion-slide>
+
+  </ion-slides>
+
+</ion-content>
+<ion-footer class="ion-no-border">
+  <div class="segment-arrow">
+    <ion-segment #segmentFooter scrollable (ionChange)="stageSegmentChanged($event)" value="0">
+      <ion-segment-button [value]="i" *ngFor="let stagesSegment of [0,1,2,3,4,5,6,7,8,9]; let i = index">
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+</ion-footer>

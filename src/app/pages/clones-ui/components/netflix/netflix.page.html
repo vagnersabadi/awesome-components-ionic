@@ -1,9 +1,160 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>netflix</ion-title>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="start"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-segment (ionChange)="segmentChanged($event)">
+        <ion-segment-button value="series" checked>Series</ion-segment-button>
+        <ion-segment-button value="movies" checked>Movies</ion-segment-button>
+        <ion-segment-button value="mylist" checked>My List</ion-segment-button>
+      </ion-segment>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
 
+<ion-content>
+  <div *ngIf="segmentTab == 'series'">
+    <div class="banner" [ngStyle]="{'background-image':'url('+netflixSeriesData.banner.image+')'}">
+      <div class="overlay"></div>
+      <div class="banner-bottom">
+        <div class="banner-title">Watch {{netflixSeriesData.banner.title}}</div>
+        <div class="banner-buttons">
+          <div class="mylist">
+            <div class="icon">
+              <ion-icon name="add"></ion-icon>
+            </div>
+            <div class="text">My List</div>
+          </div>
+          <div class="play">
+            <ion-icon name="play"></ion-icon>
+            Play
+          </div>
+          <div class="info">
+            <div class="icon">
+              <ion-icon name="information-circle-outline"></ion-icon>
+            </div>
+            <div class="text">Info</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="tray" *ngFor="let tray of netflixSeriesData.trays_before">
+      <div class="tray-title">
+        {{tray.title}}
+      </div>
+      <div class="tray-inner">
+
+        <div class="tray-content" *ngFor="let item of tray.items">
+          <div class="tray-item" [ngStyle]="{'background-image':'url('+item.image+')'}">
+            <div class="play-div" *ngIf="tray.continue">
+              <ion-icon name="play"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="upcoming">
+      <div class="date">Coming on {{netflixSeriesData.upcoming.date}}</div>
+      <ion-img [src]="netflixSeriesData.upcoming.image"></ion-img>
+      <div class="upcoming-buttons">
+        <ion-button class="trailer" expand="block" color="light">
+          <ion-icon slot="start" name="play"></ion-icon>
+          Trailer
+        </ion-button>
+        <ion-button fill="outline" expand="block" color="light" class="add">
+          <ion-icon slot="start" name="add"></ion-icon>
+          My List
+        </ion-button>
+      </div>
+    </div>
+    <div class="tray" *ngFor="let tray of netflixSeriesData.trays_after">
+      <div class="tray-title">
+        {{tray.title}}
+      </div>
+      <div class="tray-inner">
+
+        <div class="tray-content" *ngFor="let item of tray.items">
+          <div class="tray-item" [ngStyle]="{'background-image':'url('+item.image+')'}">
+            <div class="play-div" *ngIf="tray.continue">
+              <ion-icon name="play"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="segmentTab == 'movies'">
+    <div class="banner" [ngStyle]="{'background-image':'url('+netflixMoviesData.banner.image+')'}">
+      <div class="overlay"></div>
+      <div class="banner-bottom">
+        <div class="banner-title">Watch {{netflixMoviesData.banner.title}}</div>
+        <div class="banner-buttons">
+          <div class="mylist">
+            <div class="icon">
+              <ion-icon name="add"></ion-icon>
+            </div>
+            <div class="text">My List</div>
+          </div>
+          <div class="play">
+            <ion-icon name="play"></ion-icon>
+            Play
+          </div>
+          <div class="info">
+            <div class="icon">
+              <ion-icon name="information-circle-outline"></ion-icon>
+            </div>
+            <div class="text">Info</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="tray" *ngFor="let tray of netflixMoviesData.trays_before">
+      <div class="tray-title">
+        {{tray.title}}
+      </div>
+      <div class="tray-inner">
+
+        <div class="tray-content" *ngFor="let item of tray.items">
+          <div class="tray-item" [ngStyle]="{'background-image':'url('+item.image+')'}">
+            <div class="play-div" *ngIf="tray.continue">
+              <ion-icon name="play"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="upcoming">
+      <div class="date">Coming on {{netflixMoviesData.upcoming.date}}</div>
+      <ion-img [src]="netflixMoviesData.upcoming.image"></ion-img>
+      <div class="upcoming-buttons">
+        <ion-button class="trailer" expand="block" color="light">
+          <ion-icon slot="start" name="play"></ion-icon>
+          Trailer
+        </ion-button>
+        <ion-button fill="outline" expand="block" color="light" class="add">
+          <ion-icon slot="start" name="add"></ion-icon>
+          My List
+        </ion-button>
+      </div>
+    </div>
+    <div class="tray" *ngFor="let tray of netflixMoviesData.trays_after">
+      <div class="tray-title">
+        {{tray.title}}
+      </div>
+      <div class="tray-inner">
+
+        <div class="tray-content" *ngFor="let item of tray.items">
+          <div class="tray-item" [ngStyle]="{'background-image':'url('+item.image+')'}">
+            <div class="play-div" *ngIf="tray.continue">
+              <ion-icon name="play"></ion-icon>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </ion-content>

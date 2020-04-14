@@ -13,7 +13,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FivExpandableModule, FivRouterItemModule, FivCollapsableModule } from '@fivethree/core';
+import { HttpClientModule } from '@angular/common/http';
 // import { SwingModule } from 'angular2-swing';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,12 +28,14 @@ import { FivExpandableModule, FivRouterItemModule, FivCollapsableModule } from '
     IonicModule.forRoot(),
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    Geolocation,
   ],
   bootstrap: [AppComponent]
 })

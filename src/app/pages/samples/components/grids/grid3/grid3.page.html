@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/grids"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title-ios">Full Width Images</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item no-lines ion-item *ngFor="let p of gridImages" no-padding mode="md">
+      <div class="imagediv" [ngStyle]="{'background-image' :'linear-gradient(0deg,rgba(88, 87, 88, 0.3),rgba(94, 93, 94, 0.3)),url('+ p.image+ ')','background-repeat': 'no-repeat', 
+      'height':'40% 100px', 'background-size': 'cover '}">
+        <div class="inner">
+          <h1><b>{{p.title}}</b></h1>
+        </div>
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>

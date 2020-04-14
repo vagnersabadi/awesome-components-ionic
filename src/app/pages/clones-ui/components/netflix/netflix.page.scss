@@ -1,0 +1,130 @@
+ion-content {
+    --background: #232528;
+}
+.banner {
+    height: 70vh;
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    .overlay {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: linear-gradient(transparent 50%, #242528);
+    }
+    .banner-bottom {
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .banner-title {
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .banner-buttons {
+            display: flex;
+            width: 60%;
+            justify-content: space-around;
+            align-items: center;
+            .mylist {
+                color: white;
+                text-align: center;
+                .icon {
+                    ion-icon {
+                        font-size: 36px;
+                    }
+                }
+                .text {
+                    font-size: 12px;
+                }
+            }
+            .play {
+                background: white;
+                padding: 5px 10px;
+                border-radius: 3px;
+                display: flex;
+                align-items: center;
+                width: 100px;
+                justify-content: space-around;
+            }
+            .info {
+                color: white;
+                text-align: center;
+                .icon {
+                    ion-icon {
+                        font-size: 36px;
+                    }
+                }
+                .text {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+.tray {
+    width: 100%;
+    overflow-x: scroll;
+    padding: 10px 15px;
+    .tray-title {
+        color: white;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+    .tray-inner {
+        display: flex;
+        .tray-content {
+            margin-right: 5px;
+            .tray-item {
+                height: 170px;
+                width: 120px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                border-radius: 3px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .play-div {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    background: rgba(0, 0, 0, 0.5);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    ion-icon {
+                        color: white;
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+.upcoming {
+    .date {
+        padding: 10px 15px;
+        color: white;
+        font-weight: bold;
+    }
+    ion-img {
+    }
+    .upcoming-buttons {
+        display: flex;
+        justify-content: space-around;
+        ion-button {
+            width: 100%;
+            padding: 5px 5px 0;
+        }
+        .trailer {
+        }
+        .add {
+        }
+    }
+}

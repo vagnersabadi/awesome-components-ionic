@@ -1,0 +1,153 @@
+<!-- 
+
+IMPORTANT!!!!!
+
+https://www.npmjs.com/package/agm-direction
+
+npm install --save @agm/core agm-direction
+
+
+ionic cordova plugin add cordova-plugin-geolocation
+
+npm install @ionic-native/geolocation
+
+ -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="start"></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="!driveStatus">
+      Offline
+    </ion-title>
+    <ion-title *ngIf="driveStatus">
+      Online
+    </ion-title>
+    <ion-toggle slot="end" [(ngModel)]="driveStatus" color="secondary">
+    </ion-toggle>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content slot="fixed">
+  <div *ngIf="!driveStatus">
+    <ion-item color="secondary" lines="none">
+      <ion-avatar slot="start" class="nightModeIcon">
+        <img src="../../../assets/clones/map/nightMode.png">
+      </ion-avatar>
+      <ion-label class="textBold">You are Offline</ion-label>
+    </ion-item>
+
+
+
+  </div>
+
+  <div *ngIf="driveStatus">
+
+
+  </div>
+</ion-content>
+
+<ion-footer *ngIf="!driveStatus">
+  <div class="driverCardBottom">
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed" class="driverlocationIcon" color="dark">
+      <ion-fab-button>
+        <ion-icon name="locate" class="locationIcon"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+    <ion-card no-padding no-margin slot="fixed" class="driverCard fixed">
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="../../../assets/clones/map/driver.jpeg">
+        </ion-avatar>
+        <ion-label text-capitalize> <b>John Doe</b></ion-label>
+        <span fill="outline" slot="end"> <b>$325.00</b></span>
+      </ion-item>
+
+      <ion-card-content color="primary" no-margin>
+        <div class="cardContent">
+          <div class="driverDetails">
+            <ion-icon name="time" class="driverStatusIcons"></ion-icon>
+            <ion-label class="textColor textBold detailsLabel">10.2</ion-label>
+            <p text-uppercase class="detailText ">Hours Online</p>
+          </div>
+          <div class="driverDetails">
+            <ion-icon name="speedometer" class="driverStatusIcons"></ion-icon>
+            <ion-label text-uppercase class="textColor textBold detailsLabel">30 KM</ion-label>
+            <p text-uppercase class="detailText">Total Distance</p>
+          </div>
+          <div class="driverDetails">
+            <ion-icon name="time" class="driverStatusIcons"></ion-icon>
+            <ion-label class="textColor textBold detailsLabel">20</ion-label>
+            <p text-uppercase class="detailText">Total Jobs</p>
+          </div>
+        </div>
+
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-footer>
+
+<ion-footer *ngIf="driveStatus && userCard">
+  <div class="relative">
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed" class="userlocationIcon" color="dark" padding-bottom>
+      <ion-fab-button>
+        <ion-icon name="locate" class="locationIcon"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+    <ion-card slot="fixed" class="userCard">
+      <ion-card-header color="light" class="userCardHeader dFlex">
+        <ion-thumbnail>
+          <img src="../../../assets/clones/map/user.jpeg" class="userIcon">
+        </ion-thumbnail>
+
+        <div padding-horizontal>
+          <div>
+            <ion-label>Esther Berry</ion-label>
+          </div>
+          <div class="dFlex" align-items-center>
+            <ion-button size="small" color="primary" shape="round" class="card-Chip textBold boxShadow" text-capitalize>
+              Apple pay</ion-button>
+            <ion-button size="small" color="primary" shape="round" class="card-Chip textBold boxShadow" text-capitalize>
+              Discount</ion-button>
+          </div>
+        </div>
+
+        <div float-right padding-start>
+          <div>
+            <ion-label class="textBold"> $25.00</ion-label>
+          </div>
+          <div>
+            <ion-label class="textBold lightTextColor">2.2 KM</ion-label>
+          </div>
+
+        </div>
+
+      </ion-card-header>
+
+      <ion-card-content color="light" no-margin class="userCard-conetnt">
+        <div class="borderBottom paddingVertical">
+          <div class="detailText fontSmall" text-uppercase>Pick Up</div>
+          <ion-label class="detailsLabel textColor textBold">7958 Swift Village</ion-label>
+        </div>
+
+        <div class="borderBottom paddingVertical">
+          <div class="detailText fontSmall" text-uppercase>Drop Off</div>
+          <ion-label class="detailsLabel  textColor textBold">105 William, US</ion-label>
+        </div>
+
+        <div>
+          <div class="userCardFooter" padding-start>
+            <ion-button color="light" size="small" class="textBold boxShadow">Ignore</ion-button>
+            <ion-button color="firebase" size="small" class="textBold boxShadow">Accept</ion-button>
+          </div>
+
+          <div class="requestAll" no-padding>
+            <ion-label color="dark" class="textBold boxShadow">View All Requests</ion-label>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-footer>

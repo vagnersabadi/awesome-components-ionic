@@ -1,0 +1,33 @@
+<div class="feed-block" *ngFor="let item of instaData">
+  <div class="block-header">
+    <ion-item lines="none">
+      <ion-avatar slot="start">
+        <img [src]="item.avatar">
+      </ion-avatar>
+      <ion-label>
+        <ion-text color="dark">
+          <h3>{{item.title}}</h3>
+        </ion-text>
+        <p>{{item.subtitle}}</p>
+      </ion-label>
+      <ion-icon slot="end" name="more">
+
+      </ion-icon>
+    </ion-item>
+  </div>
+  <div class="block-image">
+    <img [src]="item.img">
+  </div>
+  <div class="block-icons">
+    <ion-icon slot="start" name="heart-outline"></ion-icon>
+    <ion-icon slot="start" name="chatbubble-outline"></ion-icon>
+    <ion-icon slot="start" name="send-outline"></ion-icon>
+    <ion-icon class="bookmark" name="bookmark-outline"></ion-icon>
+  </div>
+  <div class="block-desc">
+    <ion-text class="likes">{{item.likes}}</ion-text>
+    <div>
+      <ion-text>{{item.desc}}</ion-text>
+    </div>
+  </div>
+</div>

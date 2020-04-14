@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/grids"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title-ios" text-capitalize>Expandable List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="" no-padding>
+    <ion-list class="accordion-list" lines="none">
+      <ion-label *ngFor="let item of lists; let i = index" lines="none" no-padding>
+        <ion-button class="button" expand="full" slot="start" (click)="toggleGroup(i)"
+          [ngClass]="{active: isGroupShown(i)}">
+          <span class="btn-title">{{ item.Name }}</span>
+          <ion-icon class="end" [name]="isGroupShown(i) ? 'arrow-down' : 'arrow-up'"></ion-icon>
+        </ion-button>
+
+        <ion-list *ngIf="item.children && isGroupShown(i)" inset lines="none">
+          <ion-list-header *ngFor="let child of item.children; let j = index" class="ion-no-padding" lines="none">
+            <ion-item *ngIf="!child.children" class="child-item">
+              <ion-avatar slot="start">
+                <ion-img src="{{child.image}}"></ion-img>
+              </ion-avatar>
+              <ion-label>
+                <h4>
+                  <b>{{child.Name}}</b>
+                </h4>
+                <h6>{{child.Equipment}}</h6>
+                <p> {{child.Set}}</p>
+              </ion-label>
+            </ion-item>
+          </ion-list-header>
+        </ion-list>
+
+      </ion-label>
+    </ion-list>
+  </div>
+</ion-content>

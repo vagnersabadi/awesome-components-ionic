@@ -49,7 +49,7 @@
 
         <div class="tray-content" *ngFor="let item of tray.items">
           <div class="tray-item" [ngStyle]="{'background-image':'url('+item.image+')'}">
-            <div class="play-div" *ngIf="tray.continue">
+            <div class="play-div">
               <ion-icon name="play"></ion-icon>
             </div>
           </div>
@@ -120,7 +120,7 @@
 
         <div class="tray-content" *ngFor="let item of tray.items">
           <div class="tray-item" [ngStyle]="{'background-image':'url('+item.image+')'}">
-            <div class="play-div" *ngIf="tray.continue">
+            <div class="play-div">
               <ion-icon name="play"></ion-icon>
             </div>
           </div>

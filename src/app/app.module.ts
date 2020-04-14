@@ -15,6 +15,7 @@ import { environment } from '../environments/environment';
 import { FivExpandableModule, FivRouterItemModule, FivCollapsableModule } from '@fivethree/core';
 import { HttpClientModule } from '@angular/common/http';
 // import { SwingModule } from 'angular2-swing';
+import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -33,7 +34,8 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    Geolocation,
   ],
   bootstrap: [AppComponent]
 })

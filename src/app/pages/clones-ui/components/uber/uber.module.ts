@@ -8,6 +8,7 @@ import { UberPageRoutingModule } from './uber-routing.module';
 
 import { UberPage } from './uber.page';
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -17,4 +18,4 @@ import { UberPage } from './uber.page';
   ],
   declarations: [UberPage]
 })
-export class UberPageModule {}
+export class UberPageModule { }

@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { WhatsappPageRoutingModule } from './whatsapp-routing.module';
 
 import { WhatsappPage } from './whatsapp.page';
+import { ClassicPageModule } from './classic/classic.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    WhatsappPageRoutingModule
+    WhatsappPageRoutingModule,
+    ClassicPageModule
   ],
   declarations: [WhatsappPage]
 })

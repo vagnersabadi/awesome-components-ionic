@@ -1,0 +1,139 @@
+<ion-header translucent>
+  <ion-toolbar class="padding_toolbar">
+    <ion-buttons slot="start">
+      <ion-button slot="icon-only" (click)="modal.dismiss()" fill="clear">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+
+    <ion-title color="medium" text-center>Classic</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content #IonContent>
+  <ion-list>
+    <div *ngFor="let chat of msgList; let i = index; ">
+      <ion-row *ngIf="chat.userId == User">
+        <ion-col class="right" no-padding
+          [ngClass]="{'clubbed':((msgList[i+1] && msgList[i+1].userId != chat.userId)|| !msgList[i+1])}">
+          <div class="imageAvatarRight">
+            <ion-label color="light">
+              <div class="chatDiv" [ngClass]="{'sharper':((msgList[i+1] && msgList[i+1].userId == chat.userId) && 
+              (msgList[i-1] && msgList[i-1].userId == chat.userId)),
+              'sharper-top':(msgList[i-1] && msgList[i-1].userId == chat.userId),
+              'sharper-bottom':(msgList[i+1] && msgList[i+1].userId == chat.userId)}">
+                <p text-wrap padding>{{chat.message}}
+                </p>
+                <div class="corner-parent-right">
+                  <div class="corner-child-right">
+
+                  </div>
+                </div>
+              </div>
+            </ion-label>
+
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="chat.userId == toUser">
+        <ion-col class="left" no-padding
+          [ngClass]="{'clubbed':((msgList[i+1] && msgList[i+1].userId != chat.userId)|| !msgList[i+1])}">
+          <div class="imageAvatarLeft">
+            <ion-label color="light">
+              <div class="chatDiv" [ngClass]="{'sharper':((msgList[i+1] && msgList[i+1].userId == chat.userId) && 
+              (msgList[i-1] && msgList[i-1].userId == chat.userId)),
+              'sharper-top':(msgList[i-1] && msgList[i-1].userId == chat.userId),
+              'sharper-bottom':(msgList[i+1] && msgList[i+1].userId == chat.userId),
+            'transparent-bg': (chat.image || chat.map || chat.video)}">
+                <p text-wrap padding *ngIf="!chat.image && !chat.video && !chat.map">{{chat.message}}</p>
+                <div class="imageFrom_footer" *ngIf="chat.image">
+                  <ion-img [src]="chat.image" class="imageFrom_footer"></ion-img>
+                </div>
+
+                <div class="imageFrom_footer video" *ngIf="chat.video">
+                  <video controls class="videoFrom_footer">
+                    <source [src]="chat.video" type="video/mp4">
+                  </video>
+                </div>
+
+                <div class="imageFrom_footerMap" *ngIf="chat.map">
+                  <!-- <agm-map [latitude]=chat.map.lat [longitude]=chat.map.lng [draggable]="false">
+                    <agm-marker [latitude]=chat.map.lat [longitude]=chat.map.lng></agm-marker>
+                  </agm-map> -->
+                </div>
+
+                <div class="corner-parent-left" *ngIf="!(chat.image || chat.map || chat.video)">
+                  <div class="corner-child-left">
+
+                  </div>
+                </div>
+
+                <div class="corner-parent-left-image" *ngIf="chat.image || chat.map || chat.video">
+
+                </div>
+                <div class="corner-child-left-image" *ngIf="chat.image || chat.map || chat.video">
+                  <div class="child">
+
+                  </div>
+                </div>
+              </div>
+            </ion-label>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="((msgList[i+1] && msgList[i+1].userId != chat.userId)|| !msgList[i+1])">
+        <ion-col>
+          <ion-text class="chat-time">{{chat.time}}</ion-text>
+        </ion-col>
+      </ion-row>
+    </div>
+    <ion-row *ngIf="loader">
+      <ion-col no-padding class="loading-col">
+        <div class="imageAvatarRight">
+          <ion-label color="light">
+            <div class="chatDivLoader">
+              <p text-wrap padding class="loader-text">
+                <ion-spinner name="dots" color="dark"></ion-spinner>
+              </p>
+              <div class="corner-parent-right">
+                <div class="corner-child-right">
+
+                </div>
+              </div>
+            </div>
+          </ion-label>
+
+        </div>
+
+      </ion-col>
+    </ion-row>
+  </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-item class="footer_item">
+      <ion-icon slot="end" name="send" expand="icon-only" class="footerIconSend" (click)=" sendMsg()"
+        (mousedown)="something($event)"></ion-icon>
+      <ion-input class="input-box" type="text" placeholder="Write a message..." [(ngModel)]="user_input"
+        (keypress)="userTyping($event)" (ionFocus)="focusFunction($event)"></ion-input>
+      <ion-icon slot="end" name="add" expand="icon-only" class="footerIcon" (click)="toggleList()"></ion-icon>
+    </ion-item>
+    <ion-list *ngIf="show" class="footer-options">
+      <ion-row class="footer_row">
+        <ion-col size="4" class="footer_col" *ngFor="let footer of footerJson; let i of index">
+          <ion-label class="footer_label" (click)="typeSelected(footer)">
+            <ion-icon name={{footer.icon}} expand="icon-only" *ngIf="footer.icon" class="footerIcon"></ion-icon>
+            <ion-thumbnail *ngIf="footer.image">
+              <ion-img [src]=footer.image></ion-img>
+            </ion-thumbnail>
+            <p>{{footer.label}}</p>
+          </ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-list>
+  </ion-toolbar>
+</ion-footer>

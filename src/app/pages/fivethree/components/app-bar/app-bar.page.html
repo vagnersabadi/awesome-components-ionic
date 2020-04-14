@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/fivethree"></ion-back-button>
+    </ion-buttons>
+    <ion-title>App Bar</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-tabs #tabs>
+    <fiv-app-bar slot="bottom"  #bar>
+      <fiv-fab [fivAppBarFab]="position" #fab>
+        <fiv-icon name="color-wand"></fiv-icon>
+      </fiv-fab>
+  
+      <fiv-app-bar-tab left tab="tab1" href="#">
+        <fiv-icon name="home"></fiv-icon>
+        <ion-label>Home</ion-label>
+      </fiv-app-bar-tab>
+      <fiv-app-bar-tab left tab="tab2" href="#">
+        <fiv-icon name="images"></fiv-icon>
+        <ion-label>Images</ion-label>
+      </fiv-app-bar-tab>
+      <fiv-app-bar-tab right tab="tab3" href="#">
+        <fiv-icon [badge]="1" name="pizza"></fiv-icon>
+        <ion-label>Pizza</ion-label>
+      </fiv-app-bar-tab>
+      <fiv-app-bar-tab right tab="tab4" href="#">
+        <fiv-icon name="chatbox-ellipses"></fiv-icon>
+        <ion-label>More</ion-label>
+      </fiv-app-bar-tab>
+    </fiv-app-bar>
+  </ion-tabs>
+</ion-content>

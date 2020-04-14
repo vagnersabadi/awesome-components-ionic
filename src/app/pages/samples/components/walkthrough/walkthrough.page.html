@@ -1,0 +1,57 @@
+<ion-content>
+  <ion-slides pager="true" [options]="slideOpts" (ionSlideDidChange)="sliderChanges($event)">
+    <ion-slide>
+      <div class="slide slide-1">
+        <div class="skip-button">
+          <ion-button color="light" fill="clear" class="skip" (click)="skip()">Skip</ion-button>
+        </div>
+        <img src="assets/samples/imgs/ionic-white.png">
+        <div>
+          <h1 class="slideTitle">SAMPLES</h1>
+          <span class="slideText">Explore the ultimate Ionic 5 resource for all your app development</span>
+        </div>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide slide-2">
+        <div class="skip-button">
+          <ion-button color="light" fill="clear" class="skip" (click)="skip()">Skip</ion-button>
+        </div>
+        <img src="assets/samples/imgs/firebase.png" alt="">
+        <div>
+          <h1 class="slideTitle">FIREBASE</h1>
+          <span class="slideText">Use Firebase Authentication, social login, storage and data queries for your
+            application</span>
+        </div>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="slide slide-3">
+        <div class="skip-button">
+          <ion-button color="light" fill="clear" class="skip" (click)="skip()">Skip</ion-button>
+        </div>
+        <img src="assets/samples/imgs/woocommerce.png" alt="">
+        <div>
+          <h1 class="slideTitle">WOO-COMMERCE</h1>
+          <span class="slideText">Use Woocommerce directly in your app. Use all shop features of an e-commerce
+            platform.</span>
+        </div>
+
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <div class="slide slide-4">
+        <img src="assets/samples/imgs/layouts.png" alt="">
+        <div>
+          <h1 class="slideTitle">LAYOUTS</h1>
+          <span class="slideText">Explore from a large number of layouts and create your perfect app</span>
+        </div>
+        <div padding-vertical padding-horizontal margin-horizontal margin-vertical>
+          <ion-button color="primary" class="btnSubmit slideTitle" padding-horizontal text-uppercase
+            (click)="skip()">Get Started</ion-button>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

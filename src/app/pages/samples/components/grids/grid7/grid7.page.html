@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/grids"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="title-ios">Product Card Grid X2</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row margin-top margin-bottom>
+      <ion-col size="6" *ngFor="let item of medicalList;let i = index">
+        <ion-card class="cardSection" margin-top>
+          <div class="heartIcon" (click)="favorites(i)">
+              <ion-icon slot="end" *ngIf="!item.checked" name="heart" class="iconSize heart "></ion-icon>
+              <ion-icon slot="end"  *ngIf="item.checked" name="heart" class="iconSize heartRed"></ion-icon>
+          </div>
+          <img [src]="item.image">
+          <ion-card-content>
+            <ion-row>
+              <ion-col>
+                  <span class="contentText">{{item.title}}</span>
+              </ion-col>
+            </ion-row>
+            <ion-row class="rowSection">
+              <ion-col size="6" class="colSection">
+                <div class="discountSection">
+                    <ion-label text-uppercase>{{item.rate}}</ion-label><ion-icon name="star"></ion-icon>
+                </div>
+                <div>
+                    <span class="salesCount">(124)</span>
+                </div>
+              </ion-col>
+              <ion-col size="6" class="colSection">
+                <span class="regularPriceSection">₹{{item.regularPrice}}</span>
+                <span class="PriceSection">₹{{item.salePrice}}</span>
+              </ion-col>
+            </ion-row>
+            
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+</ion-content>

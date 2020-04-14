@@ -101,8 +101,83 @@ const routes: Routes = [
     path: 'alerts',
     loadChildren: () => import('./pages/official/components/alerts/alerts.module').then( m => m.AlertsPageModule)
   },
-  
+  // Fivethree
+  {
+    path: 'fivethree',
+    loadChildren: () => import('./pages/fivethree/fivethree.module').then( m => m.FivethreePageModule)
+  },
+  {
+    path: 'app-bar',
+    loadChildren: () => import('./pages/fivethree/components/app-bar/app-bar.module').then( m => m.AppBarPageModule)
+  },
+  {
+    path: 'bottom-sheet',
+    loadChildren: () => import('./pages/fivethree/components/bottom-sheet/bottom-sheet.module').then( m => m.BottomSheetPageModule)
+  },
+  {
+    path: 'dialog',
+    loadChildren: () => import('./pages/fivethree/components/dialog/dialog.module').then( m => m.DialogPageModule)
+  },
+  {
+    path: 'editable-label',
+    loadChildren: () => import('./pages/fivethree/components/editable-label/editable-label.module').then( m => m.EditableLabelPageModule)
+  },
+  {
+    path: 'expandable',
+    loadChildren: () => import('./pages/fivethree/components/expandable/expandable.module').then( m => m.ExpandablePageModule)
+  },
+  {
+    path: 'fab',
+    loadChildren: () => import('./pages/fivethree/components/fab/fab.module').then( m => m.FabPageModule)
+  },
+  {
+    path: 'feature-discovery',
+    loadChildren: () => import('./pages/fivethree/components/feature-discovery/feature-discovery.module').then( m => m.FeatureDiscoveryPageModule)
+  },
+  {
+    path: 'gallery',
+    loadChildren: () => import('./pages/fivethree/components/gallery/gallery.module').then( m => m.GalleryPageModule)
+  },
+  {
+    path: 'icon',
+    loadChildren: () => import('./pages/fivethree/components/icon/icon.module').then( m => m.IconPageModule)
+  },
+  {
+    path: 'loading',
+    loadChildren: () => import('./pages/fivethree/components/loading/loading.module').then( m => m.LoadingPageModule)
+  },
+  {
+    path: 'refresh',
+    loadChildren: () => import('./pages/fivethree/components/refresh/refresh.module').then( m => m.RefreshPageModule)
+  },
+  {
+    path: 'searchbar',
+    loadChildren: () => import('./pages/fivethree/components/searchbar/searchbar.module').then( m => m.SearchbarPageModule)
+  },
+  {
+    path: 'stepper',
+    loadChildren: () => import('./pages/fivethree/components/stepper/stepper.module').then( m => m.StepperPageModule)
+  },
+  {
+    path: 'viewport',
+    loadChildren: () => import('./pages/fivethree/components/viewport/viewport.module').then( m => m.ViewportPageModule)
+  },
 
+  // SAMPLES
+  {
+    path: 'samples',
+    loadChildren: () => import('./pages/samples/samples.module').then( m => m.SamplesPageModule)
+  },  {
+    path: 'clones-ui',
+    loadChildren: () => import('./pages/clones-ui/clones-ui.module').then( m => m.ClonesUiPageModule)
+  }
+
+
+
+
+
+
+  
 
 
 ];

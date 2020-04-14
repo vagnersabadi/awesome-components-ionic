@@ -1,0 +1,23 @@
+.square-grid{
+    width: 48vw;
+    height: 48vw;
+    background-position: center;
+    background-size: cover;
+    max-width: 250px;
+    max-height: 250px;
+  }
+  .sc-ion-segment-md-h,.sc-ion-segment-ios-h {
+      --background:  var(--ion-color-primary,#1DA1F2);
+      --background-checked: white;
+      --border-color: rgba(0,0,0,0.1);
+      --color: white;
+      --color-checked:var(--ion-color-primary,#1DA1F2);;
+      //margin-top: 30px;
+    }
+    ion-segment-button{
+      border-radius: 0 !important;
+    }
+    ion-row{
+      display: flex;
+      justify-content: space-evenly;
+    }

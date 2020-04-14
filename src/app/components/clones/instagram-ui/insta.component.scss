@@ -1,0 +1,43 @@
+.feed-block {
+  margin-bottom: 15px;
+  .block-image {
+    width: 100%;
+    display: block;
+    text-align: center;
+    img {
+      min-height: 300px;
+      background: #aaa;
+    }
+  }
+  .block-header {
+    ion-label {
+      h3 {
+        font-size: 14px;
+        font-weight: bold;
+      }
+      p {
+        line-height: 16px;
+      }
+    }
+    ion-avatar {
+      border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+  }
+  .block-icons {
+    padding: 5px 15px;
+    ion-icon {
+      font-size: 28px;
+      margin-right: 20px;
+      color: #444;
+    }
+  }
+  .block-desc {
+    padding: 0 15px 8px 15px;
+    font-size: 14px;
+    font-family: sans-serif;
+    .likes {
+      font-weight: bold;
+      font-size: 14px;
+    }
+  }
+}

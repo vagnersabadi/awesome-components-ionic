@@ -52,6 +52,13 @@ export class SlidesPage implements OnInit {
       title: 'Photo Gallery (not working)',
       page: '/slide-photo-gallery'
     },
+    {
+      title: 'Slide Pagination',
+      page: '/slide-pagination'
+    },
+    
+
+    
   ];
 
   constructor(

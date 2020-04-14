@@ -1,0 +1,99 @@
+.btn-title {
+  width: 100%;
+  display: flex;
+}
+.div {
+  margin-top: 100px;
+  padding: 0px;
+}
+.button {
+  color: black;
+  background: transparent;
+}
+
+.icon {
+  position: absolute;
+  left: 15px;
+  bottom: 17px;
+  font-size: x-large;
+}
+
+:host {
+  ion-content {
+    object-fit: cover;
+    object-position: center;
+
+    // --background:linear-gradient(to bottom , #429EB6,#ffffff);
+  }
+
+  :host {
+    ion-list {
+      padding: 0;
+      display: block;
+      background: transparent;
+      contain: content;
+      list-style-type: none;
+    }
+  }
+
+  ion-item {
+    --color: black;
+    --padding-top: 16px;
+    --background: transparent;
+    width: 100%;
+    font-family: Source Code Pro !important;
+  }
+
+  ion-button {
+    --background: transparent;
+    --box-shadow: none;
+    --background-activated: #f5f6f900;
+    --background-focused: #3171e000;
+    font-family: Source Code Pro !important;
+  }
+
+  ion-list-header {
+    margin-bottom: 0 !important ;
+    background: transparent;
+  }
+
+  .list-md,
+  .list-ios {
+    margin: 0;
+    padding: 0px 0;
+    background: transparent !important;
+  }
+
+  :host {
+    p {
+      color: black !important ;
+    }
+  }
+  .accordion-list {
+    height: 100%;
+    background: #00000008;
+  }
+  :host {
+    .end {
+      right: 16px !important;
+      position: absolute !important;
+    }
+  }
+  :host .active {
+    background: rgba(0, 0, 0, 0.4117647058823529);
+    color: #fff;
+  }
+
+}
+h4,
+h6 {
+  margin: 2px 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

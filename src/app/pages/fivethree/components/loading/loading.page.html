@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/fivethree"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Loading</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-button [disabled]="bar.loading" (click)="bar.fillIn(2000)">
+    fill
+  </ion-button>
+
+  <ion-button [disabled]="bar.loading" (click)="bar.shrinkIn(2000)">
+    shrink
+  </ion-button>
+  <ion-button [disabled]="bar.loading" (click)="bar.load()">
+    load
+  </ion-button>
+  <ion-button [disabled]="!bar.loading" (click)="bar.unload()">
+    unload
+  </ion-button>
+  <ion-button [disabled]="!bar.loading" (click)="bar.complete()">
+    complete
+  </ion-button>
+  <div class="wrapper">
+    <div [fivCenter] class="progress-bar">
+      <fiv-loading-progress-bar #bar></fiv-loading-progress-bar>
+    </div>
+  </div>
+
+
+  <div class="wrapper">
+    <div [fivCenter]>
+      <fiv-spinner></fiv-spinner>
+    </div>
+  </div>
+
+</ion-content>

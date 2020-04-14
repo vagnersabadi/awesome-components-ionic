@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/samples"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Wordpress Blogs</ion-title>
+  </ion-toolbar>
+  <ion-toolbar color="primary" class="ion-text-center">
+    Wordpress posts fetched as blogs
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="video-list ion-no-padding" *ngFor="let item of blogPosts" mode="md" (click)="openBlog(item.id)">
+    <div class="imagediv" [ngStyle]="{'background-image' :'url('+ item.jetpack_featured_media_url + ')'}">
+    </div>
+    <div class="details">
+      <div class="title-block">
+        <div class="title">{{item.title.rendered}}</div>
+        <div class="extra">
+          <div class="views">{{item.date | date: 'dd/MM/yyyy'}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ion-content>

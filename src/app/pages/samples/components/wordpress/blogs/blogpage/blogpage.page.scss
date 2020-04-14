@@ -1,0 +1,22 @@
+.title{
+    font-size: 32px;
+    font-family: Muli;
+    line-height: 32px;
+    text-align: center;
+}
+.content{
+    padding: 10px;
+    text-align: justify;
+    font-family: Muli;
+}
+.image-wrapper{
+    min-height: 100px;
+}
+.tags-inner{
+    display: flex;
+    justify-content: center;
+}
+.blog-date{
+    font-size: 14px;
+    color: gray;
+}

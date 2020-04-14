@@ -1,0 +1,55 @@
+ion-slides,
+ion-slide {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+ion-segment {
+    --background: var(--ion-color-secondary);
+}
+
+ion-segment::-webkit-scrollbar {
+    display: none;
+}
+// BLOCO
+ion-segment-button {
+    --background-checked: var(--ion-color-tertiary);
+    border-right: 1px solid #fff;
+    min-height: 0px;
+    height: 20px;
+    min-width: 0;
+    --padding-end: 40px;
+}
+
+.segment-arrow {
+    
+    ion-segment {
+        --background: var(--ion-color-light);
+    }
+
+    ion-segment-button {
+        --background-checked: var(--ion-color-medium);
+        display: table-cell;
+        padding: 0;
+        position: relative;
+        vertical-align: middle;
+        min-height: 0px;
+        height: 20px;
+        min-width: 0;
+    }
+
+    ion-segment-button:before {
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        right: -8px;
+        top: 2px;
+        border-top: 6px solid #fff;
+        border-right: 6px solid #fff;
+        -webkit-transform: scaleX(0.3) rotate(45deg);
+        transform: scaleX(0.3) rotate(45deg);
+        content: " ";
+        background: transparent;
+        z-index: 1;
+    }
+}

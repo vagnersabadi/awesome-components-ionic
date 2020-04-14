@@ -1,0 +1,75 @@
+ion-content {
+  --background: #eaeaea;
+}
+
+.cardSection {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+
+  img {
+    width: 75%;
+    margin-top: 16px;
+  }
+
+  ion-card-content {
+    padding: 16px 5px;
+    width: 100%;
+  }
+}
+.contentText {
+  font-size: 12px;
+  font-weight: bold;
+  color: #4e4343;
+}
+.rowSection {
+  width: 100%;
+}
+.discountSection {
+  background: #15bf15;
+  color: #fff;
+  border-radius: 5px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  padding: 0 5px;
+}
+
+.regularPriceSection {
+  text-decoration: line-through;
+}
+
+.colSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.salesCount {
+  padding-left: 2px;
+}
+
+.PriceSection {
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 16px;
+  padding-left: 8px;
+}
+
+.heartIcon {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 20px;
+}
+
+.heart {
+  color: #d4cccc;
+}
+
+.heartRed {
+  color: #ff0000;
+}

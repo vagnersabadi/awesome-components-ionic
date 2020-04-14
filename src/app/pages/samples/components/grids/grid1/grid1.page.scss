@@ -1,0 +1,30 @@
+ion-content{
+    --background:#f4f5f8;
+}
+
+.card {
+    box-shadow: unset;
+    border-radius: 9px;
+    background-color: white !important;
+}
+.price {
+    font-size: 18px;
+    float: left;
+    margin: 3px;
+}
+.inline {
+    font-size: 15px;
+    margin-inline-end: 5px;
+    text-decoration: line-through;
+}
+.subtitle {
+    font-size: 12px;
+    color: rgb(120, 120, 120);
+}
+.badge {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    background-color: rgba(12, 12, 12, .75);
+    border-radius: 0;
+}

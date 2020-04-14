@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/fivethree"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Gallery</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <fiv-gallery>
+    <fiv-gallery-toolbar position="top">
+      <fiv-gallery-toolbar-content></fiv-gallery-toolbar-content>
+    </fiv-gallery-toolbar>
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col *ngFor="let pic of picsum" size="6" sizeMd="4">
+          <fiv-gallery-image [src]="pic"></fiv-gallery-image>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </fiv-gallery>
+</ion-content>

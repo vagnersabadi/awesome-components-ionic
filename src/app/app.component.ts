@@ -36,7 +36,19 @@ export class AppComponent {
       title: 'Angular Material',
       url: '/angular-material',
       icon: 'logo-angular'
+    },
+    {
+      title: 'My Samples',
+      url: '/samples',
+      icon: 'bug'
+    },
+    {
+      title: 'Clones UI',
+      url: '/clones-ui',
+      icon: 'apps'
     }
+
+    
 
   ];
 
@@ -46,14 +58,7 @@ export class AppComponent {
     private statusBar: StatusBar,
     public menuCtrl: MenuController
   ) {
-
-
-
-
-
     this.initializeApp();
-
-
   }
 
   initializeApp() {

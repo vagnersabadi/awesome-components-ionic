@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/grids"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Shop Grid</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let data of products;" size="6">
+        <ion-card class="card" no-margin>
+          <ion-badge class="badge" *ngIf="data.offer">{{data.discount}}%</ion-badge>
+          <img [src]="data.image[0]" [alt]="data.name">
+          <ion-card-content>
+            <ion-card-title>
+              <ion-row>
+                <ion-col *ngIf="data.offer" no-padding>
+                  <ion-text text-left><span class="price"><span class="inline">{{data.currency}}{{data.cost_price}}</span> <strong>{{data.currency}}{{gridServ.calculate(data.cost_price, data.discount)}}</strong></span></ion-text>
+                </ion-col>
+                <ion-col *ngIf="!data.offer" no-padding>
+                  <ion-text text-left><span class="price"><strong>{{data.currency}}{{data.cost_price}}</strong></span></ion-text>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col text-left no-padding>
+                  <h6 text-left class="subtitle">{{data.bought}}+ bought this</h6>
+                </ion-col>
+              </ion-row>
+            </ion-card-title>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

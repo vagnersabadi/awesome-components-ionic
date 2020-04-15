@@ -1,0 +1,57 @@
+.video-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 10px 10px 0 10px;
+    .imagediv {
+      position: relative;
+      height: 100px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      display: flex;
+      flex: 5;
+      background-position: center;
+      background-size: cover;
+      border: 1px solid #ccc;
+    }
+    .details {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 10px;
+      flex: 6;
+      justify-content: flex-start;
+      margin-left: 10px;
+      .avatar {
+        img {
+          border-radius: 50%;
+          padding: 10px;
+          width: 75px;
+        }
+      }
+      .title-block {
+        display: flex;
+        flex-direction: column;
+        font-family: sans-serif;
+        .title {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .extra {
+          display: flex;
+          flex-direction: column;
+          font-size: 14px;
+          color: gray;
+          align-items: flex-start;
+        }
+        .dot {
+          height: 3px;
+          width: 3px;
+          background: gray;
+          margin: 0px 6px;
+        }
+      }
+    }
+  }

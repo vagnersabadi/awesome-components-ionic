@@ -145,7 +145,8 @@ const routes: Routes = [
   {
     path: 'loading',
     loadChildren: () => import('./pages/fivethree/components/loading/loading.module').then( m => m.LoadingPageModule)
-  },  {
+  },
+  {
     path: 'refresh',
     loadChildren: () => import('./pages/fivethree/components/refresh/refresh.module').then( m => m.RefreshPageModule)
   },
@@ -161,10 +162,17 @@ const routes: Routes = [
     path: 'viewport',
     loadChildren: () => import('./pages/fivethree/components/viewport/viewport.module').then( m => m.ViewportPageModule)
   },
+
+  // SAMPLES
   {
-    path: 'slide-pagination',
-    loadChildren: () => import('./pages/yannbf/components/slides/slide-pagination/slide-pagination.module').then( m => m.SlidePaginationPageModule)
-  },
+    path: 'samples',
+    loadChildren: () => import('./pages/samples/samples.module').then( m => m.SamplesPageModule)
+  },  {
+    path: 'clones-ui',
+    loadChildren: () => import('./pages/clones-ui/clones-ui.module').then( m => m.ClonesUiPageModule)
+  }
+
+
 
 
 

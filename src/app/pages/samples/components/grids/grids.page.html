@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/samples"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Grids</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item *ngFor="let page of pages" [routerLink]='page.router' details>
+    <ion-label>{{ page.name }}</ion-label>
+  </ion-item>
+
+</ion-content>

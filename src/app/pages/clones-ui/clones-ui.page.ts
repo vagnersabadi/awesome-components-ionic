@@ -25,6 +25,10 @@ export class ClonesUiPage implements OnInit {
       namePage: 'Whatsapp',
       router: '/clones-ui/whatsapp',
     },
+    {
+      namePage: 'Tinder',
+      router: '/clones-ui/tinder',
+    },
   ];
 
 

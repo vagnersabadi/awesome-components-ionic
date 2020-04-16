@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/clones-ui"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Tinder cards Gestures
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-card *ngFor="let p of peoaple" [style.position]="'absolute'">
+    <img [src]="p.img" [style.width]="'100%'">
+    <ion-card-header>
+      <ion-card-title> {{ p.name }}</ion-card-title>
+      <ion-card-subtitle> Power: {{ p.power }}</ion-card-subtitle>
+
+    </ion-card-header>
+    <ion-card-content>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

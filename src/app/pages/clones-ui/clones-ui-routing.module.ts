@@ -23,7 +23,11 @@ const routes: Routes = [
   {
     path: 'whatsapp',
     loadChildren: () => import('./components/whatsapp/whatsapp.module').then( m => m.WhatsappPageModule)
+  },  {
+    path: 'tinder',
+    loadChildren: () => import('./components/tinder/tinder.module').then( m => m.TinderPageModule)
   }
+
 ];
 
 @NgModule({

@@ -5,12 +5,14 @@
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "gh-pages": "ng build  && ng build  --base-href 'https://vagnersabadi.github.io/awesome-components-ionic/' --prod && npx ngh --dir=www"
+    "gh-pages": "ng build  && ng build  --base-href 'https://vagnersabadi.github.io/awesome-components-ionic/' --prod && npx ngh --dir=www",
+    "ionic:build:prod": "ionic-app-scripts build -- --prod",
+    "heroku-postbuild": "npm run ionic:build:prod"
   },
   "private": true,
   "dependencies": {

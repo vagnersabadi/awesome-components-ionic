@@ -1,4 +1,4 @@
-# Ionic 4 | 5 Advanced Components
+# Ionic 5 Advanced Components
 
 | [Yannbf - Ionic3 Components](https://github.com/yannbf/ionic3-components) | [Agular Material](https://material.angular.io/components/categories) | [Fivethree](https://fivethree-team.github.io/ionic-4-components/) |
 | ------------- | ------------- | ------------- |

@@ -10,7 +10,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "gh-pages": "ng build  && ng build  --base-href 'https://vagnersabadi.github.io/awesome-components-ionic/' --prod && npx ngh --dir=www",
+    "gh-pages": "ng deploy --repo=git@github.com:vagnersabadi/awesome-components-ionic.git",
     "ionic:build:prod": "ionic-app-scripts build -- --prod",
     "heroku-postbuild": "npm run ionic:build:prod"
   },

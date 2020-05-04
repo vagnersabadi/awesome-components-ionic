@@ -9,7 +9,7 @@
 <ion-content>
   <ion-list>
     <!-- <ion-item *ngFor="let item of items" (click)="itemTapped($event, item)"> -->
-    <ion-item *ngFor="let item of items"  [routerLink]="[item.page]">
+    <ion-item *ngFor="let item of items"  [routerLink]="item.page" details>
       {{item.title}}
     </ion-item>
   </ion-list>

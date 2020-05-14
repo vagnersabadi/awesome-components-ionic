@@ -20,6 +20,10 @@ export class SamplesPage implements OnInit {
       namePage: 'Walkthrough',
       router: '/samples/walkthrough',
     },
+    {
+      namePage: 'Gestures API',
+      router: '/samples/gestures',
+    },
   
   ];
 

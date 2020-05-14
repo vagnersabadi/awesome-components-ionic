@@ -19,6 +19,10 @@ const routes: Routes = [
   {
     path: 'grids',
     loadChildren: () => import('./components/grids/grids.module').then( m => m.GridsPageModule)
+  },
+  {
+    path: 'gestures',
+    loadChildren: () => import('./components/gestures/gestures.module').then( m => m.GesturesPageModule)
   }
 
 ];

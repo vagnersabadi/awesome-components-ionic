@@ -96,10 +96,12 @@ export class TimerProgressComponent implements OnInit {
     let hoursString = '';
     let minutesString = '';
     let secondsString = '';
-    hoursString = (hours < 10) ? '0' + hours : hours.toString();
+    if (hours > 0) {
+        hoursString = (hours < 10) ? '0' + hours + ':' : hours.toString() + ':';
+    }
     minutesString = (minutes < 10) ? '0' + minutes : minutes.toString();
     secondsString = (seconds < 10) ? '0' + seconds : seconds.toString();
-    return hoursString + ':' + minutesString + ':' + secondsString;
+    return hoursString + minutesString + ':' + secondsString;
   }
 
 }

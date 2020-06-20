@@ -15,6 +15,10 @@ const routes: Routes = [
   {
     path: 'ui-brand',
     loadChildren: () => import('./components/ui-brand/ui-brand.module').then( m => m.UiBrandPageModule)
+  },
+  {
+    path: 'ui-button',
+    loadChildren: () => import('./components/ui-button/ui-button.module').then( m => m.UiButtonPageModule)
   }
 ];
 

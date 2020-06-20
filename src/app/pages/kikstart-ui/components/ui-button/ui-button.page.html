@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/kikstart-ui"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      UI-Buttons
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="6">
+      <div class="mb-5" *ngFor="let example of examples">
+        <h5>{{ example.name }}</h5>
+        <p class="mt-3">With <code>ui-button</code>:</p>
+        <ng-container *ngFor="let button of example.buttons">
+          <span class="mr-3">
+            <ui-button [button]="button" (action)="handleAction($event)"></ui-button>
+          </span>
+        </ng-container>
+        <p class="mt-3">With <code>ui-buttons</code>:</p>
+        <ui-buttons [buttons]="example.buttons" (action)="handleAction($event)"></ui-buttons>
+      </div>
+    </ion-col>
+
+    <ion-col size="6">
+      <h5 class="mb-5">Define the buttons inside the template</h5>
+      <ui-buttons (action)="handleAction($event)"
+        [buttons]="[
+        { icon: 'fa-refresh' }, 
+        { icon: 'fa-info' }, 
+        { icon: 'fa-trash-o' }
+        ]">
+      </ui-buttons>
+
+        <h5 class="mt-5">We can add aribtrary data to each button:</h5>
+        <ui-buttons
+          (action)="handleAction($event)"
+          [buttons]="[
+            {
+              icon: 'fa-trash-o',
+              className: 'btn btn-danger',
+              label: 'Delete',
+              data: { id: 42 },
+              confirm: { text: 'Are you sure?' }
+            }
+          ]"
+        ></ui-buttons>
+        
+        <h5 class="mt-5">Loading State</h5>
+
+        <ui-button
+          class="mr-3"
+          [loading]="loading['spinner']"
+          (action)="loading['spinner'] = !loading['spinner']"
+          [button]="{ label: loading['spinner'] ? 'Stop' : 'Start' }"
+        ></ui-button>
+        <ui-button
+          class="mr-3"
+          [loading]="loading['refresh']"
+          loadingIcon="fa-refresh"
+          (action)="loading['refresh'] = !loading['refresh']"
+          [button]="{ label: loading['refresh'] ? 'Stop' : 'Start' }"
+        ></ui-button>
+        <h5 class="mt-5">Minimalistic button definition</h5>
+        <ui-buttons
+          class="mt-3 d-block"
+          (action)="handleAction($event)"
+          [buttons]="threeIcons"
+        ></ui-buttons>
+  
+    </ion-col>
+
+  </ion-row>
+</ion-content>

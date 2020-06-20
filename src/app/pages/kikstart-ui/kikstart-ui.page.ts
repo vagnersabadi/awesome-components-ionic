@@ -9,24 +9,24 @@ export class KikstartUiPage implements OnInit {
 
   pages = [
     {
-      namePage: 'ui-avatar',
+      namePage: 'UI-Avatar',
       router: '/kikstart-ui/ui-avatar',
     },
     {
-      namePage: 'ui-brand',
+      namePage: 'UI-Brand',
       router: '/kikstart-ui/ui-brand',
     },
     {
-      namePage: 'Uber',
-      router: '/clones-ui/uber',
+      namePage: 'UI-Button',
+      router: '/kikstart-ui/ui-button',
     },
     {
       namePage: 'Whatsapp',
-      router: '/clones-ui/whatsapp',
+      router: '/kikstart-ui/whatsapp',
     },
     {
       namePage: 'Tinder',
-      router: '/clones-ui/tinder',
+      router: '/ckikstart-ui/tinder',
     },
   ];
 

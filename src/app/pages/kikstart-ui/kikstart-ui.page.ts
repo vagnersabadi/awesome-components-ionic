@@ -21,8 +21,8 @@ export class KikstartUiPage implements OnInit {
       router: '/kikstart-ui/ui-button',
     },
     {
-      namePage: 'Whatsapp',
-      router: '/kikstart-ui/whatsapp',
+      namePage: 'UI-Card',
+      router: '/kikstart-ui/ui-card',
     },
     {
       namePage: 'Tinder',

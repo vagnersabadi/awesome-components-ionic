@@ -19,6 +19,10 @@ const routes: Routes = [
   {
     path: 'ui-button',
     loadChildren: () => import('./components/ui-button/ui-button.module').then( m => m.UiButtonPageModule)
+  },
+  {
+    path: 'ui-card',
+    loadChildren: () => import('./components/ui-card/ui-card.module').then( m => m.UiCardPageModule)
   }
 ];
 

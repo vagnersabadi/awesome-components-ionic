@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/kikstart-ui"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      UI-Card
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding">
+  <ui-card class="my-3">
+    <ui-card-header cardTitle="Card Header" iconAfter="fa-lock text-muted" icon="fa-cubes">
+      <div class="right">
+        I can right
+      </div>
+    </ui-card-header>
+    <ui-card-body>
+      In here we can do whatever we please!
+    </ui-card-body>
+  
+    <ui-card-footer class="text-center" icon="fa-spinner fa-spin text-muted">
+      <small class="left text-muted text-right ml-2">
+        Loading items...
+      </small>
+    </ui-card-footer>
+  </ui-card>
+  
+  <ui-card class="my-3">
+    <ui-card-header
+      cardTitle="Card Header"
+      iconAfter="fa-lock text-muted"
+      icon="fa-cubes"
+      [buttons]="[
+        { action: 'REFRESH', icon: 'fa-refresh' },
+        { action: 'DELETE', icon: 'fa-trash-o text-danger' }
+      ]"
+    >
+      <small class="right text-muted">
+        <ui-label icon="fa-github"></ui-label>
+      </small>
+    </ui-card-header>
+    <ui-card-body>
+      In here we can do whatever we please!
+    </ui-card-body>
+    <ui-card-footer class="text-center">
+      <div class="text-muted">This is some nice summary</div>
+    </ui-card-footer>
+  </ui-card>
+</ion-content>

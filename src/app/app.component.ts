@@ -46,9 +46,14 @@ export class AppComponent {
       title: 'Clones UI',
       url: '/clones-ui',
       icon: 'apps'
+    },
+    {
+      title: 'Kikstart UI',
+      url: '/kikstart-ui',
+      icon: 'flower-outline'
     }
 
-    
+
 
   ];
 

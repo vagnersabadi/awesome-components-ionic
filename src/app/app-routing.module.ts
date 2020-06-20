@@ -159,7 +159,11 @@ const routes: Routes = [
   {
     path: 'clones-ui',
     loadChildren: () => import('./pages/clones-ui/clones-ui.module').then( m => m.ClonesUiPageModule)
+  },  {
+    path: 'kikstart-ui',
+    loadChildren: () => import('./pages/kikstart-ui/kikstart-ui.module').then( m => m.KikstartUiPageModule)
   }
+
 
 
 

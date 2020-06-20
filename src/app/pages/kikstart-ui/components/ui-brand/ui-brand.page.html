@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/kikstart-ui"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      UI-Brand
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-text-center">
+  <div class="mb-3" *ngFor="let example of examples">
+    {{ example.name }}
+    <div class="mt-3">
+      <ui-brand [brand]="brand" [size]="example.size"></ui-brand>
+    </div>
+  </div>
+</ion-content>

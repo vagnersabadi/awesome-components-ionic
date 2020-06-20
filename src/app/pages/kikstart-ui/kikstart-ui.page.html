@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Kikstart UI
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle><a
+          href="https://beeman.github.io/kikstart-ui/home">https://beeman.github.io/kikstart-ui/home</a>
+      </ion-card-subtitle>
+      <ion-card-title> Kikstart Components </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label class="ion-text-wrap">
+        Set of ready to use declarative Angular UI components.
+      </ion-label>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-item *ngFor="let item of pages" [routerLink]="[item.router]" detail>
+      <ion-label>
+        {{ item.namePage }}
+      </ion-label>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

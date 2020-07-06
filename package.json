@@ -24,7 +24,7 @@
     "@angular/forms": "~9.1.4",
     "@angular/material": "^9.2.2",
     "@angular/platform-browser": "~9.1.4",
-    "@angular/platform-browser-dynamic": "~9.1.4",
+    "@angular/platform-browser-dynamic": "~10.0.2",
     "@angular/pwa": "^0.901.4",
     "@angular/router": "~9.1.4",
     "@angular/service-worker": "~9.1.4",

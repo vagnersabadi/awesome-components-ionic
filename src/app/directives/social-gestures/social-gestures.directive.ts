@@ -42,7 +42,7 @@ export interface Gesture {
  * (doubleTap)="onDoubleTap($event) "
  * (press)="onPress($event)"
  * (swipe)="onSwipe($event)"
- * (swipeMoveed)="onMoveed($event)"
+ * (swipeEnd)="onMoveed($event)"
  * > ... </ ion-card
  */
 

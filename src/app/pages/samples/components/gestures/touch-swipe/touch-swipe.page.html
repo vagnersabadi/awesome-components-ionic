@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/gestures"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Touch Swipe</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card color="primary"
+  appSocialGestures
+  [gestureOpts]="gestureOptsTap"
+  debugMode="true"
+  (tap)="onTap()"
+  (doubleTap)="onDoubleTap()"
+  >
+    <ion-card-header>
+      <ion-card-subtitle>Exemple 01</ion-card-subtitle>
+      <ion-card-title>Tap and DoubleTap</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+
+  <ion-card
+  color="secondary"
+  appSocialGestures
+  [gestureOpts]="gestureOptsPress"
+  debugMode="true"
+  (press)="onPress()"
+  >
+    <ion-card-header>
+      <ion-card-subtitle>Exemple 02</ion-card-subtitle>
+      <ion-card-title>LongPress after 1.5 seconds</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+
+  <ion-card
+  color="tertiary"
+  appSocialGestures
+  [gestureOpts]="gestureOptsSwipe"
+  debugMode="true"
+  (swipe)="onSwipe($event)"
+  (swipeEnd)="onMoveed()"
+  >
+    <ion-card-header>
+      <ion-card-subtitle>Exemple 03</ion-card-subtitle>
+      <ion-card-title>Swipe Lefth Right</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+
+</ion-content>

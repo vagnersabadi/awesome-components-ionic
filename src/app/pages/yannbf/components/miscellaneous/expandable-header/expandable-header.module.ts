@@ -1,4 +1,4 @@
-import { ExpandableHeaderDirective } from './../../../../../directives/yannbf/expandable-header/expandable-header.directive';
+import { ExpandableHeaderDirective } from './../../../../../directives/expandable-header/expandable-header.directive';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';

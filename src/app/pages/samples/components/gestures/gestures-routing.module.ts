@@ -11,6 +11,10 @@ const routes: Routes = [
   {
     path: 'drawer',
     loadChildren: () => import('./drawer/drawer.module').then( m => m.DrawerPageModule)
+  },
+  {
+    path: 'touch-swipe',
+    loadChildren: () => import('./touch-swipe/touch-swipe.module').then( m => m.TouchSwipePageModule)
   }
 ];
 

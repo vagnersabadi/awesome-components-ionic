@@ -124,7 +124,7 @@
     </ion-item>
     <ion-list *ngIf="show" class="footer-options">
       <ion-row class="footer_row">
-        <ion-col size="4" class="footer_col" *ngFor="let footer of footerJson; let i of index">
+        <ion-col size="4" class="footer_col" **ngFor="let footer of footerJson">
           <ion-label class="footer_label" (click)="typeSelected(footer)">
             <ion-icon name={{footer.icon}} expand="icon-only" *ngIf="footer.icon" class="footerIcon"></ion-icon>
             <ion-thumbnail *ngIf="footer.image">

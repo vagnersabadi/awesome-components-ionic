@@ -27,7 +27,7 @@
     "@angular/platform-browser-dynamic": "~10.2.3",
     "@angular/pwa": "^0.1002.0",
     "@angular/router": "~10.2.3",
-    "@angular/service-worker": "~10.2.3",
+    "@angular/service-worker": "~11.2.6",
     "@fivethree/core": "^1.0.0-alpha.24",
     "@ionic-native/camera": "^5.29.0",
     "@ionic-native/core": "^5.29.0",

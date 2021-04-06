@@ -1,0 +1,30 @@
+name: Build [ PRODUCTION ]
+
+on: [workflow_dispatch]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.4
+
+      - name: Use Node.js 🔧
+        uses: actions/setup-node@v2.1.4
+        with:
+          node-version: 14
+
+      - name: Install Ionic CLI 🔧
+        run: npm install -g @ionic/cli
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Ionic
+        run: ionic build --prod -- --base-href=/awesome-components-ionic/
+
+      - name: Deploy on GitHub pages 🚀
+        uses: JamesIves/github-pages-deploy-action@4.0.0
+        with:
+          BRANCH: gh-pages
+          FOLDER: www

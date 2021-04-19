@@ -19,7 +19,7 @@
     "@angular/animations": "^10.2.3",
     "@angular/cdk": "^10.2.7",
     "@angular/common": "~10.2.3",
-    "@angular/compiler": "~10.2.3",
+    "@angular/compiler": "~11.2.10",
     "@angular/core": "~10.2.3",
     "@angular/forms": "~10.2.3",
     "@angular/material": "^10.2.7",

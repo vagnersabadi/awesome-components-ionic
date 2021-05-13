@@ -40,6 +40,11 @@ $ sudo npm install cordova ionic -g
 Once you clone this repository, run this command on your terminal to install all needed dependencies:
 ```sh
 $ npm install
+
+our
+
+$ npm install --force
+
 ```
 
 ## Install cordova plugin Dependencies

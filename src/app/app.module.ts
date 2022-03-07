@@ -1,4 +1,3 @@
-import { IonicSwingModule } from 'ionic-swing';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
@@ -14,7 +13,6 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FivExpandableModule, FivRouterItemModule, FivCollapsableModule } from '@fivethree/core';
 import { HttpClientModule } from '@angular/common/http';
-// import { SwingModule } from 'angular2-swing';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 @NgModule({

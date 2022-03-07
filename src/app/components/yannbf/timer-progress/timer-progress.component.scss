@@ -39,10 +39,10 @@
       }
 
       .mask {
-        clip: rect(0px, $circle-size, $circle-size, $circle-size/2);
+        clip: rect(0px, $circle-size, $circle-size, calc($circle-size / 2));
 
         .fill {
-          clip: rect(0px, $circle-size/2, $circle-size, 0px);
+          clip: rect(0px, calc($circle-size / 2) , $circle-size, 0px);
           background-color: $circle-color;
         }
       }
@@ -52,8 +52,8 @@
       width: $inset-size;
       height: $inset-size;
       position: absolute;
-      margin-left: ($circle-size - $inset-size)/2;
-      margin-top: ($circle-size - $inset-size)/2;
+      margin-left: calc(($circle-size - $inset-size) / 2);
+      margin-top: calc(($circle-size - $inset-size) / 2);
       background-color: $inset-color;
       border-radius: 50%;
       box-shadow: $shadow;
@@ -61,7 +61,7 @@
       .percentage {
         width: 100%;
         position: absolute;
-        top: ($inset-size - $percentage-font-size) / 2;
+        top: calc(($inset-size - $percentage-font-size) / 2);
         line-height: 1;
         text-align: center;
         font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;

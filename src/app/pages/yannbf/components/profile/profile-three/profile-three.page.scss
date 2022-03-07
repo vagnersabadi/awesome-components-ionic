@@ -11,7 +11,7 @@
 $gradient: #f96b4c, #f23182;
 $radius: 10px;
 $visual-height: 68%;
-$datas-height: calc(100% - #{$visual-height}+2px);
+$datas-height: calc(100% - #{$visual-height} + 2px);
 :root {
   font-size: 16px;
 }

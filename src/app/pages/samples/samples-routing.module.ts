@@ -23,6 +23,10 @@ const routes: Routes = [
   {
     path: 'gestures',
     loadChildren: () => import('./components/gestures/gestures.module').then( m => m.GesturesPageModule)
+  },
+  {
+    path: 'pipeline',
+    loadChildren: () => import('./components/pipeline/pipeline.module').then( m => m.PipelinePageModule)
   }
 
 ];

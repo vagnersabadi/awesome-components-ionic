@@ -4,9 +4,10 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { TouchSwipePageRoutingModule } from './touch-swipe-routing.module';
 
-import { TouchSwipePage } from './touch-swipe.page';
+import { PipelinePage } from './pipeline.component';
+import { PipelinePageRoutingModule } from './pipeline-routing.module';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 import { SocialGestureModule } from 'src/app/directives/social-gestures/social-gesture.module';
 
 @NgModule({
@@ -14,9 +15,10 @@ import { SocialGestureModule } from 'src/app/directives/social-gestures/social-g
     CommonModule,
     FormsModule,
     IonicModule,
-    TouchSwipePageRoutingModule,
+    DragDropModule,
+    PipelinePageRoutingModule,
     SocialGestureModule
   ],
-  declarations: [TouchSwipePage],
+  declarations: [PipelinePage]
 })
-export class TouchSwipePageModule { }
+export class PipelinePageModule {}

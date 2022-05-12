@@ -42,7 +42,7 @@ export interface Gesture {
  * (doubleTap)="onDoubleTap($event) "
  * (press)="onPress($event)"
  * (swipe)="onSwipe($event)"
- * (swipeEnd)="onMoveed($event)"
+ * (swipeMoveed)="onMoveed($event)"
  * > ... </ ion-card
  */
 
@@ -59,7 +59,8 @@ export class SocialGestureDirective implements OnInit {
   // Events we can listen to.
   @Output() tap = new EventEmitter();
   @Output() doubleTap = new EventEmitter();
-  @Output() press = new EventEmitter();
+  @Output() pressStart = new EventEmitter();
+  @Output() pressEnd = new EventEmitter();
   @Output() swipe = new EventEmitter();
   @Output() swipeEnd = new EventEmitter();
 
@@ -222,7 +223,7 @@ export class SocialGestureDirective implements OnInit {
         if (this.debugMode) {
           console.log('PressStart');
         }
-        this.press.emit('start');
+        this.pressStart.emit('start');
 
       }, this.pressGesture.interval); // Considered a press if it's longer than interval (default: 251).
     } else if (type === 'touchend') {
@@ -231,7 +232,7 @@ export class SocialGestureDirective implements OnInit {
         if (this.debugMode) {
           console.log('PressEnd');
         }
-        this.press.emit('end');
+        this.pressEnd.emit('end');
         this.resetTaps(); // Just incase this gets passed as a tap event too.
       }
       // Clicks have a natural delay of 300ms, so we have to account for that, before resetting isPressing.

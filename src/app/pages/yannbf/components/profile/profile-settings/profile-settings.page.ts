@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
-
 @Component({
   selector: 'app-profile-settings',
   templateUrl: './profile-settings.page.html',
@@ -29,7 +27,6 @@ export class ProfileSettingsPage implements OnInit {
 
   constructor(
     public modalCtrl: ModalController,
-    private camera: Camera
   ) { }
 
   ngOnInit() {
@@ -52,16 +49,7 @@ export class ProfileSettingsPage implements OnInit {
   }
 
   updateProfileImage() {
-    this.camera.getPicture({
-      quality: 50,
-      allowEdit: true,
-      cameraDirection: this.camera.Direction.FRONT,
-      destinationType: this.camera.DestinationType.DATA_URL
-    }).then((imageData) => {
-      this.user.imageUrl = imageData;
-    }, (err) => {
-      console.log('Error: ' + err);
-    });
+    console.log('Update profile image');
   }
 
   logOut() {

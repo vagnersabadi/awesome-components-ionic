@@ -101,13 +101,7 @@ MIT
 @fivethree/ngx-rxjs-animations
 MIT
 
-@ionic-native/camera
-MIT
-
 @ionic-native/core
-MIT
-
-@ionic-native/geolocation
 MIT
 
 @ionic-native/splash-screen

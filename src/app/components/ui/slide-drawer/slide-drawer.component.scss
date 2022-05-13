@@ -4,11 +4,16 @@
     position: absolute;
     top: calc(100vh - 144px);
     z-index: 9999;
+
+    -webkit-box-shadow: 0px -11px 13px 0px rgba(0, 0, 0, 0.39);
+    box-shadow: 0px -11px 13px 0px rgba(0, 0, 0, 0.39);
+
     ion-header {
         ion-toolbar {
             height: 88px;
             border-top-right-radius: 8px;
             border-top-left-radius: 8px;
+
             ion-icon {
                 font-size: 60px;
                 height: 20px;

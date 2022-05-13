@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Gesture } from './../../../../../directives/social-gestures/social-gestures.directive';
 import { ToastController } from '@ionic/angular';
+import { Gesture } from 'src/app/directives/social-gestures/social-gestures.directive';
 
 @Component({
   selector: 'app-touch-swipe',

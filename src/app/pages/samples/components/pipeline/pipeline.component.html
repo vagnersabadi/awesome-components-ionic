@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Slide + Drag Drop + Gestures</ion-title>
+  </ion-toolbar>
+  <ion-toolbar *ngIf="openSearch">
+    <ion-searchbar animated="true" mode="ios" debounce="500">
+    </ion-searchbar>
+  </ion-toolbar>
+
+</ion-header>
+<ion-content scrollY="false">
+
+  <!-- <ion-segment #segment scrollable (ionChange)="stageSegmentChanged($event)" value="0" color="secondary">
+    <ion-segment-button [value]="i" *ngFor="let stagesSegment of stages; let i = index" >
+      {{i}}
+    </ion-segment-button>
+  </ion-segment> -->
+
+  <ion-slides class="slides-stages" pager="false" [options]="sliderConfig" #slider
+    (ionSlideTransitionEnd)="activeSlide()">
+    <ion-slide class="slide-stage" *ngFor="let stage of stages; let stageIndex = index;" cdkDropListGroup>
+      <ion-content class="content-stage" [gestureOpts]="swipeStage" appSocialGestures (swipe)="onSwipe($event)"
+        (swipeEnd)="onSwipeEnd($event)">
+
+        <ion-list class="ion-no-padding">
+          <ion-item-divider sticky class="bar-stage" [ngStyle]="{'border-color': stage.color || '#e6ebf2'}">
+
+            <ion-button slot="icon-only" fill="clear" slot="start" class="btn-navigation-stages" (click)="prevStage()">
+              <ion-icon name="chevron-back"></ion-icon>
+            </ion-button>
+
+            <ion-label class="ion-activatable ripple-parent header-stage">
+              <ion-ripple-effect></ion-ripple-effect>
+              <div class="favorite">
+                <ion-icon name="bookmark" color="primary">
+                </ion-icon>
+              </div>
+              <ion-text>
+                <p>
+                  <b> {{ stage.name }} </b>
+                </p>
+              </ion-text>
+            </ion-label>
+            <ion-button slot="icon-only" fill="clear" slot="end" class="btn-navigation-stages" (click)="nextStage()">
+              <ion-icon name="chevron-forward"></ion-icon>
+            </ion-button>
+          </ion-item-divider>
+
+          <div *ngIf="stage.deal?.length > 0;" cdkDropList [cdkDropListData]="stage.deal"
+            (cdkDropListDropped)="drop($event, stageIndex)">
+            <ion-card *ngFor="let deal of stage.deal; let dealIndex = index;" #listCard appSocialGestures cdkDrag
+              [gestureOpts]="gestureOpts" (cdkDragMoved)="moved($event, stageIndex, dealIndex)"
+              (blockTap)="toBlockTap($event)" (tap)="tapDeal(deal)">
+              <ion-card-header>
+                <ion-card-subtitle>{{ deal.name }}</ion-card-subtitle>
+                <ion-card-title>Card Title</ion-card-title>
+              </ion-card-header>
+
+              <ion-card-content>
+                Keep close to Nature's heart... and break clear away, once in awhile,
+                and climb a mountain or spend a week in the woods. Wash your spirit clean.
+              </ion-card-content>
+
+            </ion-card>
+          </div>
+        </ion-list>
+
+      </ion-content>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>

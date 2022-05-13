@@ -24,6 +24,10 @@ export class SamplesPage implements OnInit {
       namePage: 'Gestures API',
       router: '/samples/gestures',
     },
+    {
+      namePage: 'Slide + Drag Drop + Gestures',
+      router: '/samples/pipeline',
+    },
   
   ];
 

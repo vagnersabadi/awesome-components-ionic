@@ -7,15 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { TouchSwipePageRoutingModule } from './touch-swipe-routing.module';
 
 import { TouchSwipePage } from './touch-swipe.page';
+import { SocialGestureModule } from 'src/app/directives/social-gestures/social-gesture.module';
 
-import { SocialGestureDirective } from './../../../../../directives/social-gestures/social-gestures.directive';
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    TouchSwipePageRoutingModule
+    TouchSwipePageRoutingModule,
+    SocialGestureModule
   ],
-  declarations: [TouchSwipePage, SocialGestureDirective],
+  declarations: [TouchSwipePage],
 })
 export class TouchSwipePageModule { }

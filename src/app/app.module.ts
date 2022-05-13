@@ -13,7 +13,6 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { FivExpandableModule, FivRouterItemModule, FivCollapsableModule } from '@fivethree/core';
 import { HttpClientModule } from '@angular/common/http';
-import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -33,7 +32,6 @@ import { Geolocation } from '@ionic-native/geolocation/ngx';
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    Geolocation,
   ],
   bootstrap: [AppComponent]
 })

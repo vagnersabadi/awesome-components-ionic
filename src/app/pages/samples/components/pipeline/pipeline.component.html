@@ -13,11 +13,11 @@
 </ion-header>
 <ion-content scrollY="false">
 
-  <ion-segment #segment scrollable (ionChange)="stageSegmentChanged($event)" value="0" color="secondary">
+  <!-- <ion-segment #segment scrollable (ionChange)="stageSegmentChanged($event)" value="0" color="secondary">
     <ion-segment-button [value]="i" *ngFor="let stagesSegment of stages; let i = index" >
       {{i}}
     </ion-segment-button>
-  </ion-segment>
+  </ion-segment> -->
 
   <ion-slides class="slides-stages" pager="false" [options]="sliderConfig" #slider
     (ionSlideTransitionEnd)="activeSlide()">

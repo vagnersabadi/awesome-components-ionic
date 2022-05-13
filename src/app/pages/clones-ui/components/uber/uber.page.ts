@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AlertController, MenuController } from '@ionic/angular';
-import { Geolocation } from '@ionic-native/geolocation/ngx';
 
 @Component({
   selector: 'app-uber',
@@ -192,7 +191,6 @@ export class UberPage implements OnInit {
   ]
 
   constructor(
-    private geolocation: Geolocation,
     private menuCtrl: MenuController,
     public alertController: AlertController,
     private activeRouter: ActivatedRoute,
@@ -278,17 +276,4 @@ export class UberPage implements OnInit {
   async requestIgnore() {
   }
 
-  public getcurrentLocations() {
-    this.geolocation.getCurrentPosition().then((resp) => {
-      console.log('resp', resp)
-      this.lat = resp.coords.latitude;
-      this.lng = resp.coords.longitude;
-    }).catch((error) => {
-      console.log('Error getting location', error);
-    });
-    const watch = this.geolocation.watchPosition();
-    watch.subscribe((data) => {
-      console.log('data', data);
-    });
-  }
 }

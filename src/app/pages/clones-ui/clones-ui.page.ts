@@ -29,6 +29,10 @@ export class ClonesUiPage implements OnInit {
       namePage: 'Tinder',
       router: '/clones-ui/tinder',
     },
+    {
+      namePage: 'Dynamic Island By Iphone 14',
+      router: '/clones-ui/dynamic-island',
+    },
   ];
 
 

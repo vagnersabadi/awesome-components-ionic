@@ -26,6 +26,10 @@ const routes: Routes = [
   },  {
     path: 'tinder',
     loadChildren: () => import('./components/tinder/tinder.module').then( m => m.TinderPageModule)
+  },
+  {
+    path: 'dynamic-island',
+    loadChildren: () => import('./components/dynamic-island/dynamic-island.module').then( m => m.DynamicIslandPageModule)
   }
 
 ];

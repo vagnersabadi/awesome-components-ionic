@@ -1,0 +1,91 @@
+$expanded-w-min: 250px;
+$expanded-w-max: calc(100% - 20px);
+$expanded-h-max-2: 120px;
+$expanded-h-max-3: 300px;
+$expanded-h-min-1: 40px;
+
+.dynamic-island-container {
+    background-color: black;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    width: 60%;
+    height: $expanded-h-min-1;
+    margin-top: 10px;
+}
+
+.icon-start {
+    font-size: 24px;
+    color: green;
+    margin-left: 10px;
+    margin-top: 8px;
+}
+
+.icon-end {
+    margin-right: 8px;
+    margin-top: 6px;
+
+    ion-spinner {
+        font-size: 24px;
+        color: violet;
+    }
+}
+
+.island-expanded-2 {
+    animation: expand-2 0.5s ease-out;
+    height: $expanded-h-max-2;
+    width: $expanded-w-max;
+
+    @keyframes expand-2 {
+        0% {
+            width: $expanded-w-min;
+            height: $expanded-h-min-1;
+        }
+
+        100% {
+            width: $expanded-w-max;
+            height: $expanded-h-max-2;
+        }
+    }
+
+}
+
+.island-expanded-3 {
+    animation: expand-3 0.5s ease-out;
+    height: $expanded-h-max-3;
+    width: $expanded-w-max;
+
+    @keyframes expand-3 {
+        0% {
+            width: $expanded-w-min;
+            height: $expanded-h-max-2;
+        }
+
+        100% {
+            width: $expanded-w-max;
+            height: $expanded-h-max-3;
+        }
+    }
+
+}
+
+.island-expanded-4 {
+    animation: recall 0.5s ease-out;
+    height: $expanded-h-min-1;
+    width: $expanded-w-min;
+
+
+    @keyframes recall {
+        0% {
+            width: $expanded-w-max;
+            height: $expanded-h-max-3;
+        }
+
+        100% {
+            width: $expanded-w-min;
+            height: $expanded-h-min-1;
+        }
+    }
+
+}

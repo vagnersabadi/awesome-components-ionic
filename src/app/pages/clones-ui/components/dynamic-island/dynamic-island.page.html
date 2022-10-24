@@ -1,0 +1,36 @@
+<!-- <ion-header>
+
+</ion-header> -->
+
+<ion-content>
+  <div class="dynamic-island-container" [ngClass]="'island-expanded-'+dynamicIslandState" (click)="expanded()">
+
+    <ng-container *ngIf="dynamicIslandState === 1">
+      <div class="icon-start">
+        <ion-icon name="battery-full-outline"></ion-icon>
+      </div>
+
+      <div class="icon-end">
+        <ion-spinner name="crescent"></ion-spinner>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="dynamicIslandState === 2">
+   
+
+    </ng-container>
+
+    <ng-container *ngIf="dynamicIslandState === 3">
+
+      
+
+    </ng-container>
+
+  </div>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Dynamic Is land</ion-title>
+  </ion-toolbar>
+</ion-footer>
